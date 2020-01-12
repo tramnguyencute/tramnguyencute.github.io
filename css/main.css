@@ -369,7 +369,8 @@ footer .theme-by {
   width: 100%;
 }
 .post-entry {
-  width: 80%;
+  width: 100%;
+  margin-right: 35px;
 }
 .post-image {
   float: right;
