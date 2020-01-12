@@ -107,11 +107,13 @@ bigimg:
 
 <!-- Recent Posts -->
 <h1 class="text-center">Recent Posts</h1>
+<!-- Chèn khoảng trống -->
 <div class="spacer"></div>
 <!-- site body (untouched)-->
 <div class="posts-list">
   {% for post in paginator.posts %}
   <article class="post-preview">
+    <!-- Tiêu đề bài đăng -->
     <a href="{{ post.url | prepend: site.baseurl }}">
       <h2 class="post-title">{{ post.title }}</h2>
 
@@ -121,12 +123,13 @@ bigimg:
       </h3>
       {% endif %}
     </a>
-
+    <!-- Ngày tháng bài đăng -->
     <p class="post-meta">
       Posted on {{ post.date | date: "%B %-d, %Y" }}
     </p>
-
+    <!-- Tóm tắt bài đăng -->
     <div class="post-entry-container">
+      <!-- Kiểm tra bài đăng có kèm hình nhỏ hay không -->
       {% if post.image %}
       <div class="post-image">
         <a href="{{ post.url | prepend: site.baseurl }}">
@@ -134,6 +137,9 @@ bigimg:
         </a>
       </div>
       {% endif %}
+      <!-- Chèn khoảng trống -->
+      <div class="spacer"></div>
+      <!-- Tóm tắt ngắn nội dung -->
       <div class="post-entry">
         <p style="text-align: justify;">
           {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
