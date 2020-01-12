@@ -11,8 +11,13 @@ bigimg:
 ---
 
 This is my first post, I'm moving from my old blog to GitHub pages now. It has been very exciting since I started developing it, soon I'll add new posts here as well as some of my older ones too. Watch out this space for more!
+<!-- Hello world! Posts -->
+<h1 class="text-center">My friends</h1>
+![Crepe](/img/My_Picture/phieu_dalat_phong88.jpg)
 
-![Crepe](img/My_Picture/phieu_dalat_phong88.jpg)
 Thank you for visiting my Blog.
 
 PS: This is a picture I took with my friends. And guess who I am? I wear a gray shirt <3
+
+<!-- Hello world! Posts -->
+<h3 class="text-center">Please start visiting my Blog. Wishing the trip a lot of success. <br>You can view my personal information <a href="https://duybang140494.github.io/aboutme/" class="post-read-more"><strong>here</strong></a> or download it <a href="https://duybang140494.github.io/resume/NGUYENDUYBANGCV.pdf" class="post-read-more"><strong>here</strong></a>.</h3>
