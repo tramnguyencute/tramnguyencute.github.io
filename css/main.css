@@ -22,7 +22,7 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 p a {
   /* text-decoration: underline */
@@ -377,6 +377,7 @@ footer .theme-by {
   height: 192px;
   width: 192px;
   filter: grayscale(90%);
+  margin-top: -50px;
 }
 .post-image:hover {
   filter: grayscale(0%);
@@ -384,8 +385,8 @@ footer .theme-by {
 /* Hinh anh thuc su hien ra */
 .post-image img {
   border-radius: 100px;
-  height: 192px;
-  width: 192px;
+  height: 160px;
+  width: 160px;
   margin: 20px;
 }
 .post-preview .post-read-more {
