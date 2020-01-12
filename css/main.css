@@ -401,8 +401,9 @@ footer .theme-by {
   .post-image {
     width: 100%;
     text-align: center;
-    margin-top: 0;
     float: left;
+    margin-bottom: 20px;
+    margin-top: -20px;
   }
 }
 
