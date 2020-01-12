@@ -36,7 +36,8 @@ navbar-links:
     - Smart Clock: "https://github.com/duybang140494/SmartClock"
     - Sent Data ThingSpeak: "https://github.com/duybang140494/SentDataThingSpeak"  
     - Vehicle Speed GPS: "https://github.com/duybang140494/VehicleSpeedGPS"    
-    - GSoC'15: "https://github.com/anuditverma/org.civicrm.osdi"
+    - STM32 RTC RFID: "https://github.com/duybang140494/STMF1_RTCBackup_RFID"
+    - PWM Sine Wave Generator: "https://github.com/duybang140494/PWMSineWaveGenerator"
   Resume: "resume/NGUYENDUYBANGCV.pdf"
 #  Tags: "tags"
 
