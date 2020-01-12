@@ -371,20 +371,22 @@ footer .theme-by {
 .post-entry {
   width: 100%;
 }
+/* Khung ngoai */
 .post-image {
   float: right;
   height: 192px;
   width: 192px;
-  margin-top: -13px;
   filter: grayscale(90%);
 }
 .post-image:hover {
   filter: grayscale(0%);
 }
+/* Hinh anh thuc su hien ra */
 .post-image img {
   border-radius: 100px;
-  height: 170px;
-  width: 170px;
+  height: 192px;
+  width: 192px;
+  margin: 20px;
 }
 .post-preview .post-read-more {
   font-weight: 800;
