@@ -98,8 +98,8 @@ bigimg:
       </a>
       <hr class="seperator">
       <p class="text-muted">Send and receive data between phone and <a
-            href="https://github.com/duybang140494/SmartClock" target="_blank" rel="noopener"
-            title="Go to Github Poject Page">SmartClock</a> project.
+          href="https://github.com/duybang140494/SmartClock" target="_blank" rel="noopener"
+          title="Go to Github Poject Page">SmartClock</a> project.
       </p>
     </div>
   </div>
@@ -137,7 +137,9 @@ bigimg:
       <div class="post-entry">
         {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+        <p style="text-align: justify;">
+          {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+        </p>
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
         {% endif %}
       </div>
