@@ -23,19 +23,19 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 
 ### **Việc đầu tiên các bạn cần chuẩn bị:**
   - **Phần cứng:**
-    - Board ESP266 **Wesmod D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img\2020-01-17-smart-clock\sch_d1_mini_v3.0.0.pdf)).
-    - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn micro nha... ~~Type-C~~ là ngéo luôn á :3
+    - Board ESP266 **Wesmod D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
+    - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn micro nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
     - Mạch chuyển đổi **I2c** cho màn hình LCD2004.
-    - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "Mica Sinh Viên" - nếu bạn ở tpHCM nhé).
+    - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *TPHCM* nhé).
     - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
-    - Một vài cộng dây đực cái, cái đực, vv. (nối để test mạch hoạt động).
+    - Một vài **cọng dây đực cái, cái đực**, vv. (nối để test mạch hoạt động).
     - Nguồn cung cấp cho ESP266 Wemod D1 (5v-2A, dư dòng tí mình sử dụng trong các mục đích khác).
   - **Phần mềm:**
     - **VS code** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
-    - IDE Arduino.
+    - **IDE Arduino**.
     - Driver giao tiếp giả lập port **CH340**.
-    - Android Studio.
+    - **Android Studio**.
 
   - **Ngôn ngữ lập trình:**
     - Chắc chắc là **C/C++** là không thể thiếu sót rầu nhé.
@@ -45,7 +45,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
   - 
 
 ## Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
-![esp8266](img\2020-01-17-smart-clock\wemos-d1-mini-500x500.jpg){: .center-block :}
+![esp8266](/img/2020-01-17-smart-clock/wemos-d1-mini-500x500.jpg){: .center-block :}
 ### Technical specs
 ----------------------------------------------------------------------------
 
@@ -61,7 +61,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | Weight | 3g |
 
 ### Pin
-![pinout_esp8266](img\2020-01-17-smart-clock\wemosD1Mini.jpg){: .center-block :}
+![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
 ----------------------------------------------------
 
 | Pin | Function | ESP-8266 Pin |
@@ -82,6 +82,10 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | 5V | 5V | - |
 | 3V3 | 3.3V | 3.3V |
 | RST | Reset | RST |
+### Warning
+
+{: .box-warning}
+**Warning:** Tất cả các pin IO của bé nó đều sài 3.3v nha!
 
 {% highlight c linenos %}
 #include <stdio.h>
