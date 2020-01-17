@@ -53,4 +53,4 @@ Many later languages have borrowed syntax/features directly or indirectly from C
     -   Unix system provides as large number of C function
     -   Some function are used in operation .
     -   Other are for specialized in their application
-![Crepe](http://profiles.sulekhalive.com/mstore/25546077/albums/default/thumbnailfull/c.jpg)
+![C](http://profiles.sulekhalive.com/mstore/25546077/albums/default/thumbnailfull/c.jpg)
