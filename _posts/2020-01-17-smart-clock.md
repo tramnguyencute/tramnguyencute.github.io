@@ -9,19 +9,18 @@ image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
 comments: true
 ---
-Hướng dẫn chi tiết (Phần 1: Giới thiệu chút chơi)
+# Phần 1: Giới thiệu chút chơi
 <!-- Font chữ bự chà bá -->
 <h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
-
 Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên mình viết về việc chia sẽ làm một cái gì đó...hoặc có thể coi là bài blog đầu tiên :3
 
-Ở bài viết này mình sẽ hướng dẫn chi tiết và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó. Ở thời buổi 4.0 như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên bài viết này chi mang tính chất trao đổi kiến thức, kinh nghiệm khi đam mê làm đồ chơi handmade thôu nhé!
+Ở bài viết này mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó. Ở thời buổi 4.0 như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
 
 <!-- Font chữ bự chà bá -->
 <h1 class="text-center">Vào công việc nào...!</h1>
 <div class="spacer"></div>
 
-### **Việc đầu tiên các bạn cần chuẩn bị:**
+## **Việc đầu tiên các bạn cần chuẩn bị:**
   - **Phần cứng:**
     - Board ESP266 **Wemod D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
     - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn micro nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
@@ -65,7 +64,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ### Pin
 ----------------------------------------------------
 
-| Pin | Function | ESP-8266 Pin |
+| **Pin** | **Function** | **ESP-8266 Pin** |
 | --- | --- | --- |
 | TX | TXD | TXD |
 | RX | RXD | RXD |
@@ -87,15 +86,15 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ### Warning
 
 {: .box-warning}
-**Warning:** Tất cả các pin IO của bé nó đều sài 3.3v nha!
+**Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
 
-### **Mục tiêu & tính năng của project này:**
-  - Một cái đồng hồ thời gian thực trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
-  - Thấy được nhiệt độ, độ ẩm không khí của địa phương. (Tự mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **https://openweathermap.org/api**)
-  - Với khả năng kết nối mạng không dây nhanh gọn được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
-  - Củng có báo thức luôn (set báo thức từ phím cứng trên đồng hồ hoặc smartphone luôn).
-  - Cá nhân hóa được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
-  - Đèn ngủ củng được nữa, đêm nó củng sang sáng lắm...đèn ngủ siêu tiết kiệm điện á nha.
+## **Mục tiêu & tính năng của project này:**
+  - Một cái **đồng hồ thời gian thực** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
+  - Thấy được **nhiệt độ**, **độ ẩm** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **https://openweathermap.org/api**)
+  - Với khả năng **kết nối mạng không dây nhanh gọn** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
+  - Củng có **báo thức** luôn (set báo thức từ phím cứng trên đồng hồ hoặc smartphone luôn).
+  - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
+  - **Đèn ngủ** củng được nữa, đêm nó củng sang sáng lắm...đèn ngủ siêu tiết kiệm điện á nha.
 
 
 {% highlight c linenos %}
