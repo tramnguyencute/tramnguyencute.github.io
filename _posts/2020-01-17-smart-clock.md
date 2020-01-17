@@ -4,8 +4,8 @@ title: Smart Clock
 meta-title: "Smart Clock"
 subtitle: ...và hướng dẫn chi tiết
 bigimg:
-  - "img\2020-01-17-smart-clock\anh-bia-baiviet.jpg" : "Đồng hồ"
-image: img\2020-01-17-smart-clock\anh-bia-baiviet.jpg
+  - "/img/2020-01-17-smart-clock/anh-bia-baiviet.jpg" : "Đồng hồ"
+image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
 comments: true
 ---
