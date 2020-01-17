@@ -3,8 +3,6 @@ layout: post
 title: Smart Clock
 meta-title: "Smart Clock"
 subtitle: ...và hướng dẫn chi tiết
-category: "Tutorials"
-lang: "vi"
 bigimg:
   - "img\2020-01-17-smart-clock\anh-bia-baiviet.jpg" : "Đồng hồ"
 image: img\2020-01-17-smart-clock\anh-bia-baiviet.jpg
@@ -18,7 +16,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 Việc đầu tiên các bạn cần chuẩn bị:
   - Phần cứng:
     - Board ESP266 Wemod D1 (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img\2020-01-17-smart-clock\sch_d1_mini_v3.0.0.pdf)).
-    - Một cộng cáp Micro USB connection để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn micro nha...Type-C là ngéo luôn á :3
+    - Một cộng cáp Micro USB connection để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn micro nha... Type-C là ngéo luôn á :3
     - Lcd 2004
     - Mạch chuyển đổi I2c cho màn hình LCD2004 
     - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "Mica Sinh Viên" - nếu bạn ở tpHCM nhé).
