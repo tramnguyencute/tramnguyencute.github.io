@@ -82,6 +82,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | 5V | 5V | - |
 | 3V3 | 3.3V | 3.3V |
 | RST | Reset | RST |
+
 ### Warning
 
 {: .box-warning}
