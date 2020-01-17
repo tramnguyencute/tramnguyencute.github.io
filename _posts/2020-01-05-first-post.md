@@ -20,4 +20,4 @@ Thank you for visiting my Blog.
 PS: This is a picture I took with my friends. And guess who I am? I wear a gray shirt <3
 
 <!-- Hello world! Posts -->
-<h3 class="text-center">Please start visiting my Blog.<br>Wishing the trip a lot of success.<br>You can view my personal information <a href="https://duybang140494.github.io/aboutme/" class="post-read-more"><em>here</em></a><br>or download it <a href="https://duybang140494.github.io/resume/NGUYENDUYBANGCV.pdf" class="post-read-more"><em>here</em></a>.</h3>
+<h3 class="text-center">Please start visiting my Blog.<br>Wishing the trip a lot of success.<br>You can view my personal information <a href="https://bangnguyendev.github.io/aboutme/" class="post-read-more"><em>here</em></a><br>or download it <a href="https://bangnguyendev.github.io/resume/NGUYENDUYBANGCV.pdf" class="post-read-more"><em>here</em></a>.</h3>

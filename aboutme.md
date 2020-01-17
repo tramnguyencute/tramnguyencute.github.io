@@ -27,7 +27,7 @@ I am a programmer, software developer, and seasoned ethical hacker, participatin
 
 <p class="about-text">
 <span class="fa fa-book about-icon"></span>
-I enjoy reading <a target="_blank" href="https://duybang140494.github.io/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 51 books. A list of those amazing books can be found <a target="_blank" href="https://www.goodreads.com/user/year_in_books/2018/82771249">here</a>. Make sure to add some of them in your 2019 reading list.
+I enjoy reading <a target="_blank" href="https://bangnguyendev.github.io/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 51 books. A list of those amazing books can be found <a target="_blank" href="https://www.goodreads.com/user/year_in_books/2018/82771249">here</a>. Make sure to add some of them in your 2019 reading list.
 </p>
 
 <p class="about-text">
@@ -37,7 +37,7 @@ Also, I am very fond of video games, I love to create digital art and play aroun
 
 <p class="about-text">
 <span class="fa fa-envelope about-icon"></span>
-Let’s connect if you want to collab something awesome in the world of open-source tech. Follow the social media links given below or drop an e-mail <a target="_blank" href="mailto:duybang140494@gmail.com">here</a>.
+Let’s connect if you want to collab something awesome in the world of open-source tech. Follow the social media links given below or drop an e-mail <a target="_blank" href="mailto:bangnguyendev@gmail.com">here</a>.
 </p>
 
 

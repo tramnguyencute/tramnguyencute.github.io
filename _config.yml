@@ -31,13 +31,13 @@ navbar-links:
   Publications:
     - A framework of smart homes connected devices using Internet of Things: "http://ieeexplore.ieee.org/document/7918794/"
     - LinkedIn Profile: "https://www.linkedin.com/in/bangnguyenduy"
-    - Github Profile: "https://github.com/duybang140494"
+    - Github Profile: "https://github.com/bangnguyendev"
   Projects:
-    - Smart Clock: "https://github.com/duybang140494/SmartClock"
-    - Sent Data ThingSpeak: "https://github.com/duybang140494/SentDataThingSpeak"  
-    - Vehicle Speed GPS: "https://github.com/duybang140494/VehicleSpeedGPS"    
-    - STM32 RTC RFID: "https://github.com/duybang140494/STMF1_RTCBackup_RFID"
-    - PWM Sine Wave Generator: "https://github.com/duybang140494/PWMSineWaveGenerator"
+    - Smart Clock: "https://github.com/bangnguyendev/SmartClock"
+    - Sent Data ThingSpeak: "https://github.com/bangnguyendev/SentDataThingSpeak"  
+    - Vehicle Speed GPS: "https://github.com/bangnguyendev/VehicleSpeedGPS"    
+    - STM32 RTC RFID: "https://github.com/bangnguyendev/STMF1_RTCBackup_RFID"
+    - PWM Sine Wave Generator: "https://github.com/bangnguyendev/PWMSineWaveGenerator"
   Resume: "resume/NGUYENDUYBANGCV.pdf"
 #  Tags: "tags"
 
@@ -70,7 +70,7 @@ author:
 # rss: true
   email: "duybang140494@gmail.com"
   facebook: vanchoemnoi.yeuanhthatlong
-  github: duybang140494
+  github: bangnguyendev
 #  twitter: daattali
 #  reddit: yourname
   linkedin: bangnguyenduy
