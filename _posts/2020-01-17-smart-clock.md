@@ -60,8 +60,8 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | Width | 25.6mm |
 | Weight | 3g |
 
-### Pin
 ![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
+### Pin
 ----------------------------------------------------
 
 | Pin | Function | ESP-8266 Pin |
