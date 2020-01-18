@@ -86,8 +86,6 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | 3V3 | 3.3V | 3.3V |
 | RST | Reset | RST |
 
-### Warning
-
 {: .box-warning}
 **Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
 
@@ -110,10 +108,11 @@ Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái g�
 ----------------------------------------------------
 Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến sai số thời gian - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
 
-<h2 class="text-center">4.0 và pool.ntp.org </h2>
+<h2 class="text-center"> Đến với 4.0 và pool.ntp.org </h2>
 
+![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng.")
 ----------------------------------------------------
-Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về cách thức hoạt động và lấy dữ liệu giờ từ trang **pool.ntp.org**.
+Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP) và lấy dữ liệu giờ từ trang **https://www.pool.ntp.org/zone/vn**.
 
 
 ## **Hướng dẫn nối chân:**
