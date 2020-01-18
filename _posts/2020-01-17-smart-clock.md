@@ -89,7 +89,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ### Warning
 
 {: .box-warning}
-**Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
+**Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha! :couple:
 
 ## **Mục tiêu & tính năng của project này:**
   - Một cái **đồng hồ thời gian thực** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
@@ -110,3 +110,5 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | GND | GND | GND |   |   |
 | 5V | VCC |   |   |   |
 | RST |   |   | VCC |   |
+
+/play trombone
