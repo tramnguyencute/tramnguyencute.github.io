@@ -102,6 +102,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ## **Hướng dẫn nối chân:**
 
 | **Wemos D1 mini** | **LCD/Modun LCDI2C** | **Buzzer** | **Reset Button** | **Mode Button** |
+| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
 | D5(GPIO14) |   |   |   | D5(GPIO14) |
 | D0(GPIO16) |   | D0(GPIO16) |   |   |
 | D1(GPIO5) | SCL |   |   |   |
