@@ -24,13 +24,13 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ## **Việc đầu tiên các bạn cần chuẩn bị:**
   - **Phần cứng:**
     - Board ESP266 **Wemod D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
-    - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn micro nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
+    - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **Micro USB** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
     - Mạch chuyển đổi **I2C** cho màn hình LCD2004.
     - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *thành phố Hồ Chí Minh* nhé).
     - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
-    - Một vài **cọng dây đực cái, cái đực**, vv. (nối để test mạch hoạt động).
-    - Nguồn cung cấp cho ESP266 Wemod D1 (5v-2A, dư dòng tí mình sử dụng trong các mục đích khác).
+    - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
+    - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn 5v-2A**, dư dòng tí mình sử dụng trong các mục đích khác).
   - **Phần mềm:**
     - **[VS code](https://code.visualstudio.com/download)** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
     - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
@@ -43,7 +43,9 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
     - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
 
   - **Vài thứ linh tinh:**
-    - ...đại loại như đam mê kiểu "**em yêu khoa học:3**".
+    - Đọc hiểu được **HTTP Methods GET vs POST**.
+    - Cáu trúc dữ liệu **[JavaScript Object Notation](https://vi.wikipedia.org/wiki/JSON)** (thường được viết tắt là **JSON**).
+    - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
 
 ## Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
 ![esp8266](/img/2020-01-17-smart-clock/wemos-d1-mini-500x500.jpg){: .center-block :}
@@ -97,30 +99,12 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
   - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
   - **Đèn ngủ** củng được nữa, đêm nó củng sang sáng lắm...đèn ngủ siêu tiết kiệm điện á nha.
 
-
-{% highlight c linenos %}
-#include <stdio.h>
-int main() {
-   // printf() displays the string inside quotation
-   printf("Hello, World!");
-   return 0;
-}
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
+## **Hướng dẫn nối chân:**
+| **Wemos D1 mini** | **LCD/Modun LCDI2C** | *Buzzer* | **Reset Button** | **Mode Button** |
+| D5(GPIO14) |   |   |   | D5(GPIO14) |
+| D0(GPIO16) |   | D0(GPIO16) |   |   |
+| D1(GPIO5) | SCL |   |   |   |
+| D2(GPIO4) | SDA |   |   |   |
+| GND | GND | GND |   |   |
+| 5V | VCC |   |   |   |
+| RST |   |   | VCC |   |
