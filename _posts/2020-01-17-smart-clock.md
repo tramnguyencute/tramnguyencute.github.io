@@ -16,6 +16,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 
 Ở bài viết này mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó. Ở thời buổi 4.0 như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
 
+----------------------------------------------------------------------------
 <!-- Font chữ bự chà bá -->
 <h1 class="text-center">Vào công việc nào...!</h1>
 <div class="spacer"></div>
@@ -31,10 +32,10 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
     - Một vài **cọng dây đực cái, cái đực**, vv. (nối để test mạch hoạt động).
     - Nguồn cung cấp cho ESP266 Wemod D1 (5v-2A, dư dòng tí mình sử dụng trong các mục đích khác).
   - **Phần mềm:**
-    - **VS code** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
-    - **IDE Arduino**.
-    - Driver giao tiếp giả lập port **CH340**.
-    - **Android Studio**.
+    - **[VS code](https://code.visualstudio.com/download)** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
+    - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
+    - Driver giao tiếp giả lập port **[CH340](https://sparks.gogo.co.nz/ch340.html)**.
+    - **[Android Studio](https://developer.android.com/studio)**.
 
   - **Ngôn ngữ lập trình:**
     - Chắc chắc là **C/C++** là không thể thiếu sót rầu nhé.
