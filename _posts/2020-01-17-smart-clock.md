@@ -89,7 +89,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ### Warning
 
 {: .box-warning}
-**Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha! :couple:
+**Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
 
 ## **Mục tiêu & tính năng của project này:**
   - Một cái **đồng hồ thời gian thực** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
@@ -99,9 +99,26 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
   - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
   - **Đèn ngủ** củng được nữa, đêm nó củng sang sáng lắm...đèn ngủ siêu tiết kiệm điện á nha.
 
+## **Hướng đi & giải pháp nào?:**
+
+----------------------------------------------------
+Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
+
+----------------------------------------------------
+Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái gì đó nhìn trực quan được. Có nhiefu sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
+
+----------------------------------------------------
+Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến sai số thời gian - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
+
+<h2 class="text-center">4.0 và pool.ntp.org </h2>
+
+----------------------------------------------------
+Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về cách thức hoạt động và lấy dữ liệu giờ từ trang **pool.ntp.org**.
+
+
 ## **Hướng dẫn nối chân:**
 
-| **Wemos D1 mini** | **LCD/Modun LCDI2C** | **Buzzer** | **Reset Button** | **Mode Button** |
+| **Wemos D1 mini** | **LCD/ Modun I2C** | **Buzzer** | **Reset Button** | **Mode Button** |
 | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
 | D5(GPIO14) |   |   |   | D5(GPIO14) |
 | D0(GPIO16) |   | D0(GPIO16) |   |   |
@@ -110,5 +127,3 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | GND | GND | GND |   |   |
 | 5V | VCC |   |   |   |
 | RST |   |   | VCC |   |
-
-/play trombone
