@@ -103,19 +103,51 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
 
 ----------------------------------------------------
-![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ.")
+![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái gì đó nhìn trực quan được. Có nhiefu sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
 
 ----------------------------------------------------
-![ds1307](https://i.pinimg.com/originals/d5/6e/aa/d56eaaafff5c16be93c9d3734e6ad5f2.jpg "Sơ đồ DS1307")
+![ds1307](https://i.pinimg.com/originals/d5/6e/aa/d56eaaafff5c16be93c9d3734e6ad5f2.jpg "Sơ đồ DS1307"){: .center-block :}
 Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến sai số thời gian - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
 
+----------------------------------------------------
 <h2 class="text-center"> Đến với 4.0 và pool.ntp.org </h2>
 
 ![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng."){: .center-block :}
-----------------------------------------------------
+
 Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **https://www.pool.ntp.org/zone/vn**.
 
+----------------------------------------------------
+Để lấy được giờ từ internet thì MCU của chúng ta phải có khả năng kết nối internet (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng ESP8266 Wemos D1 mini như đã giới thiệu ở trên.
+Vấn đề khiến mình băn khoăn ở đây chính là vấn đề kết nối mạng cho em nó. Đối với một số bạn thì dòng code này có vẻ rất quen thuộc:
+
+{% highlight c linenos %}
+#include <ESP8266WiFi.h>
+
+const char* ssid = "********";
+const char* password = "********";
+void setup(void)
+{
+  Serial.begin(115200);
+  Serial.println();
+
+  Serial.printf("Connecting to %s \n", ssid);
+  WiFi.begin(ssid, password);
+  WiFi.config(staticIP, gateway, subnet);
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println();
+  Serial.print("Connected, IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
+void loop() {}
+{% endhighlight %}
+
+Nếu sử dụng kiểu này, sản phẩm của chúng ta khi đóng hộp sẽ sử dụng cố định một tên SSID & PASS duy nhất rất bất tiện trọng quá trình sử dụng khi chuyển nhà, đổi tên mạng Wifi, vv...
 
 ## **Hướng dẫn nối chân:**
 
