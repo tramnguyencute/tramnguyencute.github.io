@@ -18,7 +18,7 @@ layout: base
         {% assign gh_user =  gh_split[0]  %}
         {% assign gh_repo =  gh_split[1]  %}
       
-        <div id="header-gh-btns">
+        <div id="header-gh-btns", style="text-align: justify;">
           {% if page.gh-badge.size > 0 %}
             {% for badge in page.gh-badge %}
               {% case badge %}
