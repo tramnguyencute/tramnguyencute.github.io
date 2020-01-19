@@ -67,7 +67,7 @@ avatar: "img/My_Picture/avatar_github.jpg"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Bang Nguyen
-# rss: true
+  rss: true
   email: "duybang140494@gmail.com"
   facebook: vanchoemnoi.yeuanhthatlong
   github: bangnguyendev
