@@ -53,7 +53,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ![esp8266](/img/2020-01-17-smart-clock/wemos-d1-mini-500x500.jpg){: .center-block :}
 ### Technical specs
 ----------------------------------------------------------------------------
-<center>
+<div style="center">
 
 | Microcontroller | ESP-8266EX |
 | --- | --- |
@@ -66,7 +66,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | Width | 25.6mm |
 | Weight | 3g |
 
-</center>
+</div>
 
 ![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
 ### Pin
