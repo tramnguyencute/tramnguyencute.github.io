@@ -23,7 +23,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 
 ## **Việc đầu tiên các bạn cần chuẩn bị:**
   - **Phần cứng:**
-    - Board ESP266 **Wemod D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
+    - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
     - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **Micro USB** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
     - Mạch chuyển đổi **I2C** cho màn hình LCD2004.
@@ -95,7 +95,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
   - Với khả năng **kết nối mạng không dây nhanh gọn** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
   - Củng có **báo thức** luôn (set báo thức từ phím cứng trên đồng hồ hoặc smartphone luôn).
   - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
-  - **Đèn ngủ** củng được nữa, đêm nó củng sang sáng lắm...đèn ngủ siêu tiết kiệm điện á nha.
+  - **Đèn ngủ** cũng được nữa, đêm nó củng sang sáng lắm...đèn ngủ siêu tiết kiệm điện á nha.
 
 ## **Hướng đi & giải pháp nào?:**
 
@@ -104,10 +104,10 @@ Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là ph
 
 ----------------------------------------------------
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
-Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái gì đó nhìn trực quan được. Có nhiefu sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
+Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
 
 ----------------------------------------------------
-![ds1307](https://i.pinimg.com/originals/d5/6e/aa/d56eaaafff5c16be93c9d3734e6ad5f2.jpg "Sơ đồ DS1307"){: .center-block :}
+![ds1307](/img/2020-01-17-smart-clock/RTC_DS1307_PIN_Diagram.png "Sơ đồ DS1307"){: .center-block :}
 Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến sai số thời gian - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
 
 ----------------------------------------------------
@@ -118,7 +118,9 @@ Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS
 Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **https://www.pool.ntp.org/zone/vn**.
 
 ----------------------------------------------------
-Để lấy được giờ từ internet thì MCU của chúng ta phải có khả năng kết nối internet (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng ESP8266 Wemos D1 mini như đã giới thiệu ở trên.
+<h2 class="text-center"> ESP8266 Wemos D1 mini </h2>
+
+Để lấy được giờ từ internet thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
 Vấn đề khiến mình băn khoăn ở đây chính là vấn đề kết nối mạng cho em nó. Đối với một số bạn thì dòng code này có vẻ rất quen thuộc:
 
 {% highlight c linenos %}
@@ -147,16 +149,16 @@ void setup(void)
 void loop() {}
 {% endhighlight %}
 
-Nếu sử dụng kiểu này, sản phẩm của chúng ta khi đóng hộp sẽ sử dụng cố định một tên SSID & PASS duy nhất rất bất tiện trọng quá trình sử dụng khi chuyển nhà, đổi tên mạng Wifi, vv...
+Nếu sử dụng kiểu này, sản phẩm của chúng ta khi đóng hộp sẽ **sử dụng cố định một tên SSID & PASS** duy nhất rất **bất tiện trọng quá trình sử dụng** khi chuyển nhà, đổi tên mạng Wifi, vv... Mỗi lần như vậy chúng ta phải nạp lại code để cập nhật ssid và password mới cho ESP8266 (hoặc là phải đổi tên của modun Wifi thành thứ mình đã code).
 
-## **Hướng dẫn nối chân:**
+Vậy thứ chúng ta cần là một cái đồng hồ có khả năng kết nối wifi và thay đổi wifi. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
-| **Wemos D1 mini** | **LCD/ Modun I2C** | **Buzzer** | **Reset Button** | **Mode Button** |
-| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
-| D5(GPIO14) |   |   |   | D5(GPIO14) |
-| D0(GPIO16) |   | D0(GPIO16) |   |   |
-| D1(GPIO5) | SCL |   |   |   |
-| D2(GPIO4) | SDA |   |   |   |
-| GND | GND | GND |   |   |
-| 5V | VCC |   |   |   |
-| RST |   |   | VCC |   |
+>**Smartconfig** là một khái niệm được nhắc đến khi khi muốn cấu hình thông tin cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ. 
+
+![smartconfig](/img/2020-01-17-smart-clock/smart-config.gif "Quy trình hoạt động Smartconfig")
+Lợi ích của Smartconfig
+
+---------------------------------------------------------------------------
+-   Dễ dàng cấu hình wifi cho ESP8266 thông qua smartphone.
+-   Không cần phải nạp lại code để cấu hình
+-   Có thể dùng Smartconfig để cấu hình nhiều thiết bị một lúc
