@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Smart Clock - Phần 1`:` Giới thiệu chút chơi
+title: "Smart Clock - Phần 1: Giới thiệu chút chơi"
 meta-title: "Smart Clock"
 subtitle: ...và hướng dẫn chi tiết
 bigimg:
@@ -167,7 +167,7 @@ Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng k�
 
 ### EEPROM - bộ nhớ backup lưu trữ data
 
-Với việc sử dụng **Smartconfig** thì chúng ta cần một** vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
+Với việc sử dụng **Smartconfig** thì chúng ta cần một **vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
 
 {% highlight c linenos %}
 #include <ESP8266WiFi.h>
