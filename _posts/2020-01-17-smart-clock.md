@@ -53,6 +53,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ![esp8266](/img/2020-01-17-smart-clock/wemos-d1-mini-500x500.jpg){: .center-block :}
 ### Technical specs
 ----------------------------------------------------------------------------
+<center>
 
 | Microcontroller | ESP-8266EX |
 | --- | --- |
@@ -64,6 +65,8 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | Length | 34.2mm |
 | Width | 25.6mm |
 | Weight | 3g |
+
+</center>
 
 ![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
 ### Pin
@@ -200,7 +203,7 @@ void setup()
 ![cambien_dht](/img/2020-01-17-smart-clock/dht_cambien.jpg){: .center-block :}
 ![cambien_ds18b20](/img/2020-01-17-smart-clock/ds18b20.jpg){: .center-block :}
 
-Để cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài **tính năng nhiệt độ, độ ẩm không khí**. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
+Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài **tính năng nhiệt độ, độ ẩm không khí**. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
 
 Để **tiết kiệm được PIN IN/OUT** & theo **Hot trend 4.0**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng **kết nối internet** chúng ta sẽ tìm một **nguồn cung cấp thông tin thời tiết tin cậy** và lấy thông tin từ đó.
 
