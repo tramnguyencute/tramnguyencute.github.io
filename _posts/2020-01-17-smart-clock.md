@@ -105,9 +105,11 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ### Thời gian
 
 Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
+<div style="width:50%; height:50%">
 
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 
+</div>
 Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
 
 ![ds1307](/img/2020-01-17-smart-clock/RTC_DS1307_PIN_Diagram.png "Sơ đồ DS1307"){: .center-block :}
