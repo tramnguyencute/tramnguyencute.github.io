@@ -208,10 +208,10 @@ void setup()
 
 Đây https://openweathermap.org sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn khác.
 
->**OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
->Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
->OpenWeatherMap cung cấp nhiều dữ liệu thời tiết như bản đồ **thời tiết hiện tại**, **dự báo tuần**, lượng mưa, gió, mây, dữ liệu từ các trạm thời tiết và nhiều thứ khác. Dữ liệu thời tiết được nhận từ các **dịch vụ phát sóng khí tượng toàn cầu** và hơn **40.000 trạm khí tượng**.
->Bạn có thể **nhận được bất kỳ dữ liệu** thời tiết nào cho ứng dụng của bạn bằng cách sử dụng **API JSON** / XML
+>**OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.<br>
+>Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.<br>
+>OpenWeatherMap cung cấp nhiều dữ liệu thời tiết như bản đồ **thời tiết hiện tại**, **dự báo tuần**, lượng mưa, gió, mây, dữ liệu từ các trạm thời tiết và nhiều thứ khác. Dữ liệu thời tiết được nhận từ các **dịch vụ phát sóng khí tượng toàn cầu** và hơn **40.000 trạm khí tượng**.<br>
+>Bạn có thể **nhận được bất kỳ dữ liệu** thời tiết nào cho ứng dụng của bạn bằng cách sử dụng **API JSON** / XML.<br>
 
 Với những thông số trên về **OpenWeatherMap** thì nó là sự lựa chọn đáng tin cậy cho mình.
 
