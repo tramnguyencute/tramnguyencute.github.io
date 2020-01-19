@@ -206,7 +206,7 @@ void setup()
 
 ![OpenWeatherMap](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
 
-Đây [**OpenWeatherMap**](https://openweathermap.org) sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn khác.
+Đây [**OpenWeatherMap**](https://openweathermap.org) sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn [khác](https://rapidapi.com/collection/top-weather-apis?utm_source=google&utm_medium=cpc&utm_campaign=1674315309_64978333346&utm_term=weather%20api_b&utm_content=1t1&gclid=Cj0KCQiA9orxBRD0ARIsAK9JDxTlX4QuAjT0zTrChC7GYx5ovIaqSI5wqny0YrF9yX3bXC4vO_F6gqwaAnWFEALw_wcB).
 
 >***OpenWeatherMap API***
   - **OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
