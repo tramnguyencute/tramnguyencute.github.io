@@ -200,18 +200,19 @@ void setup()
 ![cambien_dht](/img/2020-01-17-smart-clock/dht_cambien.jpg){: .center-block :}
 ![cambien_ds18b20](/img/2020-01-17-smart-clock/ds18b20.jpg){: .center-block :}
 
-Để cái đồng hồ mình trông có vẻ "xịn" hơn thì thêm một vài tính năng nhiệt độ, độ ẩm không khí. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
+Để cái đồng hồ mình trông có vẽ "xịn" hơn thì thêm một vài tính năng nhiệt độ, độ ẩm không khí. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
 
-Để tiết kiệm được PIN IN/OUT, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng kết nối internet chúng ta sẽ tìm một nguồn cung cấp thông tin thời tiết tin cậy và lấy thông tin từ đó.
+Để tiết kiệm được PIN IN/OUT & theo **trend 4.0**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng kết nối internet chúng ta sẽ tìm một nguồn cung cấp thông tin thời tiết tin cậy và lấy thông tin từ đó.
 
 ![openweather](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
 
 Đây https://openweathermap.org sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn khác.
 
->OpenWeatherMap API này cung cấp dịch vụ dữ liệu thời tiết và dự báo miễn phí, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
-Ý tưởng được lấy cảm hứng từ OpenStreetMap và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
-OpenWeatherMap cung cấp nhiều dữ liệu thời tiết như bản đồ thời tiết hiện tại, dự báo tuần, lượng mưa, gió, mây, dữ liệu từ các trạm thời tiết và nhiều thứ khác. Dữ liệu thời tiết được nhận từ các dịch vụ phát sóng khí tượng toàn cầu và hơn 40.000 trạm khí tượng.
-Bạn có thể nhận được bất kỳ dữ liệu thời tiết nào cho ứng dụng của bạn bằng cách sử dụng API JSON / XML
+>**OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
+>Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
+>OpenWeatherMap cung cấp nhiều dữ liệu thời tiết như bản đồ **thời tiết hiện tại**, **dự báo tuần**, lượng mưa, gió, mây, dữ liệu từ các trạm thời tiết và nhiều thứ khác. Dữ liệu thời tiết được nhận từ các **dịch vụ phát sóng khí tượng toàn cầu** và hơn **40.000 trạm khí tượng**.
+>Bạn có thể **nhận được bất kỳ dữ liệu** thời tiết nào cho ứng dụng của bạn bằng cách sử dụng **API JSON** / XML
 
+Với những thông số trên về **OpenWeatherMap** thì nó là sự lựa chọn đáng tin cậy cho mình.
 
 <h2 style="text-align: justify;">Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!</h2>
