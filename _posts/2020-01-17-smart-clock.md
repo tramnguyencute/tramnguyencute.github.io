@@ -16,7 +16,7 @@ comments: true
 <h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
 Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên mình viết về việc chia sẽ làm một cái gì đó...hoặc có thể coi là bài blog đầu tiên :3
 
-Ở `bài viết này` mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó (theo phong cách kể chuyện nha). Ở thời buổi 4.0 như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
+Ở `bài viết này` mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó (theo phong cách kể chuyện nha). `**Cách mạng công nghiệp 4.0**` như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
 
 ----------------------------------------------------------------------------
 <!-- Font chữ bự chà bá -->
