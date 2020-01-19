@@ -105,7 +105,8 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ### Thời gian
 
 Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
-<div style="width:50%; height:50%">
+
+<div style="width:150px; height:100px">
 
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 
