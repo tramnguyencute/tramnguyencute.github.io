@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smart Clock
+title: Smart Clock - Phần 1: Giới thiệu chút chơi
 meta-title: "Smart Clock"
-subtitle: ...và hướng dẫn chi tiết (Phần 1)
+subtitle: ...và hướng dẫn chi tiết
 bigimg:
   - "/img/2020-01-17-smart-clock/anh-bia-baiviet.jpg" : "Đồng hồ"
 image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
 gh-repo: bangnguyendev/SmartClock
-gh-badge: [star, follow, fork]
+gh-badge: [star, watch, fork, follow]
 comments: true
 ---
 # Phần 1: Giới thiệu chút chơi
