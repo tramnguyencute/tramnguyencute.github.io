@@ -16,7 +16,7 @@ comments: true
 <h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
 Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên mình viết về việc chia sẽ làm một cái gì đó...hoặc có thể coi là bài blog đầu tiên :3
 
-Ở bài viết này mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó. Ở thời buổi 4.0 như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
+Ở `bài viết này` mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó (theo phong cách kể chuyện nha). Ở thời buổi 4.0 như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
 
 ----------------------------------------------------------------------------
 <!-- Font chữ bự chà bá -->
@@ -65,28 +65,9 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 | Width | 25.6mm |
 | Weight | 3g |
 
-![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
 ### Pin
-----------------------------------------------------
 
-| **Pin** | **Function** | **ESP-8266 Pin** |
-| --- | --- | --- |
-| TX | TXD | TXD |
-| RX | RXD | RXD |
-| A0 | Analog input, max 3.3V input | A0 |
-| D0 | IO | GPIO16 |
-| D1 | IO, SCL | GPIO5 |
-| D2 | IO, SDA | GPIO4 |
-| D3 | IO, 10k Pull-up | GPIO0 |
-| D4 | IO, 10k Pull-up, BUILTIN_LED | GPIO2 |
-| D5 | IO, SCK | GPIO14 |
-| D6 | IO, MISO | GPIO12 |
-| D7 | IO, MOSI | GPIO13 |
-| D8 | IO, 10k Pull-down, SS | GPIO15 |
-| G | Ground | GND |
-| 5V | 5V | - |
-| 3V3 | 3.3V | 3.3V |
-| RST | Reset | RST |
+![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
 
 {: .box-warning}
 **Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
@@ -104,7 +85,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ----------------------------------------------------
 ### Thời gian
 
-Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
+`Việc đầu tiên`, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
 
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 
@@ -112,7 +93,7 @@ Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái g�
 
 ![ds1307](/img/2020-01-17-smart-clock/RTC_DS1307_PIN_Diagram.png "Sơ đồ DS1307"){: .center-block :}
 
-Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến sai số thời gian - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
+Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến `sai số thời gian` - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
 
 ----------------------------------------------------
 <h3 class="text-center"> Đến với 4.0 và pool.ntp.org </h3>
@@ -124,8 +105,8 @@ Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ c
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
 
-Để lấy được giờ từ internet thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
-Thứ khiến mình băn khoăn ở đây chính là **vấn đề kết nối mạng** cho em nó. Đối với một số bạn thì dòng code này có vẻ rất quen thuộc:
+`Để lấy được giờ từ internet` thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
+Thứ khiến mình `băn khoăn` ở đây chính là **vấn đề kết nối mạng** cho em nó. Đối với một số bạn thì dòng `code` này rất quen thuộc:
 
 {% highlight c linenos %}
 #include <ESP8266WiFi.h>
@@ -158,9 +139,9 @@ void loop() {}
 Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng kết nối wifi và thay đổi wifi**. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
 >**Smartconfig** là một khái niệm được nhắc đến khi khi muốn cấu hình thông tin cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
-  - Dễ dàng cấu hình wifi cho ESP8266 thông qua smartphone.
+  - `Dễ dàng cấu hình` wifi cho ESP8266 thông qua smartphone.
   - Không cần phải nạp lại code để cấu hình
-  - Có thể dùng Smartconfig để cấu hình nhiều thiết bị một lúc 
+  - Có thể dùng `Smartconfig` để cấu hình nhiều thiết bị một lúc 
 
 ![smartconfig](/img/2020-01-17-smart-clock/smart-config.gif "Quy trình hoạt động Smartconfig")
 
@@ -192,7 +173,7 @@ void setup()
 ...
 {% endhighlight %}
 
->Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng EEPROM để lưu** một số giá trị cho chức năng **báo thức**, **vị trí địa lí**, **ssid & pass wifi**.
+>Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng EEPROM để lưu** một số `giá trị` cho chức năng **báo thức**, **vị trí địa lí**, **ssid & pass wifi**.
 
 ----------------------------------------------------
 ### Thời tiết - cảm biến
@@ -210,8 +191,8 @@ Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài
 
 >***OpenWeatherMap API***
   - **OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
-  - Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
-  - OpenWeatherMap cung cấp nhiều dữ liệu thời tiết như:
+  - Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và `Wikipedia` nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
+  - `OpenWeatherMap` cung cấp nhiều dữ liệu thời tiết như:
     - Bản đồ **thời tiết hiện tại**, 
     - **Dự báo tuần**, lượng mưa, gió, mây, 
     - Dữ liệu từ các **trạm thời tiết** và nhiều thứ khác. 
@@ -220,4 +201,4 @@ Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài
 
 Với những thông số trên về **OpenWeatherMap** thì nó là sự lựa chọn đáng tin cậy cho mình.
 
-<h2 style="text-align: justify;">Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!</h2>
+<h2 style="text-align: justify;">Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. <br>Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!</h2>
