@@ -21,7 +21,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 <h1 class="text-center">Vào công việc nào...!</h1>
 <div class="spacer"></div>
 
-## **Việc đầu tiên các bạn cần chuẩn bị:**
+## Việc đầu tiên các bạn cần chuẩn bị:
   - **Phần cứng:**
     - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
     - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **Micro USB** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
@@ -89,7 +89,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 {: .box-warning}
 **Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
 
-## **Mục tiêu & tính năng của project này:**
+## Mục tiêu & tính năng của project này:
   - Một cái **đồng hồ thời gian thực** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
   - Thấy được **nhiệt độ**, **độ ẩm** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **https://openweathermap.org/api**)
   - Với khả năng **kết nối mạng không dây nhanh gọn** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
@@ -97,8 +97,8 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
   - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
   - **Đèn ngủ** cũng được nữa, đêm nó củng sang sáng lắm... **đèn ngủ siêu tiết kiệm điện** á nha.
 
-## **Hướng đi & giải pháp nào?:**
-
+## Hướng đi & giải pháp nào?
+### Thời gian
 ----------------------------------------------------
 Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
 
@@ -120,6 +120,7 @@ Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS
 Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **https://www.pool.ntp.org/zone/vn**.
 
 ----------------------------------------------------
+### MCU - Smartconfig - Kết nối mạng
 <h2 class="text-center"> ESP8266 Wemos D1 mini </h2>
 
 Để lấy được giờ từ internet thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
@@ -161,3 +162,30 @@ Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng k�
   - Có thể dùng Smartconfig để cấu hình nhiều thiết bị một lúc 
 
 ![smartconfig](/img/2020-01-17-smart-clock/smart-config.gif "Quy trình hoạt động Smartconfig")
+
+### EEPROM - bộ nhớ backup lưu trữ data
+
+Với việc sử dụng **Smartconfig** thì chúng ta cần một** vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
+
+{% highlight c linenos %}
+#include <ESP8266WiFi.h>
+#include <Wire.h>
+#include <EEPROM.h>
+void setup()
+{
+	/* Initialize eeprom */
+	EEPROM.begin(512);
+	Serial.println(" ");
+	Serial.println("Lay gio bao thuc:");
+	hen_gio = EEPROM.read(index_eeprom_hengio);
+	Serial.print("hen_gio: ");
+	Serial.println(EEPROM.read(index_eeprom_hengio));
+	hen_phut = EEPROM.read(index_eeprom_henphut);
+	Serial.print("hen_phut: ");
+	Serial.println(EEPROM.read(index_eeprom_henphut));
+	value_Location_EEPROM = EEPROM.read(index_eeprom_location_eeprom);
+	Serial.print("value_Location_EEPROM: ");
+	Serial.println(EEPROM.read(index_eeprom_location_eeprom));
+}
+...
+{% endhighlight %}
