@@ -25,7 +25,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 
 ## Việc đầu tiên các bạn cần chuẩn bị:
   - **Phần cứng:**
-    - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](img/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf)).
+    - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
     - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **Micro USB** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
     - Mạch chuyển đổi **I2C** cho màn hình LCD2004.
@@ -99,31 +99,30 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
   - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
   - **Đèn ngủ** cũng được nữa, đêm nó củng sang sáng lắm... **đèn ngủ siêu tiết kiệm điện** á nha.
 
-## Hướng đi & giải pháp nào?
-### Thời gian
 ----------------------------------------------------
+## Hướng đi & giải pháp nào?
+----------------------------------------------------
+### Thời gian
+
 Việc đầu tiên, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
 
-----------------------------------------------------
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 
 Từ đó chúng ta thấy **"xem được giờ"** tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
 
-----------------------------------------------------
 ![ds1307](/img/2020-01-17-smart-clock/RTC_DS1307_PIN_Diagram.png "Sơ đồ DS1307"){: .center-block :}
 
 Tiếp theo là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến sai số thời gian - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
 
 ----------------------------------------------------
-<h2 class="text-center"> Đến với 4.0 và pool.ntp.org </h2>
+<h3 class="text-center"> Đến với 4.0 và pool.ntp.org </h3>
 
 ![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng."){: .center-block :}
 
-Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **https://www.pool.ntp.org/zone/vn**.
+Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
 
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
-<h2 class="text-center"> ESP8266 Wemos D1 mini </h2>
 
 Để lấy được giờ từ internet thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
 Thứ khiến mình băn khoăn ở đây chính là **vấn đề kết nối mạng** cho em nó. Đối với một số bạn thì dòng code này có vẻ rất quen thuộc:
@@ -193,5 +192,24 @@ void setup()
 {% endhighlight %}
 
 >Như các bạn đã thấy trong trích đoạn code trên mình sử dụng EEPROM để lưu một số giá trị cho chức năng **báo thức**, **vị trí địa lí**, **ssid & pass wifi**.
+
+### Thời tiết - cảm biến
+
+![cambien_dht](/img/2020-01-17-smart-clock/dht_cambien.jpg){: .center-block :}
+![cambien_ds18b20](/img/2020-01-17-smart-clock/ds18b20.jpg){: .center-block :}
+
+Để cái đồng hồ mình trông có vẻ "xịn" hơn thì thêm một vài tính năng nhiệt độ, độ ẩm không khí. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
+
+Để tiết kiệm được PIN IN/OUT, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng kết nối internet chúng ta sẽ tìm một nguồn cung cấp thông tin thời tiết tin cậy và lấy thông tin từ đó.
+
+![openweather](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
+
+Đây https://openweathermap.org sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn khác.
+
+>OpenWeatherMap API này cung cấp dịch vụ dữ liệu thời tiết và dự báo miễn phí, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
+Ý tưởng được lấy cảm hứng từ OpenStreetMap và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
+OpenWeatherMap cung cấp nhiều dữ liệu thời tiết như bản đồ thời tiết hiện tại, dự báo tuần, lượng mưa, gió, mây, dữ liệu từ các trạm thời tiết và nhiều thứ khác. Dữ liệu thời tiết được nhận từ các dịch vụ phát sóng khí tượng toàn cầu và hơn 40.000 trạm khí tượng.
+Bạn có thể nhận được bất kỳ dữ liệu thời tiết nào cho ứng dụng của bạn bằng cách sử dụng API JSON / XML
+
 
 <h2 style="text-align: justify;">Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!</h2>
