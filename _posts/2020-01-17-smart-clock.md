@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Smart Clock - Phần 1: Giới thiệu chút chơi
+title: Smart Clock - Phần 1`:` Giới thiệu chút chơi
 meta-title: "Smart Clock"
 subtitle: ...và hướng dẫn chi tiết
 bigimg:
