@@ -8,6 +8,8 @@ bigimg:
 image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
 comments: true
+gh-repo: bangnguyendev/SmartClock
+gh-badge: [star, follow, fork]
 ---
 # Phần 1: Giới thiệu chút chơi
 <!-- Font chữ bự chà bá -->
@@ -189,3 +191,7 @@ void setup()
 }
 ...
 {% endhighlight %}
+
+>Như các bạn đã thấy trong trích đoạn code trên mình sử dụng EEPROM để lưu một số giá trị cho chức năng **báo thức**, vị trí địa lí, ssid & pass wifi.
+
+# Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. ở Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!
