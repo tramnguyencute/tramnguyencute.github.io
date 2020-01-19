@@ -164,6 +164,7 @@ Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng k�
 
 ![smartconfig](/img/2020-01-17-smart-clock/smart-config.gif "Quy trình hoạt động Smartconfig")
 
+----------------------------------------------------
 ### EEPROM - bộ nhớ backup lưu trữ data
 
 Với việc sử dụng **Smartconfig** thì chúng ta cần một **vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
@@ -193,6 +194,7 @@ void setup()
 
 >Như các bạn đã thấy trong trích đoạn code trên mình sử dụng EEPROM để lưu một số giá trị cho chức năng **báo thức**, **vị trí địa lí**, **ssid & pass wifi**.
 
+----------------------------------------------------
 ### Thời tiết - cảm biến
 
 ![cambien_dht](/img/2020-01-17-smart-clock/dht_cambien.jpg){: .center-block :}
