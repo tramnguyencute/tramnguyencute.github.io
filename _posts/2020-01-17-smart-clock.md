@@ -200,13 +200,13 @@ void setup()
 ![cambien_dht](/img/2020-01-17-smart-clock/dht_cambien.jpg){: .center-block :}
 ![cambien_ds18b20](/img/2020-01-17-smart-clock/ds18b20.jpg){: .center-block :}
 
-Để cái đồng hồ mình trông có vẽ "xịn" hơn thì thêm một vài tính năng nhiệt độ, độ ẩm không khí. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
+Để cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài **tính năng nhiệt độ, độ ẩm không khí**. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
 
-Để tiết kiệm được PIN IN/OUT & theo **trend 4.0**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng kết nối internet chúng ta sẽ tìm một nguồn cung cấp thông tin thời tiết tin cậy và lấy thông tin từ đó.
+Để tiết kiệm được PIN IN/OUT & theo **Hot trend 4.0**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng kết nối internet chúng ta sẽ tìm một **nguồn cung cấp thông tin thời tiết tin cậy** và lấy thông tin từ đó.
 
-![openweather](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
+![OpenWeatherMap](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
 
-Đây https://openweathermap.org sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn khác.
+Đây [**OpenWeatherMap**](https://openweathermap.org) sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn khác.
 
 >**OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.<br>
 >Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và Wikipedia nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.<br>
