@@ -16,7 +16,7 @@ comments: true
 <h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
 Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên mình viết về việc chia sẽ làm một cái gì đó...hoặc có thể coi là bài blog đầu tiên :3
 
-Ở `bài viết này` mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó (theo phong cách kể chuyện nha). `Cách mạng công nghiệp 4.0` như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
+Ở `bài viết này` mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
 
 ----------------------------------------------------------------------------
 <!-- Font chữ bự chà bá -->
@@ -29,7 +29,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
     - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **Micro USB** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
     - Mạch chuyển đổi **I2C** cho màn hình LCD2004.
-    - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *thành phố Hồ Chí Minh* nhé).
+    - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *`thành phố Hồ Chí Minh`* nhé).
     - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
     - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
     - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn 5v-2A**, dư dòng tí mình sử dụng trong các mục đích khác).
@@ -85,7 +85,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ----------------------------------------------------
 ### Thời gian
 
-`Việc đầu tiên`, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
+**`Việc đầu tiên`**, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** nè. Xem được giờ mà phải **chính xác** luôn.
 
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 
@@ -93,14 +93,14 @@ Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì 
 
 ![ds1307](/img/2020-01-17-smart-clock/RTC_DS1307_PIN_Diagram.png "Sơ đồ DS1307"){: .center-block :}
 
-`Tiếp theo` là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến `sai số thời gian` - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
+**`Tiếp theo`** là việc lựa chọn **nguồn cung cấp thời gian**? RTC **DS1307**? Nó thì mình củng đã từng sử dụng qua rồi... Việc cấu hình khá vất vả, phụ thuộc vào viên pin Backup, **độ chính xác không cao** (thạch anh và **vị trí đặt thạch anh** trên mạch như thế nào củng ảnh hưởng đến `sai số thời gian` - và việc này làm chúng ta **code bù trừ thời gian** thêm phức tạp), vân vân mấy mây...
 
 ----------------------------------------------------
 <h3 class="text-center"> Đến với 4.0 và pool.ntp.org </h3>
 
 ![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng."){: .center-block :}
 
-Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
+Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
 
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
@@ -138,10 +138,10 @@ void loop() {}
 
 Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng kết nối wifi và thay đổi wifi**. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
->**Smartconfig** là một khái niệm được nhắc đến khi khi muốn cấu hình thông tin cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
+>**`Smartconfig`** là một khái niệm được nhắc đến khi khi muốn cấu hình thông tin cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
   - `Dễ dàng cấu hình` wifi cho ESP8266 thông qua smartphone.
-  - Không cần phải nạp lại code để cấu hình
-  - Có thể dùng `Smartconfig` để cấu hình nhiều thiết bị một lúc 
+  - `Không` cần phải `nạp lại code` để cấu hình
+  - Có thể dùng `Smartconfig` để cấu hình `nhiều thiết bị` một lúc 
 
 ![smartconfig](/img/2020-01-17-smart-clock/smart-config.gif "Quy trình hoạt động Smartconfig")
 
@@ -183,22 +183,22 @@ void setup()
 
 Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài **tính năng nhiệt độ, độ ẩm không khí**. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
 
-Để **tiết kiệm được PIN IN/OUT** & theo **Hot trend 4.0**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng **kết nối internet** chúng ta sẽ tìm một **nguồn cung cấp thông tin thời tiết tin cậy** và lấy thông tin từ đó.
+Để **tiết kiệm được PIN IN/OUT** & theo **`Hot trend 4.0`**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng **kết nối internet** chúng ta sẽ tìm một **nguồn cung cấp thông tin thời tiết tin cậy** và lấy thông tin từ đó.
 
 ![OpenWeatherMap](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
 
 Đây [**OpenWeatherMap**](https://openweathermap.org) sẽ là nơi mình chọn lựa nơi để lấy data thời giữa một đống các sự lựa chọn [khác](https://rapidapi.com/collection/top-weather-apis?utm_source=google&utm_medium=cpc&utm_campaign=1674315309_64978333346&utm_term=weather%20api_b&utm_content=1t1&gclid=Cj0KCQiA9orxBRD0ARIsAK9JDxTlX4QuAjT0zTrChC7GYx5ovIaqSI5wqny0YrF9yX3bXC4vO_F6gqwaAnWFEALw_wcB).
 
 >***OpenWeatherMap API***
-  - **OpenWeatherMap API** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
+  - **`OpenWeatherMap API`** này cung cấp dịch vụ **dữ liệu thời tiết và dự báo miễn phí**, thích hợp cho bất kỳ dịch vụ bản đồ như các ứng dụng web và điện thoại thông minh.
   - Ý tưởng được lấy cảm hứng từ **OpenStreetMap** và `Wikipedia` nhằm cung cấp thông tin miễn phí và sẵn có cho mọi người.
-  - `OpenWeatherMap` cung cấp nhiều dữ liệu thời tiết như:
+  - **`OpenWeatherMap`** cung cấp nhiều dữ liệu thời tiết như:
     - Bản đồ **thời tiết hiện tại**, 
     - **Dự báo tuần**, lượng mưa, gió, mây, 
     - Dữ liệu từ các **trạm thời tiết** và nhiều thứ khác. 
     - Dữ liệu thời tiết được nhận từ các **dịch vụ phát sóng khí tượng toàn cầu** và hơn **40.000 trạm khí tượng**.
   - Bạn có thể **nhận được bất kỳ dữ liệu** thời tiết nào cho ứng dụng của bạn bằng cách sử dụng **API JSON** / XML.
 
-Với những thông số trên về **OpenWeatherMap** thì nó là sự lựa chọn đáng tin cậy cho mình.
+Với những thông số trên về **`OpenWeatherMap`** thì nó là sự lựa chọn `đáng tin cậy` cho mình.
 
 <h2 style="text-align: justify;">Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. <br>Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!</h2>
