@@ -26,9 +26,9 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 ## Việc đầu tiên các bạn cần chuẩn bị:
   - **Phần cứng:**
     - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
-    - Một cộng cáp **Micro USB connection** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **Micro USB** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
+    - Một cộng cáp **`Micro USB connection`** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **`Micro USB`** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
-    - Mạch chuyển đổi **I2C** cho màn hình LCD2004.
+    - Mạch chuyển đổi **`I2C`** cho màn hình LCD2004.
     - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *`thành phố Hồ Chí Minh`* nhé).
     - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
     - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
@@ -45,7 +45,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
     - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
 
   - **Vài thứ linh tinh:**
-    - Đọc hiểu được **HTTP Methods GET vs POST**.
+    - Đọc hiểu được **`HTTP Methods GET vs POST`**.
     - Cáu trúc dữ liệu **[JavaScript Object Notation](https://vi.wikipedia.org/wiki/JSON)** (thường được viết tắt là **JSON**).
     - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
 
@@ -73,12 +73,12 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 **Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
 
 ## Mục tiêu & tính năng của project này:
-  - Một cái **đồng hồ thời gian thực** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
-  - Thấy được **nhiệt độ**, **độ ẩm** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **https://openweathermap.org/api**)
-  - Với khả năng **kết nối mạng không dây nhanh gọn** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
-  - Củng có **báo thức** luôn (set báo thức từ phím cứng trên đồng hồ hoặc smartphone luôn).
-  - **Cá nhân hóa** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
-  - **Đèn ngủ** cũng được nữa, đêm nó củng sang sáng lắm... **đèn ngủ siêu tiết kiệm điện** á nha.
+  - Một cái **`đồng hồ thời gian thực`** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
+  - Thấy được **`nhiệt độ`**, **`độ ẩm`** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **https://openweathermap.org/api**)
+  - Với khả năng **`kết nối mạng không dây nhanh gọn`** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
+  - Củng có **`báo thức`** luôn (set báo thức từ phím cứng trên đồng hồ hoặc smartphone luôn).
+  - **`Cá nhân hóa`** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
+  - **`Đèn ngủ`** cũng được nữa, đêm nó củng sang `sáng lắm`... **đèn ngủ siêu `tiết kiệm` điện** á nha.
 
 ----------------------------------------------------
 ## Hướng đi & giải pháp nào?
@@ -89,7 +89,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
 
 ![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
 
-Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **LCD 20x04** vì nó khá dễ sử dụng với bộ thư viện tràn lan trên Github và các diễn đàn IoT.
+Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **`LCD 20x04`** vì nó khá dễ sử dụng với bộ `thư viện` tràn lan trên `Github` và các diễn đàn IoT.
 
 ![ds1307](/img/2020-01-17-smart-clock/RTC_DS1307_PIN_Diagram.png "Sơ đồ DS1307"){: .center-block :}
 
@@ -100,12 +100,12 @@ Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì 
 
 ![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng."){: .center-block :}
 
-Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **lấy giờ giống như các thiết bị di động** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
+Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **cập nhật giờ giống như các thiết bị di động, laptop,...** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
 
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
 
-**`Để lấy được giờ từ internet`** thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
+**`Để lấy được giờ từ internet`** thì **MCU** của chúng ta phải **có khả năng `kết nối internet`** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
 Thứ khiến mình `băn khoăn` ở đây chính là **vấn đề kết nối mạng** cho em nó. Đối với một số bạn thì dòng `code` này rất quen thuộc:
 
 {% highlight c linenos %}
@@ -134,11 +134,11 @@ void setup(void)
 void loop() {}
 {% endhighlight %}
 
-**Nếu sử dụng kiểu này**, sản phẩm của chúng ta khi đóng hộp sẽ **sử dụng cố định một tên SSID & PASS** duy nhất rất **bất tiện trọng quá trình sử dụng** khi chuyển nhà, đổi tên mạng Wifi, vv... Mỗi lần như vậy **chúng ta phải nạp lại code để cập nhật ssid và password mới** cho ESP8266 (hoặc là phải đổi tên của modun Wifi thành ssid và pass như chúng ta đã cấu hình trong code).
+**`Nếu sử dụng kiểu này`**, sản phẩm của chúng ta khi đóng hộp sẽ **sử dụng cố định một tên SSID & PASS** duy nhất rất **`bất tiện` trọng quá trình sử dụng** khi chuyển nhà, đổi tên mạng Wifi, vv... Mỗi lần như vậy **chúng ta phải `nạp lại code` để cập nhật ssid và password mới** cho ESP8266 (hoặc là phải đổi tên của modun Wifi thành ssid và pass như chúng ta đã cấu hình trong code).
 
 Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng kết nối wifi và thay đổi wifi**. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
->**`Smartconfig`** là một khái niệm được nhắc đến khi khi muốn cấu hình thông tin cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
+>**`Smartconfig`** là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
   - `Dễ dàng cấu hình` wifi cho ESP8266 thông qua smartphone.
   - `Không` cần phải `nạp lại code` để cấu hình
   - Có thể dùng `Smartconfig` để cấu hình `nhiều thiết bị` một lúc 
@@ -148,7 +148,7 @@ Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng k�
 ----------------------------------------------------
 ### EEPROM - bộ nhớ backup lưu trữ data
 
-Với việc sử dụng **Smartconfig** thì chúng ta cần một **vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
+Với việc sử dụng **`Smartconfig`** thì chúng ta cần một **vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
 
 {% highlight c linenos %}
 #include <ESP8266WiFi.h>
@@ -173,7 +173,7 @@ void setup()
 ...
 {% endhighlight %}
 
->Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng EEPROM để lưu** một số `giá trị` cho chức năng **báo thức**, **vị trí địa lí**, **ssid & pass wifi**.
+>Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng `EEPROM` để lưu** một số `giá trị` cho chức năng **`báo thức`**, **`vị trí địa lí`**, **`ssid & pass wifi`**.
 
 ----------------------------------------------------
 ### Thời tiết - cảm biến
@@ -183,7 +183,7 @@ void setup()
 
 Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài **tính năng nhiệt độ, độ ẩm không khí**. Như các hình ảnh trên thì những cảm biến **DH111**, **DHT22**, **DS18b20** được rất nhiều các bạn sài.
 
-Để **tiết kiệm được PIN IN/OUT** & theo **`Hot trend 4.0`**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng **kết nối internet** chúng ta sẽ tìm một **nguồn cung cấp thông tin thời tiết tin cậy** và lấy thông tin từ đó.
+Để **tiết kiệm được `PIN IN/OUT`** & theo **`Hot trend 4.0`**, ở dự án này mình không sử dụng phần cứng như thế. Với khả năng **kết nối internet** chúng ta sẽ tìm một **nguồn cung cấp thông tin thời tiết tin cậy** và lấy thông tin từ đó.
 
 ![OpenWeatherMap](/img/2020-01-17-smart-clock/icon-openweathermap-1.png){: .center-block :}
 
