@@ -105,7 +105,7 @@ Mình đã nhận ra một điều là với thời đại 4.0 như bây giờ c
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
 
-`Để lấy được giờ từ internet` thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
+**`Để lấy được giờ từ internet`** thì **MCU** của chúng ta phải **có khả năng kết nối internet** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
 Thứ khiến mình `băn khoăn` ở đây chính là **vấn đề kết nối mạng** cho em nó. Đối với một số bạn thì dòng `code` này rất quen thuộc:
 
 {% highlight c linenos %}
