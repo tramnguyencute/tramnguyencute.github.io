@@ -14,9 +14,10 @@ comments: true
 # Phần 1: Giới thiệu chút chơi
 <!-- Font chữ bự chà bá -->
 <h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
-Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên mình viết về việc chia sẽ làm một cái gì đó...hoặc có thể coi là bài blog đầu tiên :3
 
-Ở `bài viết này` mình sẽ **hướng dẫn chi tiết** và lí giải tuần tự mọi thứ kể từ khi mình bắt đầu làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái đồng hồ có tính năng tương tự hoặc hay ho hơn thé chỉ với giá thành không hề cao là đã sở hữu nó rồi. Thế nên **bài viết** này chi mang **tính chất trao đổi kiến thức**, **kinh nghiệm** khi đam mê làm đồ chơi handmade thôu nhé!
+Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên` mình viết về việc `chia sẽ` làm một cái gì đó...
+
+Ở `bài viết này` mình sẽ **`mô tả` chi tiết** và tuần tự mọi thứ kể từ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành không hề cao là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **tính chất `trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
 
 ----------------------------------------------------------------------------
 <!-- Font chữ bự chà bá -->
@@ -32,7 +33,7 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
     - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *`thành phố Hồ Chí Minh`* nhé).
     - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
     - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
-    - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn 5v-2A**, dư dòng tí mình sử dụng trong các mục đích khác).
+    - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn `5v-2A`**, dư dòng tí mình sử dụng trong các mục đích khác).
   - **Phần mềm:**
     - **[VS code](https://code.visualstudio.com/download)** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
     - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
@@ -40,8 +41,8 @@ Hưm... Xin chào mọi người. Có lẽ đây là bài viết đầu tiên m�
     - **[Android Studio](https://developer.android.com/studio)**.
 
   - **Ngôn ngữ lập trình:**
-    - Chắc chắc là **C/C++** là không thể thiếu sót rầu nhé.
-    - Một chút tẹo tẹo về **Java** để chơi app Android. (Đọc hiểu củng đơn giản lắm - chỉ easy so với ứng dụng mình làm thôu nhé).
+    - Chắc chắc là **`C/C++`** là không thể thiếu sót rầu nhé.
+    - Một chút tẹo tẹo về **`Java`** để chơi app Android. (Đọc hiểu củng đơn giản lắm - chỉ easy so với ứng dụng mình làm thôu nhé).
     - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
 
   - **Vài thứ linh tinh:**
