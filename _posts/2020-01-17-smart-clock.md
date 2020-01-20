@@ -75,7 +75,7 @@ Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên
 
 ## Mục tiêu & tính năng của project này:
   - Một cái **`đồng hồ thời gian thực`** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
-  - Thấy được **`nhiệt độ`**, **`độ ẩm`** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **https://openweathermap.org/api**)
+  - Thấy được **`nhiệt độ`**, **`độ ẩm`** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **`OpenWeathermap`**)
   - Với khả năng **`kết nối mạng không dây nhanh gọn`** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
   - Củng có **`báo thức`** luôn (set báo thức từ phím cứng trên đồng hồ hoặc smartphone luôn).
   - **`Cá nhân hóa`** được nè (thẩm mĩ tí khúc khắc lazer mica các bạn sẽ có sản phẩm toẹt vời).
