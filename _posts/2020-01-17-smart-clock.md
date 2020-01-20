@@ -196,8 +196,8 @@ Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài
     - Bản đồ **thời tiết hiện tại**, 
     - **Dự báo tuần**, lượng mưa, gió, mây, 
     - Dữ liệu từ các **trạm thời tiết** và nhiều thứ khác. 
-    - Dữ liệu thời tiết được nhận từ các **dịch vụ phát sóng khí tượng toàn cầu** và hơn **40.000 trạm khí tượng**.
-  - Bạn có thể **nhận được bất kỳ dữ liệu** thời tiết nào cho ứng dụng của bạn bằng cách sử dụng **API JSON** / XML.
+    - Dữ liệu thời tiết được nhận từ các **dịch vụ phát sóng khí tượng toàn cầu** và hơn **`40.000 trạm khí tượng`**.
+  - Bạn có thể **nhận được bất kỳ dữ liệu** `thời tiết` nào cho ứng dụng của bạn bằng cách sử dụng **API JSON** / XML.
 
 Với những thông số trên về **`OpenWeatherMap`** thì nó là sự lựa chọn `đáng tin cậy` cho mình.
 
