@@ -17,7 +17,7 @@ comments: true
 
 Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên` mình viết về việc `chia sẽ` làm một cái gì đó...
 
-Ở `bài viết này` mình sẽ **`mô tả` chi tiết** và tuần tự mọi thứ kể từ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành không hề cao là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **tính chất `trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
+Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ kể từ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành không hề cao là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
 
 ----------------------------------------------------------------------------
 <!-- Font chữ bự chà bá -->
