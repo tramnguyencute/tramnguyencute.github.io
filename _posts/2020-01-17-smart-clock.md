@@ -51,7 +51,7 @@ Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên
     - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
 
 ## Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
-![esp8266](/img/2020-01-17-smart-clock/wemos-d1-mini-500x500.jpg){: .center-block :}
+![esp8266](/img/2020-01-17-smart-clock/Wemos-D1-Mini.png){: .center-block :}
 ### Technical specs
 ----------------------------------------------------------------------------
 
@@ -202,4 +202,10 @@ Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài
 
 Với những thông số trên về **`OpenWeatherMap`** thì nó là sự lựa chọn `đáng tin cậy` cho mình.
 
-<h2 style="text-align: justify;">Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi. <br>Phần 2 mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!</h2>
+=======================================================================
+
+Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi.
+
+{: .box-note}
+**Note:** `Phần 2` mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!
+
