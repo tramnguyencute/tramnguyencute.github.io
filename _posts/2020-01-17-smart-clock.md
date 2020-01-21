@@ -202,10 +202,10 @@ Cái **đồng hồ mình trông có vẻ "*xịn*"** hơn thì thêm một vài
 
 Với những thông số trên về **`OpenWeatherMap`** thì nó là sự lựa chọn `đáng tin cậy` cho mình.
 
-=======================================================================
+------------------------------------------------------------
 
-Cơ bản là đã giới thiệu sơ bộ những linh kiện và kiến thức cần thiết sử dụng trong project này rồi.
+Cơ bản là đã `giới thiệu` sơ bộ những `linh kiện` và `kiến thức` cần thiết sử dụng `trong project` này rồi.
 
 {: .box-note}
-**Note:** `Phần 2` mình sẽ đào vào logic code của mình. Hẹn gặp lại ở phần tiếp theo!
+**Note:** **`Phần 2`** mình sẽ đào vào `logic code` của mình. Hẹn gặp lại ở phần tiếp theo **`(Feb - 2020)`**!
 
