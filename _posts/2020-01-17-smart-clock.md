@@ -11,19 +11,15 @@ gh-repo: bangnguyendev/SmartClock
 gh-badge: [star, watch, fork, follow]
 comments: true
 ---
+----------------------------------------------------------------------------
 # Phần 1: Giới thiệu chút chơi
-<!-- Font chữ bự chà bá -->
-<h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
-
 Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên` mình viết về việc `chia sẽ` làm một cái gì đó...
+
+![industrial4.0](/img/2020-01-17-smart-clock/iot40.jpeg "What is the Industrial IoT?"){: .center-block :}
 
 Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành không hề cao là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
 
 ----------------------------------------------------------------------------
-<!-- Font chữ bự chà bá -->
-<h1 class="text-center">Vào công việc nào...!</h1>
-<div class="spacer"></div>
-
 ## Việc đầu tiên các bạn cần chuẩn bị:
   - **Phần cứng:**
     - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
@@ -35,7 +31,7 @@ Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên
     - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
     - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn `5v-2A`**, dư dòng tí mình sử dụng trong các mục đích khác).
   - **Phần mềm:**
-    - **[VS code](https://code.visualstudio.com/download)** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
+    - **[VS code](https://code.visualstudio.com/download "Visual Studio Code")** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
     - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
     - Driver giao tiếp giả lập port **[CH340](https://sparks.gogo.co.nz/ch340.html)**.
     - **[Android Studio](https://developer.android.com/studio)**.
@@ -56,7 +52,6 @@ Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên
 ----------------------------------------------------------------------------
 
 | Microcontroller | ESP-8266EX |
-| --- | --- |
 | Operating Voltage | 3.3V |
 | Digital I/O Pins | 11 |
 | Analog Input Pins | 1(Max input: 3.2V) |
