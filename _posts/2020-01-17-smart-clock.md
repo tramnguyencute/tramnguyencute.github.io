@@ -2,7 +2,7 @@
 layout: post
 title: "Smart Clock - Phần 1: Giới thiệu chút chơi"
 meta-title: "Smart Clock"
-subtitle: ...và hướng dẫn chi tiết
+subtitle: "...Phần 1: Giới thiệu chút chơi"
 bigimg:
   - "/img/2020-01-17-smart-clock/anh-bia-baiviet.jpg" : "Đồng hồ"
 image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
@@ -12,14 +12,14 @@ gh-badge: [star, watch, fork, follow]
 comments: true
 ---
 ----------------------------------------------------------------------------
-# Phần 1: Giới thiệu chút chơi
-
 `Xin chào` mọi người. Đây là bài viết `đầu tiên chia sẽ` về một trong những `project` mà mình đã và đang phát triển...
 
 Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ thì việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành vừa phải là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
+
 ![industrial4.0](/img/2020-01-17-smart-clock/iot40.jpeg "What is the Industrial IoT?"){: .center-block :}
+
 ----------------------------------------------------------------------------
-## Việc đầu tiên các bạn cần chuẩn bị:
+## .1 Việc đầu tiên các bạn cần chuẩn bị:
   - **Phần cứng:**
     - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
     - Một cộng cáp **`Micro USB connection`** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **`Micro USB`** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
