@@ -96,7 +96,7 @@ Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì 
 
 ![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng."){: .center-block :}
 
-Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **cập nhật giờ giống như các thiết bị di động, laptop,...** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
+Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình lại không sử dụng nó để **cập nhật giờ giống như các thiết bị di động, laptop** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
 
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
@@ -134,7 +134,8 @@ void loop() {}
 
 Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng kết nối wifi và thay đổi wifi**. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
->**`Smartconfig`** là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
+{: .box-note}
+**`Smartconfig`** là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
   - `Dễ dàng cấu hình` wifi cho ESP8266 thông qua smartphone.
   - `Không` cần phải `nạp lại code` để cấu hình
   - Có thể dùng `Smartconfig` để cấu hình `nhiều thiết bị` một lúc 
@@ -169,7 +170,8 @@ void setup()
 ...
 {% endhighlight %}
 
->Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng `EEPROM` để lưu** một số `giá trị` cho chức năng **`báo thức`**, **`vị trí địa lí`**, **`ssid & pass wifi`**.
+{: .box-note}
+Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng `EEPROM` để lưu** một số `giá trị` cho chức năng **`báo thức`**, **`vị trí địa lí`**, **`ssid & pass wifi`**.
 
 ----------------------------------------------------
 ### Thời tiết - cảm biến
