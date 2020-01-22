@@ -19,35 +19,35 @@ comments: true
 ![industrial4.0](/img/2020-01-17-smart-clock/iot40.jpeg "What is the Industrial IoT?"){: .center-block :}
 
 ----------------------------------------------------------------------------
-## .1 Việc đầu tiên các bạn cần chuẩn bị:
-  - **Phần cứng:**
-    - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
-    - Một cộng cáp **`Micro USB connection`** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **`Micro USB`** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
-    - **Lcd 20x04**.
-    - Mạch chuyển đổi **`I2C`** cho màn hình LCD2004.
-    - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *`thành phố Hồ Chí Minh`* nhé).
-    - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
-    - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
-    - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn `5v-2A`**, dư dòng tí mình sử dụng trong các mục đích khác).
-  - **Phần mềm:**
-    - **[VS code](https://code.visualstudio.com/download "Visual Studio Code")** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
-    - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
-    - Driver giao tiếp giả lập port **[CH340](https://sparks.gogo.co.nz/ch340.html)**.
-    - **[Android Studio](https://developer.android.com/studio)**.
+## 1. Việc đầu tiên các bạn cần chuẩn bị:
+### 1.1 Phần cứng:
+  - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
+  - Một cộng cáp **`Micro USB connection`** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **`Micro USB`** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
+  - **Lcd 20x04**.
+  - Mạch chuyển đổi **`I2C`** cho màn hình LCD2004.
+  - Mica dày 3mm (có hay không củng không quan trọng, các bạn cứ chạy ra tiệm nào nhận cắt mica rồi đưa bản vẽ ra, họ cân tất cả. Có một số cửa hàng cắt mica khá ngon mình sẽ đính kèm địa chỉ cuối bài viết hoặc tìm gg "**Mica Sinh Viên**" - nếu bạn ở *`thành phố Hồ Chí Minh`* nhé).
+  - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
+  - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
+  - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn `5v-2A`**, dư dòng tí mình sử dụng trong các mục đích khác).
+### 1.2 Phần mềm:
+  - **[VS code](https://code.visualstudio.com/download "Visual Studio Code")** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
+  - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
+  - Driver giao tiếp giả lập port **[CH340](https://sparks.gogo.co.nz/ch340.html)**.
+  - **[Android Studio](https://developer.android.com/studio)**.
 
-  - **Ngôn ngữ lập trình:**
-    - Chắc chắc là **`C/C++`** là không thể thiếu sót rầu nhé.
-    - Một chút tẹo tẹo về **`Java`** để chơi app Android. (Đọc hiểu củng đơn giản lắm - chỉ easy so với ứng dụng mình làm thôu nhé).
-    - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
+### 1.3 Ngôn ngữ lập trình:
+  - Chắc chắc là **`C/C++`** là không thể thiếu sót rầu nhé.
+  - Một chút tẹo tẹo về **`Java`** để chơi app Android. (Đọc hiểu củng đơn giản lắm - chỉ easy so với ứng dụng mình làm thôu nhé).
+  - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
 
-  - **Vài thứ linh tinh:**
-    - Đọc hiểu được **`HTTP Methods GET vs POST`**.
-    - Cáu trúc dữ liệu **[JavaScript Object Notation](https://vi.wikipedia.org/wiki/JSON)** (thường được viết tắt là **JSON**).
-    - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
+### 1.4 Vài thứ linh tinh:
+  - Đọc hiểu được **`HTTP Methods GET vs POST`**.
+  - Cáu trúc dữ liệu **[JavaScript Object Notation](https://vi.wikipedia.org/wiki/JSON)** (thường được viết tắt là **JSON**).
+  - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
 
-## Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
+## 2. Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
 ![esp8266](/img/2020-01-17-smart-clock/Wemos-D1-Mini.png){: .center-block :}
-### Technical specs
+### 2.1 Technical specs
 ----------------------------------------------------------------------------
 
 | Microcontroller | ESP-8266EX |
@@ -60,14 +60,14 @@ comments: true
 | Width | 25.6mm |
 | Weight | 3g |
 
-### Pin
+### 2.2 Pin
 
 ![pinout_esp8266](/img/2020-01-17-smart-clock/wemosD1Mini.jpg){: .center-block :}
 
 {: .box-warning}
 **Warning:** Tất cả các **pin IO** của bé nó đều sài **3.3v** nha!
 
-## Mục tiêu & tính năng của project này:
+## 3. Mục tiêu & tính năng của project này:
   - Một cái **`đồng hồ thời gian thực`** trang trí phòng ngon lành. Độ chính xác của giờ lấy từ **pool.ntp.org** đem lại độ chính xác tin cậy cho người dùng.
   - Thấy được **`nhiệt độ`**, **`độ ẩm`** không khí của địa phương (set mode tới 5 vị trí địa lí muốn lấy dữ liệu thời tiết với độ tin cậy từ **`OpenWeathermap`**)
   - Với khả năng **`kết nối mạng không dây nhanh gọn`** được hổ trợ bởi nhà sản xuất ESP32 & ESP8266.
@@ -76,9 +76,9 @@ comments: true
   - **`Đèn ngủ`** cũng được nữa, đêm nó củng sang `sáng lắm`... **đèn ngủ siêu `tiết kiệm` điện** á nha.
 
 ----------------------------------------------------
-## Hướng đi & giải pháp nào?
+## 4. Hướng đi & giải pháp nào?
 ----------------------------------------------------
-### Thời gian
+### 4.1 Thời gian
 
 **`Việc đầu tiên`**, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** mà phải **chính xác** luôn - `thời gian thực`.
 
@@ -98,7 +98,7 @@ Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì 
 Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình lại không sử dụng nó để **cập nhật giờ giống như các thiết bị di động, laptop** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
 
 ----------------------------------------------------
-### MCU - Smartconfig - Kết nối mạng
+### 4.2 MCU - Smartconfig - Kết nối mạng
 
 **`Để lấy được giờ từ internet`** thì **MCU** của chúng ta phải **có khả năng `kết nối internet`** (hoặc là kết nối không dây hoặc là có dây). Mình sử dụng **ESP8266 Wemos D1 mini** như đã giới thiệu ở trên.
 Thứ khiến mình `băn khoăn` ở đây chính là **vấn đề kết nối mạng** cho em nó. Đối với một số bạn thì dòng `code` này rất quen thuộc:
@@ -142,7 +142,7 @@ Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng k�
 ![smartconfig](/img/2020-01-17-smart-clock/smart-config.gif "Quy trình hoạt động Smartconfig")
 
 ----------------------------------------------------
-### EEPROM - bộ nhớ backup lưu trữ data
+### 4.3 EEPROM - bộ nhớ backup lưu trữ data
 
 Với việc sử dụng **`Smartconfig`** thì chúng ta cần một **vùng nhớ lưu ssid và pass** phòng khi **reset** đồng hồ hoặc **mất điện** vì lí do nào đó.
 
@@ -173,7 +173,7 @@ void setup()
 Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng `EEPROM` để lưu** một số `giá trị` cho chức năng **`báo thức`**, **`vị trí địa lí`**, **`ssid & pass wifi`**.
 
 ----------------------------------------------------
-### Thời tiết - cảm biến
+### 4.4 Thời tiết - cảm biến
 
 ![cambien_dht](/img/2020-01-17-smart-clock/dht_cambien.jpg){: .center-block :}
 ![cambien_ds18b20](/img/2020-01-17-smart-clock/ds18b20.jpg){: .center-block :}
