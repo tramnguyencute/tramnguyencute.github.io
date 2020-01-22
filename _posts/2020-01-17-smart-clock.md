@@ -83,7 +83,7 @@ comments: true
 
 **`Việc đầu tiên`**, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** mà phải **chính xác** luôn - `thời gian thực`.
 
-![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
+![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block .img-rounded :}
 
 Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **`LCD 20x04`** vì nó khá dễ sử dụng với bộ `thư viện` phong phú trên `Github` và các diễn đàn IoT.
 
