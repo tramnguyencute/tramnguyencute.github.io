@@ -16,7 +16,7 @@ comments: true
 
 `Xin chào` mọi người. Đây là bài viết `đầu tiên chia sẽ` về một trong những `project` mà mình đã và đang phát triển...
 
-Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành không hề cao là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
+Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ thì việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành vừa phải là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
 ![industrial4.0](/img/2020-01-17-smart-clock/iot40.jpeg "What is the Industrial IoT?"){: .center-block :}
 ----------------------------------------------------------------------------
 ## Việc đầu tiên các bạn cần chuẩn bị:
