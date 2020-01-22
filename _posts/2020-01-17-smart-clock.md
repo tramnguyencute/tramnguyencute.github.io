@@ -41,7 +41,7 @@ comments: true
     - Một chút tẹo tẹo về **`Java`** để chơi app Android. (Đọc hiểu củng đơn giản lắm - chỉ easy so với ứng dụng mình làm thôu nhé).
     - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
 
-  - Vài thứ linh tinh:
+  - **`Vài thứ linh tinh:`**
     - Đọc hiểu được **`HTTP Methods GET vs POST`**.
     - Cáu trúc dữ liệu **[JavaScript Object Notation](https://vi.wikipedia.org/wiki/JSON)** (thường được viết tắt là **JSON**).
     - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
