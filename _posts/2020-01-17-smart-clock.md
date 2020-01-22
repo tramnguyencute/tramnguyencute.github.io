@@ -29,6 +29,7 @@ comments: true
   - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
   - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
   - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn `5v-2A`**, dư dòng tí mình sử dụng trong các mục đích khác).
+
 ### 1.2 Phần mềm:
   - **[VS code](https://code.visualstudio.com/download "Visual Studio Code")** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
   - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
@@ -46,9 +47,9 @@ comments: true
   - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
 
 ## 2. Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
-![esp8266](/img/2020-01-17-smart-clock/Wemos-D1-Mini.png){: .center-block :}
 ### 2.1 Technical specs
 ----------------------------------------------------------------------------
+![esp8266](/img/2020-01-17-smart-clock/Wemos-D1-Mini.png){: .center-block :}
 
 | Microcontroller | ESP-8266EX |
 | Operating Voltage | 3.3V |
