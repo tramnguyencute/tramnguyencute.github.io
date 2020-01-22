@@ -12,7 +12,7 @@ gh-badge: [star, watch, fork, follow]
 comments: true
 ---
 ----------------------------------------------------------------------------
-# Phần 1: Giới thiệu chút chơi
+# Phần 1: Giới thiệu chút chơi <br>
 Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên` mình viết về việc `chia sẽ` làm một cái gì đó...
 
 ![industrial4.0](/img/2020-01-17-smart-clock/iot40.jpeg "What is the Industrial IoT?"){: .center-block :}
