@@ -26,7 +26,8 @@ Không riêng gì dự án này, ở một số dự án IoT nếu muốn thiế
     - `Android`:
     - `IOS`:
     - Cài trước đi nha, hướng dẫn sử dụng sau.
-  - Vào code, chúng ta làm theo quy trình sau: (`Lưu đồ vẽ sau.`)
+  - Vào code, chúng ta làm theo quy trình sau: 
+  ![Lưu Đồ Giải Thuật](/img/2020-01-23-smart-clock/SSID_PASS_EEPROM_Diagram.png)
     1. Thiết bị sẽ khởi động.
     2. Quá trình đọc ssid và pass wifi sẽ được lấy trong bộ nhớ EEPROM (với Wemos D1 mini mới mua về thì bước đọc bộ nhớ này sẽ cho ra kết quả rỗng - kết quả rỗng thì bước đăng nhập wifi sẽ không được - Wemos D1 mini sẽ vào `bước 4`).
     3. Sử dụng ssid và pass vừa đọc ra để kết nối wifi.
