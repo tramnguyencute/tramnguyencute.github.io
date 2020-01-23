@@ -14,7 +14,7 @@ comments: true
 ----------------------------------------------------------------------------
 Ở bài viết này, chúng ta sẽ làm việc với code sau khi các bạn đã cài đặt các phần mềm và chuẩn bị những phần cứng ở [**`Phần 1`**](https://bangnguyendev.github.io/2020-01-17-smart-clock/ "Phần 1: Giới thiệu dự án")
 
-Repo các bạn có thể nhấn vào các Button Github ở đầu bài để Clone Repo về máy tính cá nhân. Nếu máy các bạn không hiện ra thì có thể [nhấn ở đây để](https://github.com/bangnguyendev/SmartClock/ "Smart Clock") truy cập Repo.
+Repo các bạn có thể nhấn vào các <kbd>Button Github</kbd> ở đầu bài để Clone Repo về máy tính cá nhân. Nếu máy các bạn không hiện ra thì có thể [nhấn ở đây để](https://github.com/bangnguyendev/SmartClock/ "Smart Clock") truy cập Repo.
 
 {: .box-note}
 **Khuyên dùng**: Sử dụng `Git` (GitHub Desktop, GitLab), `TortoiseGit` để lưu trữ & Clone Repo về.
@@ -35,6 +35,30 @@ Không riêng gì dự án này, ở một số dự án IoT nếu muốn thiế
     - **Bước 6.** Trong thời gian 100 giây chúng ta `mở ứng dụng trên điện thoại`, lúc này màn hình giao diện sẽ yêu cầu chúng ta nhập ssid và pass cho Wemos D1 mini lấy data kết nối, nếu `kết nối thành công` thì ssid và pass sẽ được `lưu vào EEPROM`.
     - **Bước 7.** Nếu `không thành công` sau 100 giây thiết bị sẽ `khởi động lại` và bắt đầu quy trình đầu tiên.
     ![Lưu Đồ Giải Thuật](/img/2020-01-23-smart-clock/SSID_PASS_EEPROM_Diagram.png "Lưu Đồ Giải Thuật"){: .center-block :}
+  - Code thực tế:
+
+{% highlight c linenos %}
+#include <ESP8266WiFi.h>
+#include <Wire.h>
+#include <EEPROM.h>
+void setup()
+{
+	/* Initialize eeprom */
+	EEPROM.begin(512);
+	Serial.println(" ");
+	Serial.println("Lay gio bao thuc:");
+	hen_gio = EEPROM.read(index_eeprom_hengio);
+	Serial.print("hen_gio: ");
+	Serial.println(EEPROM.read(index_eeprom_hengio));
+	hen_phut = EEPROM.read(index_eeprom_henphut);
+	Serial.print("hen_phut: ");
+	Serial.println(EEPROM.read(index_eeprom_henphut));
+	value_Location_EEPROM = EEPROM.read(index_eeprom_location_eeprom);
+	Serial.print("value_Location_EEPROM: ");
+	Serial.println(EEPROM.read(index_eeprom_location_eeprom));
+}
+...
+{% endhighlight %}
 
 ### 
 
