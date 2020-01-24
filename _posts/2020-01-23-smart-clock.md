@@ -39,7 +39,7 @@ Không riêng gì dự án này, ở một số dự án IoT nếu muốn thiế
 
     ![Lưu Đồ Giải Thuật](/img/2020-01-23-smart-clock/SSID_PASS_EEPROM_Diagram.png "Lưu Đồ Giải Thuật - Draw.io"){: .center-block :}
 
-  - Code giúp ESP8266 - Wemos D1 mini có khả năng lưu trữ và thay đổi wifi:
+  - [`Code giúp ESP8266`](https://github.com/bangnguyendev/bangnguyendev.github.io/blob/d4888c8d471a839490e3eb189fa3b70d2a94c660/documents/2020-01-23-smart-clock/Code-Smartconfig/Smartconfig.ino "Source Code") - Wemos D1 mini có khả năng lưu trữ và thay đổi wifi:
 
 {% highlight c linenos %}
 #include <ESP8266WiFi.h>
