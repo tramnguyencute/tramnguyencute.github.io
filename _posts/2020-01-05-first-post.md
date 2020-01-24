@@ -5,7 +5,7 @@ tags: [test, source code, thanks, blog]
 meta-title: "First post!"
 subtitle: ... I am checking the source code.
 use-site-title: true
-image: img/My_Picture/avatar_github.jpg
+image: /img/My_Picture/avatar_github.jpg
 bigimg:
   - "/img/My_Picture/phieu_dalat_ngamsong.jpg"
 ---
