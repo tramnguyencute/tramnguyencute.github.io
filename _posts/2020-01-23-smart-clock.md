@@ -23,10 +23,10 @@ Repo các bạn có thể nhấn vào các <kbd>Button Github</kbd> ở đầu b
 ### Đảm bảo kết nối wifi dễ dàng cho thiết bị (ở đây là đồng hồ)
 Không riêng gì dự án này, ở một số dự án IoT nếu muốn thiết bị của chúng ta linh động hơn trong kết nối Wifi thì giải pháp được đề cập đến là `SmartConfig` (xem lại phần 1 chúng ta đã giới thiệu).
   - Đầu tiên chúng ta cần 1 cái `Smartphone` (máy tính bảng gì củng được - thu phát được sóng wifi 2.4GHz là được) để cài ứng dụng `Smartconfig`.
-    - Link tải [`app chính hãng`](https://www.espressif.com/en/products/software/esp-touch/resources) từ ESP bao gồm IOS & Android Code.
-    - ![Hình ảnh mô tả](/img/2020-01-23-smart-clock/APK_APP_SMARTCONFIG.png)
-    - `Android`: [ESP8266 SmartConfig](https://play.google.com/store/apps/details?id=com.cmmakerclub.iot.esptouch&hl=vi), [IoT Smartconfig](https://play.google.com/store/apps/details?id=com.iotmaker&hl=vi).
-    - `IOS`: [Espressif Esptouch](https://apps.apple.com/us/app/espressif-esptouch/id1071176700)
+    - Link tải [`app chính hãng`](https://www.espressif.com/en/products/software/esp-touch/resources) từ ESP bao gồm `IOS` & `Android Code`. Tải app ở link này về để các bạn có thể tùy **biến lại giao diện** app nếu dùng Android Studio.
+    ![Hình ảnh mô tả](/img/2020-01-23-smart-clock/APK_APP_SMARTCONFIG.png "Vào mục APKs để tải ứng dụng"){: .center-block :}
+    - `Android` tải về dùng luôn: [ESP8266 SmartConfig](https://play.google.com/store/apps/details?id=com.cmmakerclub.iot.esptouch&hl=vi), [IoT Smartconfig](https://play.google.com/store/apps/details?id=com.iotmaker&hl=vi).
+    - `IOS` tải về dùng luôn: [Espressif Esptouch](https://apps.apple.com/us/app/espressif-esptouch/id1071176700)
     - Cài trước đi nha, hướng dẫn sử dụng sau.
   - Vào code, chúng ta làm theo `quy trình` sau: 
     - **Bước 1.** Thiết bị sẽ `khởi động`.
