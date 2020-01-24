@@ -277,7 +277,7 @@ void printLocalTime()
 
   Trích đoạn **lưu đồ** và **code** được sử dụng để `hiển thị` 2 màn hình trên:
 
-  ![Lưu đồ hiển thị](/img/2020-01-23-smart-clock/hien-thi-thoi-gian-Diagram.png)
+  ![Lưu đồ hiển thị](/img/2020-01-23-smart-clock/hien-thi-thoi-gian-Diagram.png){: .center-block .img-rounded :}
 
 {% highlight c linenos %}
 ...
