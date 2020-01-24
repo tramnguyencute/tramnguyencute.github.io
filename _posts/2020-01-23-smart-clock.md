@@ -275,7 +275,9 @@ void printLocalTime()
 
   >Đây là cách mình bố trí hiển thị thông tin thời gian và một vài thứ khác. Các giao diện trên được mình thay đổi mỗi 5 giây.
 
-  Trích đoạn **code** được sử dụng để `hiển thị` 2 màn hình trên:
+  Trích đoạn **lưu đồ** và **code** được sử dụng để `hiển thị` 2 màn hình trên:
+
+  ![Lưu đồ hiển thị](/img/2020-01-23-smart-clock/hien-thi-thoi-gian-Diagram.png)
 
 {% highlight c linenos %}
 ...
