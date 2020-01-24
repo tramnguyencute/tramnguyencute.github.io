@@ -279,193 +279,193 @@ void printLocalTime()
 
 {% highlight c linenos %}
 ...
-		if (giay / 1 % 10 < 5)
-		/* Mỗi chế độ hiển thị 5 giây */
-		{
-      /* Chỉ hiển thị vào ngày sinh nhật Dung */
-			if ((ngay == DAY_DungNguyen) && (thang == MON_DungNguyen))
-			{
-				lcd.setCursor(0, 0);
-				lcd.print("Dung Cute!");
-				lcd.print("HPBD!");
-				static int age_of_MsDung;
-				age_of_MsDung = nam - 1994;
-				lcd.setCursor(0, 1);
-				lcd.print("Dung tron ");
-				lcd.print(age_of_MsDung);
-				lcd.print(" tuoi.");
-				Serial.println("Sanh thần Dung ngáo :3");
-			}
-      /* Hiển thị các ngày bình thường */
-			else
-			{
-				lcd.setCursor(0, 0);
-				lcd.write(0);
-				/* Canh giữa màn hình các hiển thị Thứ */
-				/* Sunday Monday Friday*/
-				if ((thu == 0) || (thu == 1) || (thu == 5))
-				{
-					lcd.setCursor(6, 0);
-					lcd.print(buffer_THU);
-				}
-				/* Tuesday   */
-				else if (thu == 2)
-				{
-					lcd.setCursor(5, 0);
-					lcd.print(buffer_THU);
-				}
-				/* Thursday Saturday  */
-				else if ((thu == 4) || (thu == 6))
-				{
-					lcd.setCursor(5, 0);
-					lcd.print(buffer_THU);
-				}
-				/* Wednesday  */
-				else if (thu == 3)
-				{
-					lcd.setCursor(4, 0);
-					lcd.print(buffer_THU);
-				}
-				/* */
-				lcd.setCursor(19, 0);
-				lcd.write(2);
+if (giay / 1 % 10 < 5)
+/* Mỗi chế độ hiển thị 5 giây */
+{
+  /* Chỉ hiển thị vào ngày sinh nhật Dung */
+  if ((ngay == DAY_DungNguyen) && (thang == MON_DungNguyen))
+  {
+    lcd.setCursor(0, 0);
+    lcd.print("Dung Cute!");
+    lcd.print("HPBD!");
+    static int age_of_MsDung;
+    age_of_MsDung = nam - 1994;
+    lcd.setCursor(0, 1);
+    lcd.print("Dung tron ");
+    lcd.print(age_of_MsDung);
+    lcd.print(" tuoi.");
+    Serial.println("Sanh thần Dung ngáo :3");
+  }
+  /* Hiển thị các ngày bình thường */
+  else
+  {
+    lcd.setCursor(0, 0);
+    lcd.write(0);
+    /* Canh giữa màn hình các hiển thị Thứ */
+    /* Sunday Monday Friday*/
+    if ((thu == 0) || (thu == 1) || (thu == 5))
+    {
+      lcd.setCursor(6, 0);
+      lcd.print(buffer_THU);
+    }
+    /* Tuesday   */
+    else if (thu == 2)
+    {
+      lcd.setCursor(5, 0);
+      lcd.print(buffer_THU);
+    }
+    /* Thursday Saturday  */
+    else if ((thu == 4) || (thu == 6))
+    {
+      lcd.setCursor(5, 0);
+      lcd.print(buffer_THU);
+    }
+    /* Wednesday  */
+    else if (thu == 3)
+    {
+      lcd.setCursor(4, 0);
+      lcd.print(buffer_THU);
+    }
+    /* */
+    lcd.setCursor(19, 0);
+    lcd.write(2);
 
-				lcd.setCursor(0, 1);
-				lcd.write(3);
+    lcd.setCursor(0, 1);
+    lcd.write(3);
 
-				/*  *___XX_May_2019____* */
-				if (thang == 5)
-				{
-					lcd.setCursor(4, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				/*  *___XX_June_2019___*
-				July  */
-				else if ((thang == 6) || (thang == 7))
-				{
-					lcd.setCursor(4, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				/*  *__XX_March_2019___*
-				April  */
-				else if ((thang == 3) || (thang == 4))
-				{
-					lcd.setCursor(3, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				/*  *__XX_August_2019__* */
-				else if (thang == 8)
-				{
-					lcd.setCursor(3, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				/*  *_XX_January_2019__*
-				October */
-				else if ((thang == 10) || (thang == 1))
-				{
-					lcd.setCursor(2, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				/*  *_XX_February_2019_*
-				November December  */
-				else if ((thang == 11) || (thang == 2) || (thang == 12))
-				{
-					lcd.setCursor(2, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				/* *_XX_September_2019* */
-				else if (thang == 9)
-				{
-					lcd.setCursor(2, 1);
-					lcd.print(buffer_N_T_N);
-				}
-				lcd.setCursor(19, 1);
-				lcd.write(5);
-			}
-		}
-		else
-		/* Hiển thị thời tiết */
-		{
-			if (temp == 0)
-			{
-				lcd.setCursor(0, 0);
-				lcd.print("WL_CONNECTION_LOST");
-				lcd.setCursor(0, 1);
-				lcd.print("time.nist.gov LOST");
-			}
-			else
-			{
+    /*  *___XX_May_2019____* */
+    if (thang == 5)
+    {
+      lcd.setCursor(4, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    /*  *___XX_June_2019___*
+    July  */
+    else if ((thang == 6) || (thang == 7))
+    {
+      lcd.setCursor(4, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    /*  *__XX_March_2019___*
+    April  */
+    else if ((thang == 3) || (thang == 4))
+    {
+      lcd.setCursor(3, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    /*  *__XX_August_2019__* */
+    else if (thang == 8)
+    {
+      lcd.setCursor(3, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    /*  *_XX_January_2019__*
+    October */
+    else if ((thang == 10) || (thang == 1))
+    {
+      lcd.setCursor(2, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    /*  *_XX_February_2019_*
+    November December  */
+    else if ((thang == 11) || (thang == 2) || (thang == 12))
+    {
+      lcd.setCursor(2, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    /* *_XX_September_2019* */
+    else if (thang == 9)
+    {
+      lcd.setCursor(2, 1);
+      lcd.print(buffer_N_T_N);
+    }
+    lcd.setCursor(19, 1);
+    lcd.write(5);
+  }
+}
+else
+/* Hiển thị thời tiết */
+{
+  if (temp == 0)
+  {
+    lcd.setCursor(0, 0);
+    lcd.print("WL_CONNECTION_LOST");
+    lcd.setCursor(0, 1);
+    lcd.print("time.nist.gov LOST");
+  }
+  else
+  {
 
-				lcd.setCursor(0, 0);
-				lcd.write(0);
-				lcd.print(hen_gio / 10 % 10);
-				lcd.print(hen_gio / 1 % 10);
-				lcd.print(":");
-				lcd.print(hen_phut / 10 % 10);
-				lcd.print(hen_phut / 1 % 10);
-				lcd.setCursor(6, 0);
-				lcd.write(2);
-				lcd.write(4);
-				lcd.write(0);
-				lcd.print("  H: ");
-				lcd.print(humidity);
-				lcd.print("%");
-				lcd.setCursor(19, 0);
-				lcd.write(2);
+    lcd.setCursor(0, 0);
+    lcd.write(0);
+    lcd.print(hen_gio / 10 % 10);
+    lcd.print(hen_gio / 1 % 10);
+    lcd.print(":");
+    lcd.print(hen_phut / 10 % 10);
+    lcd.print(hen_phut / 1 % 10);
+    lcd.setCursor(6, 0);
+    lcd.write(2);
+    lcd.write(4);
+    lcd.write(0);
+    lcd.print("  H: ");
+    lcd.print(humidity);
+    lcd.print("%");
+    lcd.setCursor(19, 0);
+    lcd.write(2);
 
-				lcd.setCursor(0, 1);
-				lcd.write(3);
-				if (value_Location_EEPROM == 0)
-				{
-					lcd.print("TpHcm"); /* chuyen thanh location */
-				}
-				else if (value_Location_EEPROM == 1)
-				{
-					lcd.print("VgTau"); /* chuyen thanh location */
-				}
-				else if (value_Location_EEPROM == 2)
-				{
-					lcd.print("DaLat"); /* chuyen thanh location */
-				}
-				else if (value_Location_EEPROM == 3)
-				{
-					lcd.print("TpHue"); /* chuyen thanh location */
-				}
-				lcd.setCursor(6, 1);
-				lcd.write(5);
-				lcd.write(1);
-				lcd.write(3);
-				lcd.print("T: ");
-				lcd.print(temp);
-				lcd.print("*C");
-				lcd.write(5);
-			}
-		}
-		/* Hiển thị giờ Font số lớn */
-		printDigits(gio / 10 % 10, 0, 2);
-		printDigits(gio / 1 % 10, 4, 2);
-		/* Hiển thị dấu 2 chấm giờ & phút */
-		if (giay % 2 == 0)
-		{
-			lcd.setCursor(8, 2);
-			lcd.write(1);
-			lcd.setCursor(8, 3);
-			lcd.write(4);
-		}
-		else
-		{
-			lcd.setCursor(8, 2);
-			lcd.write(4);
-			lcd.setCursor(8, 3);
-			lcd.write(1);
-		}
-		/* Hiển thị phút Font số lớn */
-		printDigits(phut / 10 % 10, 10, 2);
-		printDigits(phut / 1 % 10, 14, 2);
-		/* Hiển thị giây */
-		lcd.setCursor(17, 3);
-		lcd.print(":");
-		lcd.print(buffer_GIAY);
+    lcd.setCursor(0, 1);
+    lcd.write(3);
+    if (value_Location_EEPROM == 0)
+    {
+      lcd.print("TpHcm"); /* chuyen thanh location */
+    }
+    else if (value_Location_EEPROM == 1)
+    {
+      lcd.print("VgTau"); /* chuyen thanh location */
+    }
+    else if (value_Location_EEPROM == 2)
+    {
+      lcd.print("DaLat"); /* chuyen thanh location */
+    }
+    else if (value_Location_EEPROM == 3)
+    {
+      lcd.print("TpHue"); /* chuyen thanh location */
+    }
+    lcd.setCursor(6, 1);
+    lcd.write(5);
+    lcd.write(1);
+    lcd.write(3);
+    lcd.print("T: ");
+    lcd.print(temp);
+    lcd.print("*C");
+    lcd.write(5);
+  }
+}
+/* Hiển thị giờ Font số lớn */
+printDigits(gio / 10 % 10, 0, 2);
+printDigits(gio / 1 % 10, 4, 2);
+/* Hiển thị dấu 2 chấm giờ & phút */
+if (giay % 2 == 0)
+{
+  lcd.setCursor(8, 2);
+  lcd.write(1);
+  lcd.setCursor(8, 3);
+  lcd.write(4);
+}
+else
+{
+  lcd.setCursor(8, 2);
+  lcd.write(4);
+  lcd.setCursor(8, 3);
+  lcd.write(1);
+}
+/* Hiển thị phút Font số lớn */
+printDigits(phut / 10 % 10, 10, 2);
+printDigits(phut / 1 % 10, 14, 2);
+/* Hiển thị giây */
+lcd.setCursor(17, 3);
+lcd.print(":");
+lcd.print(buffer_GIAY);
 ...
 {% endhighlight %}
 
