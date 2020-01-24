@@ -210,7 +210,7 @@ void loop()
 ...
 {% endhighlight %}
 
-  - Như các bạn thấy trong đoạn code trên mình tạo một hàm riêng <kbd>void smartConfig_ndb()</kbd>, trong quá trình sử dụng thiết bị nếu chúng ta `muốn thay đổi wifi` thì chỉ việc gọi hàm này ra.
+  - <kbd>void smartConfig_ndb()</kbd> trong đoạn code trên mình tạo một hàm riêng , trong quá trình sử dụng thiết bị nếu chúng ta `muốn thay đổi wifi` thì chỉ việc gọi hàm này ra.
   - **Sử dụng ứng dụng Smartconfig**: khi `Wemos D1 mini` vào chế độ `Smartconfig` chúng ta mở điện thoại đã cài đặt thành công ứng dụng, nhập dữ liệu tên wifi và pass và nhấn **`Comfirm`** - hình ảnh minh họa phía dưới. 
   ![Hướng dẫn sử dụng ứng dụng](/img/2020-01-23-smart-clock/Help_smartconfig.png "Quá trình kết nối Smartconfig qua phương thức ESPTouch"){: .center-block :}
 
