@@ -135,7 +135,7 @@ void loop() {}
 Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng kết nối wifi và thay đổi wifi**. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
 >
-[**`Smartconfig`**](https://www.espressif.com/sites/default/files/documentation/esp-touch_user_guide_en.pdf) là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
+[**`Smartconfig - ESPTouch`**](https://www.espressif.com/sites/default/files/documentation/esp-touch_user_guide_en.pdf) là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
   - `Dễ dàng cấu hình` wifi cho ESP8266 thông qua smartphone.
   - `Không` cần phải `nạp lại code` để cấu hình
   - Có thể dùng `Smartconfig` để cấu hình `nhiều thiết bị` một lúc 
