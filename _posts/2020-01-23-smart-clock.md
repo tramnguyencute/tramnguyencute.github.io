@@ -218,7 +218,6 @@ void loop()
 
   ![ntp sever](/img/2020-01-23-smart-clock/ntp_sever.jpg){: .center-block .img-rounded :}
 
-  - Tham khảo [tại đây](/documents/2020-01-23-smart-clock/ntp-time/Gravity_date_codes.pdf)
 {% highlight c linenos %}
 #include "time.h"
 
@@ -267,6 +266,15 @@ void printLocalTime()
 }
 {% endhighlight %}
 
+  - Tham khảo cách hiển thị thời gian [tại đây](/documents/2020-01-23-smart-clock/ntp-time/Gravity_date_codes.pdf).
+  - Sau khi hiểu cách thức hoạt động và lấy thông tin thời gian cần thiết cho dự án của mình, việc tiếp theo chúng ta cần quan tâm là lựa chọn và sắp xếp bố cục thông tin thời gian trên LCD 20x04.
+
+  ![gio-nhietdo-dam](/img/2020-01-23-smart-clock/gio-nhietdo-dam.jpg "Hiển thị giờ, nhiệt độ, độ ẩm, giờ báo thức, địa phương"){: .center-block .img-rounded :}
+
+  ![gio-thu-ngay-thang-nam](/img/2020-01-23-smart-clock/gio-thu-ngay-thang-nam.jpg "Hiển thị thứ, giờ, ngày, tháng, năm"){: .center-block .img-rounded :}
+
+  >Đây là cách mình bố trí hiển thị thông tin thời gian và một vài thứ khác.
+  
 ### Đồng bộ thời tiết từ OpenWeatherMap
 
 
