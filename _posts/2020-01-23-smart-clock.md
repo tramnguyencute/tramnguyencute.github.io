@@ -208,9 +208,12 @@ void loop()
 ...
 {% endhighlight %}
 
-### 
+  - Sử dụng ứng dụng Smartconfig: khi Wemos D1 mini vào chế độ Smartconfig chúng ta mở điện thoại đã cài đặt thanhg công ứng dụng, nhập dữ liệu tên wifi và pass vào và nhấn **`Comfirm`**. 
+  ![Hướng dẫn sử dụng ứng dụng](/img/2020-01-23-smart-clock/Help_smartconfig.png){: .center-block :}
 
-### 
+### Đồng bộ thời gian từ ntp
+
+### Đồng bộ thời tiết từ OpenWeatherMap
 
 
 ------------------------------------------------------------
