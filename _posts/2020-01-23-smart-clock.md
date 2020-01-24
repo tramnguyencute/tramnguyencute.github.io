@@ -30,14 +30,16 @@ Không riêng gì dự án này, ở một số dự án IoT nếu muốn thiế
     - Cài trước đi nha, hướng dẫn sử dụng sau.
   - Vào code, chúng ta làm theo `quy trình` sau: 
     - **Bước 1.** Thiết bị sẽ `khởi động`.
-    - **Bước 2.** Quá trình đọc `ssid và pass wifi` sẽ được lấy `trong bộ nhớ EEPROM` (với Wemos D1 mini mới mua về thì bước đọc bộ nhớ này sẽ cho ra kết quả rỗng - kết quả rỗng thì bước đăng nhập wifi sẽ không được - Wemos D1 mini sẽ vào `bước 4`).
+    - **Bước 2.** Quá trình đọc `ssid và pass wifi` sẽ được lấy `trong bộ nhớ EEPROM` (với Wemos D1 mini mới mua về thì bước đọc bộ nhớ này sẽ cho ra kết quả rỗng - kết quả rỗng thì bước đăng nhập wifi sẽ không được - Wemos D1 mini sẽ vào `Bước 4`).
     - **Bước 3.** Sử dụng ssid và pass vừa đọc ra để `kết nối wifi`.
     - **Bước 4.** Nếu trong thời gian quy định mà việc kết nối vẫn `không thành công` thì sẽ nhảy vào quá trình `Smartconfig`.
     - **Bước 5.** `Timeout Smartconfig` chúng ta đặt ra là `100 giây` (các bạn muốn bao nhiêu giây thì chỉnh lại, riêng mình thấy 100s là hợp lí sau bao nhiêu lần thử nghiệm).
     - **Bước 6.** Trong thời gian 100 giây chúng ta `mở ứng dụng trên điện thoại`, lúc này màn hình giao diện sẽ yêu cầu chúng ta nhập ssid và pass cho Wemos D1 mini lấy data kết nối, nếu `kết nối thành công` thì ssid và pass sẽ được `lưu vào EEPROM`.
     - **Bước 7.** Nếu `không thành công` sau 100 giây thiết bị sẽ `khởi động lại` và bắt đầu quy trình đầu tiên.
+
     ![Lưu Đồ Giải Thuật](/img/2020-01-23-smart-clock/SSID_PASS_EEPROM_Diagram.png "Lưu Đồ Giải Thuật - Draw.io"){: .center-block :}
-  - Code thực tế:
+
+  - Code giúp ESP8266 - Wemos D1 mini có khả năng lưu trữ và thay đổi wifi:
 
 {% highlight c linenos %}
 #include <ESP8266WiFi.h>
@@ -208,8 +210,9 @@ void loop()
 ...
 {% endhighlight %}
 
-  - Sử dụng ứng dụng Smartconfig: khi Wemos D1 mini vào chế độ Smartconfig chúng ta mở điện thoại đã cài đặt thanhg công ứng dụng, nhập dữ liệu tên wifi và pass vào và nhấn **`Comfirm`**. 
-  ![Hướng dẫn sử dụng ứng dụng](/img/2020-01-23-smart-clock/Help_smartconfig.png){: .center-block :}
+  - Như các bạn thấy trong đoạn code trên mình tạo một hàm riêng <kbd>void smartConfig_ndb()</kbd>, trong quá trình sử dụng thiết bị nếu chúng ta `muốn thay đổi wifi` thì chỉ việc gọi hàm này ra.
+  - **Sử dụng ứng dụng Smartconfig**: khi `Wemos D1 mini` vào chế độ `Smartconfig` chúng ta mở điện thoại đã cài đặt thành công ứng dụng, nhập dữ liệu tên wifi và pass và nhấn **`Comfirm`** - hình ảnh minh họa phía dưới. 
+  ![Hướng dẫn sử dụng ứng dụng](/img/2020-01-23-smart-clock/Help_smartconfig.png "Quá trình kết nối Smartconfig qua phương thức ESPTouch"){: .center-block :}
 
 ### Đồng bộ thời gian từ ntp
 
