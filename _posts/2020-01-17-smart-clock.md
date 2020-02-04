@@ -204,5 +204,5 @@ Với những thông số trên về **`OpenWeatherMap`** thì nó là sự lự
 Cơ bản là đã `giới thiệu` sơ bộ những `linh kiện` và `kiến thức` cần thiết sử dụng `trong project` này rồi.
 
 {: .box-note}
-**Note:** **`[Phần 2](https://bangnguyendev.github.io/2020-01-23-smart-clock/)`** mình sẽ đào vào `logic code` của mình. Hẹn gặp lại ở phần tiếp theo **`(Feb - 2020)`**!
+**Note:** [**`Phần 2`**](https://bangnguyendev.github.io/2020-01-23-smart-clock) mình sẽ đào vào `logic code` của mình. Hẹn gặp lại ở phần tiếp theo **`(Feb - 2020)`**!
 
