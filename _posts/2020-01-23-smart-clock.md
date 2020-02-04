@@ -474,285 +474,285 @@ lcd.print(buffer_GIAY);
 ### Đồng bộ thời tiết từ OpenWeatherMap
 
 Ở phần lấy dữ liệu thời tiết hoạt động theo chu trình:
-  1. Khởi động thiết bị và đọc vị trí lưu ở EEPROM
-  2. Sử dụng vị trí đã lưu để cập nhập thời tiết
-  3. Cứ mỗi 10 phút chúng ta sẽ update dữ liệu thời tiết tại vị trí đang set trước đó qua hàm `Call_Weather_Every_10Min()`
-{% highlight c linenos %}
-/* Hàm gọi thời tiết mỗi 10 phút một lần */
-void Call_Weather_Every_10Min()
-{
-	if ((unsigned long)(millis() - time_dem_thoitiet) > 60 * 10 * 1000) //10 phut/ lan
-	{
-		time_dem_thoitiet = millis();
-		Weather_Online_sever();
-	}
-}
-{% endhighlight %}
-  4. Trong quá trình sử dụng nếu chúng ta muốn thay đổi vị trí thì gọi hàm `Choose_location()`
-{% highlight c linenos %}
-/* Chon vi tri doc gia tri thoi tiet */
-void Choose_location()
-{
-	lcd.clear();
-	lcd.setCursor(0, 0);
-	lcd.print("Hold Mode Key >= 1s ");
-	lcd.setCursor(0, 1);
-	lcd.print("TpHCM> VgTau> DaLat>");
-	lcd.setCursor(0, 2);
-	lcd.print("VgTau> DaLat> TpHue>");
-	lcd.setCursor(0, 3);
-	lcd.print("DaLat> TpHue> TpHCM>");
-	unsigned long dem_10s_stop = millis();
-	int dem_location = 0;
-	while (((unsigned long)(millis() - dem_10s_stop) < 10000) && (status_Mode == 0))
-	{
-		if (digitalRead(Button_Mode) == HIGH) // nếu nút bấm ở mức thấp
-		{
-			delay(500); //check chac chan la do ng nhan nut
-			if (digitalRead(Button_Mode) == HIGH)
-			{
-				long startTime = millis();				 // giá trị ban đầu được gán bằng giá trị hiện tại của millis
-				while (digitalRead(Button_Mode) == HIGH) // đợi cho nút bấm được giữ
-				{
-					/* khi nhan nut thi set lai time out mode */
-					dem_10s_stop = millis();
-					/* check hanh vi nut nhan */
-					Serial.println(millis() - startTime);
-					couter_Mode = (millis() - startTime) / 1000;
-					couter_Mode = couter_Mode / 1 % 10;
-					lcd.setCursor(0, 0);
-					lcd.print("Couter: ");
-					lcd.print(couter_Mode);
-					lcd.print(" seconds  ");
-					if (couter_Mode < 1)
-					{
-					}
-					else if (couter_Mode >= 9)
-					{
-						/* mode xoay vong nen dem 1 den 9 thi reset */
-						startTime = millis();
-						lcd.setCursor(0, 1);
-						lcd.print("Loca:    Hue        ");
-						lcd.setCursor(0, 2);
-						lcd.print("         HCMC       ");
-						lcd.setCursor(0, 3);
-						lcd.print("         VungTau    ");
-					}
-					else if (couter_Mode >= 7)
-					{
-						value_Location_EEPROM = 3;
-						lcd.setCursor(0, 1);
-						lcd.print("Loca: >> Hue        ");
-						lcd.setCursor(0, 2);
-						lcd.print("         HCMC       ");
-						lcd.setCursor(0, 3);
-						lcd.print("         VungTau    ");
-					}
-					else if (couter_Mode >= 5)
-					{
-						value_Location_EEPROM = 2;
-						lcd.setCursor(0, 1);
-						lcd.print("Loca: >> DaLat      ");
-						lcd.setCursor(0, 2);
-						lcd.print("         Hue        ");
-						lcd.setCursor(0, 3);
-						lcd.print("         HCMC       ");
-					}
-					else if (couter_Mode >= 3)
-					{
-						value_Location_EEPROM = 1;
-						lcd.setCursor(0, 1);
-						lcd.print("Loca: >> VungTau    ");
-						lcd.setCursor(0, 2);
-						lcd.print("         DaLat      ");
-						lcd.setCursor(0, 3);
-						lcd.print("         Hue        ");
-					}
-					else if (couter_Mode >= 1)
-					{
-						value_Location_EEPROM = 0;
-						lcd.setCursor(0, 1);
-						lcd.print("Loca: >> HCMC       ");
-						lcd.setCursor(0, 2);
-						lcd.print("         VungTau    ");
-						lcd.setCursor(0, 3);
-						lcd.print("         DaLat      ");
-					}
-					yield(); // disble Soft WDT reset - NodeMCU
-				};
-				Serial.printf("couter_Mode: ");
-				Serial.println(couter_Mode);
-				if (couter_Mode < 1)
-				{
-				}
-				else if (couter_Mode >= 7)
-				{
-					value_Location_EEPROM = 3;
-					lcd.setCursor(0, 0);
-					lcd.print("Location Selection: ");
-					lcd.setCursor(0, 1);
-					lcd.print("         Hue        ");
-					lcd.setCursor(0, 2);
-					lcd.print("                    ");
-					lcd.setCursor(0, 3);
-					lcd.print("                    ");
-					customT(0, 2);
-					delay(100);
-					customP(0 + 4, 2);
-					delay(100);
-					customH(0 + 4 + 4, 2);
-					delay(100);
-					customU(0 + 4 + 4 + 4, 2);
-					delay(100);
-					customE(0 + 4 + 4 + 4 + 4, 2);
-					delay(800);
-				}
-				else if (couter_Mode >= 5)
-				{
-					value_Location_EEPROM = 2;
-					lcd.setCursor(0, 0);
-					lcd.print("Location Selection: ");
-					lcd.setCursor(0, 1);
-					lcd.print("       Dat Lat      ");
-					lcd.setCursor(0, 2);
-					lcd.print("                    ");
-					lcd.setCursor(0, 3);
-					lcd.print("                    ");
-					customD(0, 2);
-					delay(100);
-					customA(0 + 4, 2);
-					delay(100);
-					customL(0 + 4 + 4, 2);
-					delay(100);
-					customA(0 + 4 + 4 + 4, 2);
-					delay(100);
-					customT(0 + 4 + 4 + 4 + 4, 2);
-					delay(800);
-				}
-				else if (couter_Mode >= 3)
-				{
-					value_Location_EEPROM = 1;
-					lcd.setCursor(0, 0);
-					lcd.print("Location Selection: ");
-					lcd.setCursor(0, 1);
-					lcd.print("      Vung Tau      ");
-					lcd.setCursor(0, 2);
-					lcd.print("                    ");
-					lcd.setCursor(0, 3);
-					lcd.print("                    ");
-					customV(0, 2);
-					delay(100);
-					customG(0 + 4, 2);
-					delay(100);
-					customT(0 + 4 + 4, 2);
-					delay(100);
-					customA(0 + 4 + 4 + 4, 2);
-					delay(100);
-					customU(0 + 4 + 4 + 4 + 4, 2);
-					delay(800);
-				}
-				else if (couter_Mode >= 1)
-				{
-					value_Location_EEPROM = 0;
-					lcd.setCursor(0, 0);
-					lcd.print("Location Selection: ");
-					lcd.setCursor(0, 1);
-					lcd.print("        TPHCM       ");
-					lcd.setCursor(0, 2);
-					lcd.print("                    ");
-					lcd.setCursor(0, 3);
-					lcd.print("                    ");
-					customT(0, 2);
-					delay(100);
-					customP(0 + 4, 2);
-					delay(100);
-					customH(0 + 4 + 4, 2);
-					delay(100);
-					customC(0 + 4 + 4 + 4, 2);
-					delay(100);
-					customM(0 + 4 + 4 + 4 + 4, 2);
-					delay(800);
-				}
-			}
-		}
-		yield(); // disble Soft WDT reset - NodeMCU
-	}
-	/* set lai gia tri cho su dung lan sau */
-	status_Mode = 0;
-	/* luu gia tri vao eeprom */
-	EEPROM.write(index_eeprom_location_eeprom, value_Location_EEPROM);
-	EEPROM.commit();
-	Serial.print("value_Location_EEPROM duoc set eeprom: ");
-	Serial.println(EEPROM.read(index_eeprom_location_eeprom));
-	/* Chuông báo ok */
-	digitalWrite(signal_Bell, ESP_NB_ON);
-	delay(300);
-	digitalWrite(signal_Bell, ESP_NB_OFF);
-}
-{% endhighlight %}
-  5. Trước khi hàm `Choose_location()` kết thúc vị trí sẽ được lưu vào EEPROM và lưu vào biến `Location`
-  6. Gọi hàm `Weather_Online_sever()` để cập nhật thời tiết 
-{% highlight c linenos %}
-/* Lay gia tri thoi tiet tai vi tri da chon */
-void Weather_Online_sever()
-{
-	if (value_Location_EEPROM == 0)
-	{
-		Location = "1566083";
-	}
-	else if (value_Location_EEPROM == 1)
-	{
-		Location = "1562414";
-	}
-	else if (value_Location_EEPROM == 2)
-	{
-		Location = "1584071";
-	}
-	else if (value_Location_EEPROM == 3)
-	{
-		Location = "1565033";
-	}
+  - Khởi động thiết bị và đọc vị trí lưu ở EEPROM
+  - Sử dụng vị trí đã lưu để cập nhập thời tiết
+  - Cứ mỗi 10 phút chúng ta sẽ update dữ liệu thời tiết tại vị trí đang set trước đó qua hàm `Call_Weather_Every_10Min()`
+  {% highlight c linenos %}
+  /* Hàm gọi thời tiết mỗi 10 phút một lần */
+  void Call_Weather_Every_10Min()
+  {
+    if ((unsigned long)(millis() - time_dem_thoitiet) > 60 * 10 * 1000) //10 phut/ lan
+    {
+      time_dem_thoitiet = millis();
+      Weather_Online_sever();
+    }
+  }
+  {% endhighlight %}
+  - Trong quá trình sử dụng nếu chúng ta muốn thay đổi vị trí thì gọi hàm `Choose_location()`
+  {% highlight c linenos %}
+  /* Chon vi tri doc gia tri thoi tiet */
+  void Choose_location()
+  {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Hold Mode Key >= 1s ");
+    lcd.setCursor(0, 1);
+    lcd.print("TpHCM> VgTau> DaLat>");
+    lcd.setCursor(0, 2);
+    lcd.print("VgTau> DaLat> TpHue>");
+    lcd.setCursor(0, 3);
+    lcd.print("DaLat> TpHue> TpHCM>");
+    unsigned long dem_10s_stop = millis();
+    int dem_location = 0;
+    while (((unsigned long)(millis() - dem_10s_stop) < 10000) && (status_Mode == 0))
+    {
+      if (digitalRead(Button_Mode) == HIGH) // nếu nút bấm ở mức thấp
+      {
+        delay(500); //check chac chan la do ng nhan nut
+        if (digitalRead(Button_Mode) == HIGH)
+        {
+          long startTime = millis();				 // giá trị ban đầu được gán bằng giá trị hiện tại của millis
+          while (digitalRead(Button_Mode) == HIGH) // đợi cho nút bấm được giữ
+          {
+            /* khi nhan nut thi set lai time out mode */
+            dem_10s_stop = millis();
+            /* check hanh vi nut nhan */
+            Serial.println(millis() - startTime);
+            couter_Mode = (millis() - startTime) / 1000;
+            couter_Mode = couter_Mode / 1 % 10;
+            lcd.setCursor(0, 0);
+            lcd.print("Couter: ");
+            lcd.print(couter_Mode);
+            lcd.print(" seconds  ");
+            if (couter_Mode < 1)
+            {
+            }
+            else if (couter_Mode >= 9)
+            {
+              /* mode xoay vong nen dem 1 den 9 thi reset */
+              startTime = millis();
+              lcd.setCursor(0, 1);
+              lcd.print("Loca:    Hue        ");
+              lcd.setCursor(0, 2);
+              lcd.print("         HCMC       ");
+              lcd.setCursor(0, 3);
+              lcd.print("         VungTau    ");
+            }
+            else if (couter_Mode >= 7)
+            {
+              value_Location_EEPROM = 3;
+              lcd.setCursor(0, 1);
+              lcd.print("Loca: >> Hue        ");
+              lcd.setCursor(0, 2);
+              lcd.print("         HCMC       ");
+              lcd.setCursor(0, 3);
+              lcd.print("         VungTau    ");
+            }
+            else if (couter_Mode >= 5)
+            {
+              value_Location_EEPROM = 2;
+              lcd.setCursor(0, 1);
+              lcd.print("Loca: >> DaLat      ");
+              lcd.setCursor(0, 2);
+              lcd.print("         Hue        ");
+              lcd.setCursor(0, 3);
+              lcd.print("         HCMC       ");
+            }
+            else if (couter_Mode >= 3)
+            {
+              value_Location_EEPROM = 1;
+              lcd.setCursor(0, 1);
+              lcd.print("Loca: >> VungTau    ");
+              lcd.setCursor(0, 2);
+              lcd.print("         DaLat      ");
+              lcd.setCursor(0, 3);
+              lcd.print("         Hue        ");
+            }
+            else if (couter_Mode >= 1)
+            {
+              value_Location_EEPROM = 0;
+              lcd.setCursor(0, 1);
+              lcd.print("Loca: >> HCMC       ");
+              lcd.setCursor(0, 2);
+              lcd.print("         VungTau    ");
+              lcd.setCursor(0, 3);
+              lcd.print("         DaLat      ");
+            }
+            yield(); // disble Soft WDT reset - NodeMCU
+          };
+          Serial.printf("couter_Mode: ");
+          Serial.println(couter_Mode);
+          if (couter_Mode < 1)
+          {
+          }
+          else if (couter_Mode >= 7)
+          {
+            value_Location_EEPROM = 3;
+            lcd.setCursor(0, 0);
+            lcd.print("Location Selection: ");
+            lcd.setCursor(0, 1);
+            lcd.print("         Hue        ");
+            lcd.setCursor(0, 2);
+            lcd.print("                    ");
+            lcd.setCursor(0, 3);
+            lcd.print("                    ");
+            customT(0, 2);
+            delay(100);
+            customP(0 + 4, 2);
+            delay(100);
+            customH(0 + 4 + 4, 2);
+            delay(100);
+            customU(0 + 4 + 4 + 4, 2);
+            delay(100);
+            customE(0 + 4 + 4 + 4 + 4, 2);
+            delay(800);
+          }
+          else if (couter_Mode >= 5)
+          {
+            value_Location_EEPROM = 2;
+            lcd.setCursor(0, 0);
+            lcd.print("Location Selection: ");
+            lcd.setCursor(0, 1);
+            lcd.print("       Dat Lat      ");
+            lcd.setCursor(0, 2);
+            lcd.print("                    ");
+            lcd.setCursor(0, 3);
+            lcd.print("                    ");
+            customD(0, 2);
+            delay(100);
+            customA(0 + 4, 2);
+            delay(100);
+            customL(0 + 4 + 4, 2);
+            delay(100);
+            customA(0 + 4 + 4 + 4, 2);
+            delay(100);
+            customT(0 + 4 + 4 + 4 + 4, 2);
+            delay(800);
+          }
+          else if (couter_Mode >= 3)
+          {
+            value_Location_EEPROM = 1;
+            lcd.setCursor(0, 0);
+            lcd.print("Location Selection: ");
+            lcd.setCursor(0, 1);
+            lcd.print("      Vung Tau      ");
+            lcd.setCursor(0, 2);
+            lcd.print("                    ");
+            lcd.setCursor(0, 3);
+            lcd.print("                    ");
+            customV(0, 2);
+            delay(100);
+            customG(0 + 4, 2);
+            delay(100);
+            customT(0 + 4 + 4, 2);
+            delay(100);
+            customA(0 + 4 + 4 + 4, 2);
+            delay(100);
+            customU(0 + 4 + 4 + 4 + 4, 2);
+            delay(800);
+          }
+          else if (couter_Mode >= 1)
+          {
+            value_Location_EEPROM = 0;
+            lcd.setCursor(0, 0);
+            lcd.print("Location Selection: ");
+            lcd.setCursor(0, 1);
+            lcd.print("        TPHCM       ");
+            lcd.setCursor(0, 2);
+            lcd.print("                    ");
+            lcd.setCursor(0, 3);
+            lcd.print("                    ");
+            customT(0, 2);
+            delay(100);
+            customP(0 + 4, 2);
+            delay(100);
+            customH(0 + 4 + 4, 2);
+            delay(100);
+            customC(0 + 4 + 4 + 4, 2);
+            delay(100);
+            customM(0 + 4 + 4 + 4 + 4, 2);
+            delay(800);
+          }
+        }
+      }
+      yield(); // disble Soft WDT reset - NodeMCU
+    }
+    /* set lai gia tri cho su dung lan sau */
+    status_Mode = 0;
+    /* luu gia tri vao eeprom */
+    EEPROM.write(index_eeprom_location_eeprom, value_Location_EEPROM);
+    EEPROM.commit();
+    Serial.print("value_Location_EEPROM duoc set eeprom: ");
+    Serial.println(EEPROM.read(index_eeprom_location_eeprom));
+    /* Chuông báo ok */
+    digitalWrite(signal_Bell, ESP_NB_ON);
+    delay(300);
+    digitalWrite(signal_Bell, ESP_NB_OFF);
+  }
+  {% endhighlight %}
+  - Trước khi hàm `Choose_location()` kết thúc vị trí sẽ được lưu vào EEPROM và lưu vào biến `Location`
+  - Gọi hàm `Weather_Online_sever()` để cập nhật thời tiết 
+  {% highlight c linenos %}
+  /* Lay gia tri thoi tiet tai vi tri da chon */
+  void Weather_Online_sever()
+  {
+    if (value_Location_EEPROM == 0)
+    {
+      Location = "1566083";
+    }
+    else if (value_Location_EEPROM == 1)
+    {
+      Location = "1562414";
+    }
+    else if (value_Location_EEPROM == 2)
+    {
+      Location = "1584071";
+    }
+    else if (value_Location_EEPROM == 3)
+    {
+      Location = "1565033";
+    }
 
-	if (WiFi.status() == WL_CONNECTED) //Check WiFi connection status
-	{
-		HTTPClient http; //Declare an object of class HTTPClient
+    if (WiFi.status() == WL_CONNECTED) //Check WiFi connection status
+    {
+      HTTPClient http; //Declare an object of class HTTPClient
 
-		// specify request destination
-		http.begin("http://api.openweathermap.org/data/2.5/weather?id=" + Location + "&APPID=" + APIKey_openweather);
+      // specify request destination
+      http.begin("http://api.openweathermap.org/data/2.5/weather?id=" + Location + "&APPID=" + APIKey_openweather);
 
-		int httpCode = http.GET(); // send the request
+      int httpCode = http.GET(); // send the request
 
-		if (httpCode > 0) // check the returning code
-		{
-			String payload = http.getString(); //Get the request response payload
+      if (httpCode > 0) // check the returning code
+      {
+        String payload = http.getString(); //Get the request response payload
 
-			DynamicJsonBuffer jsonBuffer(512);
+        DynamicJsonBuffer jsonBuffer(512);
 
-			// Parse JSON object
-			JsonObject &root = jsonBuffer.parseObject(payload);
-			if (!root.success())
-			{
-				Serial.println(F("Parsing failed !"));
-			}
+        // Parse JSON object
+        JsonObject &root = jsonBuffer.parseObject(payload);
+        if (!root.success())
+        {
+          Serial.println(F("Parsing failed !"));
+        }
 
-			temp = (float)(root["main"]["temp"]) - 273.15;		 // get temperature in °C
-			humidity = root["main"]["humidity"];				 // get humidity in %
-			pressure = (float)(root["main"]["pressure"]) / 1000; // get pressure in bar
-			wind_speed = root["wind"]["speed"];					 // get wind speed in m/s
-			wind_degree = root["wind"]["deg"];					 // get wind degree in °
+        temp = (float)(root["main"]["temp"]) - 273.15;		 // get temperature in °C
+        humidity = root["main"]["humidity"];				 // get humidity in %
+        pressure = (float)(root["main"]["pressure"]) / 1000; // get pressure in bar
+        wind_speed = root["wind"]["speed"];					 // get wind speed in m/s
+        wind_degree = root["wind"]["deg"];					 // get wind degree in °
 
-			// print data
-			Serial.printf("Temperature = % .2f°C\r\n", temp);
-			Serial.printf("Humidity = % d % %\r\n", humidity);
-			// Serial.printf("Pressure = % .3f bar\r\n", pressure);
-			// Serial.printf("Wind speed = % .1f m / s\r\n", wind_speed);
-			// Serial.printf("Wind degree = % d°\r\n\r\n", wind_degree);
-		}
-		http.end(); //Close connection
-		yield();	// disble Soft WDT reset - NodeMCU
-	}
-}
-{% endhighlight %}
+        // print data
+        Serial.printf("Temperature = % .2f°C\r\n", temp);
+        Serial.printf("Humidity = % d % %\r\n", humidity);
+        // Serial.printf("Pressure = % .3f bar\r\n", pressure);
+        // Serial.printf("Wind speed = % .1f m / s\r\n", wind_speed);
+        // Serial.printf("Wind degree = % d°\r\n\r\n", wind_degree);
+      }
+      http.end(); //Close connection
+      yield();	// disble Soft WDT reset - NodeMCU
+    }
+  }
+  {% endhighlight %}
 
 ------------------------------------------------------------
 
