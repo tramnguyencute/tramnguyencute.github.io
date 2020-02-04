@@ -756,8 +756,6 @@ void Weather_Online_sever()
 
 ------------------------------------------------------------
 
-Cơ bản là đã `giới thiệu` sơ bộ những `linh kiện` và `kiến thức` cần thiết sử dụng `trong project` này rồi.
-
 {: .box-note}
-**Note:** **`Phần 2`** mình sẽ đào vào `logic code` của mình. Hẹn gặp lại ở phần tiếp theo **`(Feb - 2020)`**!
+**Note:** Phần 3 chúng ta sẽ làm việc với các Mode - Sử dụng một nút nhấn cho nhiều MODE
 
