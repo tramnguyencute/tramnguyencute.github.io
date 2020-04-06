@@ -1,31 +1,31 @@
 ---
 layout: post
-title: "Smart Clock - Phần 1: Giới thiệu chút chơi"
+title: "Smart Clock"
 meta-title: "Smart Clock"
-subtitle: ...và hướng dẫn chi tiết
+subtitle: "...Phần 1: Giới thiệu chút chơi"
 bigimg:
-  - "/img/2020-01-17-smart-clock/anh-bia-baiviet.jpg" : "Đồng hồ"
+  - "/img/2020-01-17-smart-clock/anh-bia-baiviet.jpg"
 image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
 gh-repo: bangnguyendev/SmartClock
 gh-badge: [star, watch, fork, follow]
 comments: true
 ---
-# Phần 1: Giới thiệu chút chơi
-<!-- Font chữ bự chà bá -->
-<h1 class="text-center">Tản mạn dạo đầu tí nha!</h1>
+----------------------------------------------------------------------------
+`Xin chào` mọi người. Đây là bài viết `đầu tiên chia sẽ` về một trong những `project` mà mình đã và đang phát triển...
 
-Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên` mình viết về việc `chia sẽ` làm một cái gì đó...
+Repo các bạn có thể nhấn vào các <kbd>Button Github</kbd> ở đầu bài (<kbd>star</kbd>, <kbd>watch</kbd>, <kbd>fork</kbd>, <kbd>follow</kbd>) để Clone Repo về máy tính cá nhân. Nếu máy các bạn không hiện ra thì có thể [nhấn ở đây để](https://github.com/bangnguyendev/SmartClock/ "Smart Clock") truy cập Repo.
 
-Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành không hề cao là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
+{: .box-note}
+**Khuyên dùng**: Sử dụng `Git` (GitHub Desktop, GitLab), `TortoiseGit` để lưu trữ & Clone Repo về.
+
+Ở `bài viết này` mình sẽ **`mô tả chi tiết`** và tuần tự mọi thứ khi mình `bắt đầu` làm nó (theo phong cách kể chuyện nha). **`Cách mạng công nghiệp 4.0`** như bây giờ thì việc mua 1 cái `đồng hồ thông minh` có tính năng hay ho với giá thành vừa phải là điều rất dễ dàng. Thế nên **`bài viết`** này chi mang **`tính chất trao đổi kiến thức`**, **`kinh nghiệm`** khi đam mê làm đồ chơi `handmade` thôu nhé!
+
+![industrial4.0](/img/2020-01-17-smart-clock/iot40.jpeg "What is the Industrial IoT?"){: .center-block :}
 
 ----------------------------------------------------------------------------
-<!-- Font chữ bự chà bá -->
-<h1 class="text-center">Vào công việc nào...!</h1>
-<div class="spacer"></div>
-
 ## Việc đầu tiên các bạn cần chuẩn bị:
-  - **Phần cứng:**
+  - **`Phần cứng:`**
     - Board ESP266 **Wemos D1 mini** (Sơ đồ nguyên lí đây [nhấn vô đây cơ](/documents/2020-01-17-smart-clock/sch_d1_mini_v3.0.0.pdf "Sơ đồ nguyên lí mạch")).
     - Một cộng cáp **`Micro USB connection`** để nạp code nha! Mình lấy cáp sạc điện thoại Samsung nạp luôn, nhưng nhớ là chuẩn **`Micro USB`** nha... ~~Type-C~~ là ngéo luôn á nha mọi người.
     - **Lcd 20x04**.
@@ -34,29 +34,29 @@ Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên
     - **Buzzer** 5-12v (hoặc loa liếc gì đấy tùy vào kỹ năng chơi điện của các bạn.).
     - Một vài **cọng dây đực cái, cái đực, dây điện** (nối để test mạch hoạt động), vv...
     - Nguồn cung cấp cho ESP266 Wemod D1 (**Nguồn `5v-2A`**, dư dòng tí mình sử dụng trong các mục đích khác).
-  - **Phần mềm:**
-    - **[VS code](https://code.visualstudio.com/download)** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
+
+  - **`Phần mềm:`**
+    - **[VS code](https://code.visualstudio.com/download "Visual Studio Code")** (khuyên dùng vì tiện nhiều thứ hơn IDE Arduino không hổ trợ).
     - **[IDE Arduino](https://www.arduino.cc/en/main/software)**.
     - Driver giao tiếp giả lập port **[CH340](https://sparks.gogo.co.nz/ch340.html)**.
     - **[Android Studio](https://developer.android.com/studio)**.
 
-  - **Ngôn ngữ lập trình:**
+  - **`Ngôn ngữ lập trình:`**
     - Chắc chắc là **`C/C++`** là không thể thiếu sót rầu nhé.
     - Một chút tẹo tẹo về **`Java`** để chơi app Android. (Đọc hiểu củng đơn giản lắm - chỉ easy so với ứng dụng mình làm thôu nhé).
     - Một chút kiến thức về debug, vị trí đặt lệnh kiểm tra giá trị này nọ...
 
-  - **Vài thứ linh tinh:**
+  - **`Vài thứ linh tinh:`**
     - Đọc hiểu được **`HTTP Methods GET vs POST`**.
     - Cáu trúc dữ liệu **[JavaScript Object Notation](https://vi.wikipedia.org/wiki/JSON)** (thường được viết tắt là **JSON**).
     - ... đại loại như đam mê kiểu **"Em yêu khoa học:3"**.
 
-## Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
-![esp8266](/img/2020-01-17-smart-clock/Wemos-D1-Mini.png){: .center-block :}
+##  Giới thiệu chút về Wemos D1 mini mà mình sẽ sử dụng nhé!
 ### Technical specs
 ----------------------------------------------------------------------------
+![esp8266](/img/2020-01-17-smart-clock/Wemos-D1-Mini.png){: .center-block :}
 
 | Microcontroller | ESP-8266EX |
-| --- | --- |
 | Operating Voltage | 3.3V |
 | Digital I/O Pins | 11 |
 | Analog Input Pins | 1(Max input: 3.2V) |
@@ -88,7 +88,7 @@ Hưm... `Xin chào` mọi người. Có lẽ đây là bài viết `đầu tiên
 
 **`Việc đầu tiên`**, đã là cái đồng hồ thì điều quan trọng là phải **xem được giờ** mà phải **chính xác** luôn - `thời gian thực`.
 
-![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block :}
+![lcd2004](https://www.makerguides.com/wp-content/uploads/2019/02/I2C-LCD-1024x683.jpg "Màn hình LCD thường dùng trong các dự án IoT nhỏ."){: .center-block .img-rounded :}
 
 Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì đó nhìn trực quan được. Có nhiều sự lựa chọn cho việc đó như **LCD 20x04**, **LCD Graphic**, **LCD Oled**... Và mình chọn **`LCD 20x04`** vì nó khá dễ sử dụng với bộ `thư viện` phong phú trên `Github` và các diễn đàn IoT.
 
@@ -101,7 +101,7 @@ Từ đó chúng ta thấy `"xem được giờ"` tức là phải có cái gì 
 
 ![ntp](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Network_Time_Protocol_servers_and_clients.svg/525px-Network_Time_Protocol_servers_and_clients.svg.png "Mũi tên vàng là kết nối trực tiếp; mũi tên đỏ là kết nối thông qua mạng."){: .center-block :}
 
-Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình sử dụng nó để **cập nhật giờ giống như các thiết bị di động, laptop,...** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
+Với **`công nghiệp 4.0`** như bây giờ cái việc nhà nhà có internet, người người có internet thì tại sao mình lại không sử dụng nó để **cập nhật giờ giống như các thiết bị di động, laptop** nhỉ? Sau khi tìm hiểu trên các diễn đàn IoT trong nước củng như nước ngoài, mình đã thu thập được một vài kiến thức về [cách thức hoạt động](https://vi.wikipedia.org/wiki/NTP "NTP (Network Time Protocol - Giao thức đồng bộ thời gian mạng)") và lấy dữ liệu giờ từ trang **[pool.ntp.org](https://www.pool.ntp.org/zone/vn)**.
 
 ----------------------------------------------------
 ### MCU - Smartconfig - Kết nối mạng
@@ -139,7 +139,8 @@ void loop() {}
 
 Vậy thứ **chúng ta cần** là một cái đồng hồ có **khả năng kết nối wifi và thay đổi wifi**. Giải pháp được mình tìm thấy chính là [**Smartconfig**](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/network/esp_smartconfig.html).
 
->**`Smartconfig`** là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
+>
+[**`Smartconfig - ESPTouch`**](https://www.espressif.com/sites/default/files/documentation/esp-touch_user_guide_en.pdf) là một khái niệm được nhắc đến khi khi muốn `cấu hình thông tin` cho thiết bị WiFi kết nối nhanh chóng đến Internet nhất từ người dùng bằng chính thiết bị (điện thoại) của họ.
   - `Dễ dàng cấu hình` wifi cho ESP8266 thông qua smartphone.
   - `Không` cần phải `nạp lại code` để cấu hình
   - Có thể dùng `Smartconfig` để cấu hình `nhiều thiết bị` một lúc 
@@ -174,7 +175,8 @@ void setup()
 ...
 {% endhighlight %}
 
->Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng `EEPROM` để lưu** một số `giá trị` cho chức năng **`báo thức`**, **`vị trí địa lí`**, **`ssid & pass wifi`**.
+{: .box-note}
+Như các bạn đã thấy trong trích đoạn code trên mình **sử dụng `EEPROM` để lưu** một số `giá trị` cho chức năng **`báo thức`**, **`vị trí địa lí`**, **`ssid & pass wifi`**.
 
 ----------------------------------------------------
 ### Thời tiết - cảm biến
@@ -207,5 +209,5 @@ Với những thông số trên về **`OpenWeatherMap`** thì nó là sự lự
 Cơ bản là đã `giới thiệu` sơ bộ những `linh kiện` và `kiến thức` cần thiết sử dụng `trong project` này rồi.
 
 {: .box-note}
-**Note:** **`Phần 2`** mình sẽ đào vào `logic code` của mình. Hẹn gặp lại ở phần tiếp theo **`(Feb - 2020)`**!
+**Note:** [**`Phần 2`**](https://bangnguyendev.github.io/2020-01-23-smart-clock) mình sẽ đào vào `logic code` của mình. Hẹn gặp lại ở phần tiếp theo **`(Feb - 2020)`**!
 
