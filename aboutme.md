@@ -13,6 +13,8 @@ bigimg:
 <span class="fa fa-briefcase about-icon"></span>
 Hi again, my name is <strong>Nguyen Duy Bang</strong>, I am an avid open source enthusiast, contributor and developer. 
 And I'm currently a <strong>Embedded Systems Engineer</strong> at <a target="_blank" href="http://banvien.com/">Ban Vien</a> company, where I work in <strong>MCAL</strong> team.
+- 7/2019 > 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd.
+- 2/2020 > Present : Onsite at Robert Bosch Engineering Viet Nam.
 </p>
 
 <p class="about-text">
