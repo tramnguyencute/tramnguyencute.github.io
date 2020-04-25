@@ -12,9 +12,11 @@ bigimg:
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
 Hi again, my name is <strong>Nguyen Duy Bang</strong>, I am an avid open source enthusiast, contributor and developer. 
-And I'm currently a <strong>Embedded Systems Engineer</strong> at <a target="_blank" href="http://banvien.com/">Ban Vien</a> company, where I work in <strong>MCAL</strong> team.
-- 7/2019 > 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd.
-- 2/2020 > Present : Onsite at Robert Bosch Engineering Viet Nam.
+And I'm currently a <strong>Embedded Systems Engineer</strong> at <a target="_blank" href="http://banvien.com/">Ban Vien</a> company.
+
+- 7/2019 > 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd. (I work in <strong>MCAL</strong> team.)
+
+- 2/2020 > Present : Onsite at Robert Bosch Engineering Viet Nam. (I work in <strong>ASA UT</strong> team.)
 </p>
 
 <p class="about-text">
