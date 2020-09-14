@@ -12,3 +12,6 @@ tags: [bash, script, unix]
 comments: true
 ---
 ----------------------------------------------------------------------------
+Link tải [**`Git BASH.`**](https://git-scm.com/)
+
+Lệnh `find`:
