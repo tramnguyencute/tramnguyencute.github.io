@@ -22,7 +22,7 @@ ls -lt
 <div class="post-img-post">
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
 </div>
-
+<!-- 
 <div class="test_ok">
   <svg viewBox="0 0 600 300">
 
@@ -46,6 +46,6 @@ ls -lt
     <use xlink:href="#s-text" class="text"
         ></use>
   </svg>
-</div>
+</div> -->
 
 Link tải [**`Git BASH.`**](https://git-scm.com/)
