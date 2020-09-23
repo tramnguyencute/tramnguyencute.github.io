@@ -23,6 +23,7 @@ ls -lt
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
 </div>
 
+<div class="test_ok">
 <svg viewBox="0 0 600 300">
 
   <!-- Symbol -->
@@ -35,16 +36,16 @@ ls -lt
 
   <!-- Duplicate symbols -->
   <use xlink:href="#s-text" class="text"
-       ></use>
+      ></use>
   <use xlink:href="#s-text" class="text"
-       ></use>
+      ></use>
   <use xlink:href="#s-text" class="text"
-       ></use>
+      ></use>
   <use xlink:href="#s-text" class="text"
-       ></use>
+      ></use>
   <use xlink:href="#s-text" class="text"
-       ></use>
-
+      ></use>
 </svg>
+</div>
 
 Link tải [**`Git BASH.`**](https://git-scm.com/)
