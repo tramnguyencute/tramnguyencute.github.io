@@ -394,8 +394,12 @@ footer .theme-by {
 .post-preview .post-read-more {
   font-weight: 800;
 }
+/* Hinh anh vao bai dang */
 .post-img-post {
-  border: 1px solid #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 150px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 150px;
