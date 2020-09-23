@@ -24,28 +24,28 @@ ls -lt
 </div>
 
 <div class="test_ok">
-<svg viewBox="0 0 600 300">
+  <svg viewBox="0 0 600 300">
 
-  <!-- Symbol -->
-  <symbol id="s-text">
-    <text text-anchor="middle"
-          x="50%" y="50%" dy=".35em">
-      Text
-    </text>
-  </symbol>  
+    <!-- Symbol -->
+    <symbol id="s-text">
+      <text text-anchor="middle"
+            x="50%" y="50%" dy=".35em">
+        Text
+      </text>
+    </symbol>  
 
-  <!-- Duplicate symbols -->
-  <use xlink:href="#s-text" class="text"
-      ></use>
-  <use xlink:href="#s-text" class="text"
-      ></use>
-  <use xlink:href="#s-text" class="text"
-      ></use>
-  <use xlink:href="#s-text" class="text"
-      ></use>
-  <use xlink:href="#s-text" class="text"
-      ></use>
-</svg>
+    <!-- Duplicate symbols -->
+    <use xlink:href="#s-text" class="text"
+        ></use>
+    <use xlink:href="#s-text" class="text"
+        ></use>
+    <use xlink:href="#s-text" class="text"
+        ></use>
+    <use xlink:href="#s-text" class="text"
+        ></use>
+    <use xlink:href="#s-text" class="text"
+        ></use>
+  </svg>
 </div>
 
 Link tải [**`Git BASH.`**](https://git-scm.com/)
