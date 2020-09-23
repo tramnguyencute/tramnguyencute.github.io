@@ -13,10 +13,18 @@ comments: true
 ---
 ----------------------------------------------------------------------------
 Sắp xếp file theo thời gian:
+
 ![](/img/2020-09-09-bash-script-2/lenh_ls_lt.png ){: .center-block :}
+
 {% highlight bash linenos %}
 ls -lt
 {% endhighlight %}
 
+<div class="post-image">
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <img src="{{ /img/2020-09-09-bash-script-2/lenh_ls_lt.png }}">
+  </a>
+</div>
+<img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png" alt="Paris">
 
 Link tải [**`Git BASH.`**](https://git-scm.com/)
