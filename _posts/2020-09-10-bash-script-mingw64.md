@@ -20,9 +20,9 @@ Sắp xếp file theo thời gian:
 ls -lt
 {% endhighlight %}
 
-<div class="post-image">
+<div class="post-img-post">
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
 </div>
 
-ÂSASASAS
+
 Link tải [**`Git BASH.`**](https://git-scm.com/)
