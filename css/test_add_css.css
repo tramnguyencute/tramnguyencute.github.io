@@ -15,10 +15,10 @@
 
 .text {
   fill: none;
-  stroke-width: 6;
+  stroke-width: 3;
   stroke-linejoin: round;
   stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 50;
   -webkit-animation: stroke 6s infinite linear;
   animation: stroke 6s infinite linear;
 }
@@ -41,7 +41,7 @@
 }
 
 .text:nth-child(5n + 4) {
-  stroke: #56D9CD;
+  stroke: #660033;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
@@ -66,7 +66,7 @@
 
 div.test_ok{
   background-color: transparent;
-  font: 50px Open Sans, Impact;
+  font: 150px Open Sans, Impact;
   text-transform: uppercase;
 }
 
