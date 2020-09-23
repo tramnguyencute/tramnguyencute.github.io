@@ -30,7 +30,7 @@ ls -lt
   <symbol id="s-text">
     <text text-anchor="middle"
           x="50%" y="50%" dy=".35em">
-      Text
+      Bang Nguyen
     </text>
   </symbol>  
 

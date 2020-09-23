@@ -35,7 +35,7 @@
 }
 
 .text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
+  stroke: #33cc33;
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
@@ -65,11 +65,9 @@
 }
 
 div.test_ok{
-  background: #111;
+  background: rgba(17, 17, 17, 0);
   font: 150px Open Sans, Impact;
   text-transform: uppercase;
-  width: 800px;
-  height: 200px;
 }
 
 svg {
