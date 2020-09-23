@@ -1,0 +1,27 @@
+@import url("pygment_highlights.css");
+
+/* --- General --- */
+
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 18px;
+  color: #404040;
+  position: relative;
+  background: #FFF;
+  {% if site.page-col %}
+  background: {{ site.page-col }};
+  {% endif %}
+  {% if site.page-img %}
+  background-image: url({{ site.page-img }});
+  background-attachment: fixed;
+  {% endif %}
+}
+
+/* Hinh anh vao bai dang */
+.post-img-post {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #ddd;
+    border-radius: 7px;
+    padding: 5px;
+}

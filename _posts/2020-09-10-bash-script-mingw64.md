@@ -11,10 +11,14 @@ tags: [bash, script, unix]
 # gh-badge: [star, watch, fork, follow]
 comments: true
 ---
-----------------------------------------------------------------------------
-Sắp xếp file theo thời gian:
 
-![](/img/2020-09-09-bash-script-2/lenh_ls_lt.png ){: .center-block :}
+----------------------------------------------------------------------------
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/test.css" />
+</head>
+
+Sắp xếp file theo thời gian:
 
 {% highlight bash linenos %}
 ls -lt
@@ -24,5 +28,6 @@ ls -lt
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
 </div>
 
+aaaaaaaaaaaaaaaaaaaaaa
 
 Link tải [**`Git BASH.`**](https://git-scm.com/)
