@@ -65,8 +65,8 @@
 }
 
 div.test_ok{
-  background: rgba(17, 17, 17, 0);
-  font: 150px Open Sans, Impact;
+  background-color: transparent;
+  font: 50px Open Sans, Impact;
   text-transform: uppercase;
 }
 
