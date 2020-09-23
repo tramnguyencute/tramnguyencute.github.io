@@ -394,14 +394,7 @@ footer .theme-by {
 .post-preview .post-read-more {
   font-weight: 800;
 }
-/* Hinh anh vao bai dang */
-.post-img-post {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
-  padding: 5px;
-}
+
 @media only screen and (max-width: 500px) {
   .post-image, .post-image img {
     height: 100px;
@@ -422,6 +415,14 @@ footer .theme-by {
   }
 }
 
+/* Hinh anh vao bai dang */
+.post-img-post {
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #ddd;
+  border-radius: 20px;
+  padding: 5px;
+}
 /* --- Tags --- */
 
 .blog-tags {
