@@ -12,6 +12,11 @@ tags: [bash, script, unix]
 comments: true
 ---
 ----------------------------------------------------------------------------
-Link tải [**`Git BASH.`**](https://git-scm.com/)
+Sắp xếp file theo thời gian:
+![](/img/2020-09-09-bash-script-2/lenh_ls_lt.png ){: .center-block :}
+{% highlight c linenos %}
+ls -lt
+{% endhighlight %}
 
-Lệnh `find`:
+
+Link tải [**`Git BASH.`**](https://git-scm.com/)
