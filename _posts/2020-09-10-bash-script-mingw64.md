@@ -21,10 +21,8 @@ ls -lt
 {% endhighlight %}
 
 <div class="post-image">
-  <a href="{{ post.url | prepend: site.baseurl }}">
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
-  </a>
 </div>
 
-
+ÂSASASAS
 Link tải [**`Git BASH.`**](https://git-scm.com/)
