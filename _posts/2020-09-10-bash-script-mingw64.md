@@ -14,7 +14,7 @@ comments: true
 ----------------------------------------------------------------------------
 Sắp xếp file theo thời gian:
 ![](/img/2020-09-09-bash-script-2/lenh_ls_lt.png ){: .center-block :}
-{% highlight c linenos %}
+{% highlight bash linenos %}
 ls -lt
 {% endhighlight %}
 
