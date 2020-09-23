@@ -399,10 +399,8 @@ footer .theme-by {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 150px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 150px;
 }
 @media only screen and (max-width: 500px) {
   .post-image, .post-image img {
