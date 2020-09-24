@@ -24,13 +24,13 @@ ls -lt
 </div>
 
 <div class="test_ok">
-<svg viewBox="0 0 2600 300">
+<svg viewBox="0 0 900 200">
 
   <!-- Symbol -->
   <symbol id="s-text">
     <text text-anchor="middle"
           x="50%" y="50%" dy=".35em">
-      Hi, Im Bang
+      Hi, I'm Bang
     </text>
   </symbol>  
 
