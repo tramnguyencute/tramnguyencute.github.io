@@ -12,6 +12,11 @@ tags: [bash, script, unix]
 comments: true
 ---
 ----------------------------------------------------------------------------
+Command ls được dùng để xem nội dung thư mục. Mặc định là command này sẽ hiển thị danh sách file trong thư mục hiện tại.
+Có nhiều phiên bản để dùng với lệnh **ls **như sau:
+-   **ls -R** liệt kê các file bao gồm cả các thư mục phụ bên trong
+-   **ls -a** liệt kê những file ẩn
+-   **ls -al** liệt kê tất cả file và thư mục với thông tin chi tiết như phân quyền, kích thước, chủ sở hữu, vân vân.
 
 Sắp xếp file theo thời gian:
 
@@ -23,7 +28,6 @@ ls -lt
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
 </div>
 
-<div class="test_ok">
 <svg viewBox="0 0 900 200">
 
   <!-- Symbol -->
@@ -46,6 +50,5 @@ ls -lt
   <use xlink:href="#s-text" class="text"
       ></use>
 </svg>
-</div>
 
 Link tải [**`Git BASH.`**](https://git-scm.com/)

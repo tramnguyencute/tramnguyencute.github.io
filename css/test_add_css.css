@@ -64,13 +64,10 @@
   }
 }
 
-div.test_ok{
+svg {
   background-color: transparent;
   font: 150px Open Sans, Impact;
   text-transform: uppercase;
-}
-
-svg {
   position: relative;
   width: 100%;
   height: 100%;
