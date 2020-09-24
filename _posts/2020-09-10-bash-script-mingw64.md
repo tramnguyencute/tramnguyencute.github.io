@@ -11,7 +11,6 @@ tags: [bash, script, unix, maxdepth, mindepth]
 # gh-badge: [star, watch, fork, follow]
 comments: true
 ---
-----------------------------------------------------------------------------
 Command `ls` được dùng để xem nội dung thư mục. Mặc định là command này sẽ hiển thị danh sách file trong thư mục hiện tại.
 
 Có nhiều phiên bản để dùng với lệnh **`ls`** như sau:
@@ -32,6 +31,7 @@ ls -lt
 Câu lệnh `find` trong Linux được dùng để tìm kiếm tập tin và thư mục dựa trên các điều kiện đầu vào khác nhau. Tương tự như câu lệnh ls thì câu lệnh find cũng là một trong những câu lệnh được sử dụng phổ biến trên Linux.
 
 Ở ví dụ này, lệnh `find` dùng để tìm kiếm các file có định dạng **UT_001, UT_678, UT_XXX,** ... sau khi tìm xong thì đưa output vào file list_folder. Dùng kết hợp `for do done` & `7z` để nén các thư mục đó lại.
+
 <div class="post-img-post">
     <img src="/img/2020-09-09-bash-script-2/tao_file_UT.png">
 </div>
