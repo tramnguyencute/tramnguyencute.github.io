@@ -29,7 +29,7 @@ ls -lt
   <!-- Symbol -->
   <symbol id="s-text">
     <text text-anchor="middle"
-          x="50%" y="50%" dy=".35em">
+          x="50%" y="50%" dy="50px">
       Text
     </text>
   </symbol>  

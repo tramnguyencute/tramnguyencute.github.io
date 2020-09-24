@@ -69,6 +69,8 @@ div.test_ok{
   font: 150px Open Sans, Impact;
   text-transform: uppercase;
   margin: 0;
+  height: 200px;
+  width: 200px;
 }
 
 svg {
