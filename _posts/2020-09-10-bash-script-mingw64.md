@@ -29,6 +29,34 @@ ls -lt
     <img src="/img/2020-09-09-bash-script-2/lenh_ls_lt.png">
 </div>
 
+Câu lệnh `find` trong Linux được dùng để tìm kiếm tập tin và thư mục dựa trên các điều kiện đầu vào khác nhau. Tương tự như câu lệnh ls thì câu lệnh find cũng là một trong những câu lệnh được sử dụng phổ biến trên Linux.
+
+Ở ví dụ này, lệnh `find` dùng để tìm kiếm các file có định dạng UT_001,UT_678,UT_XXX,... sau khi tìm xong thì đưa output vào file list_folder. Dùng kết hợp `for do done` & `7z` để nén các thư mục đó lại.
+<div class="post-img-post">
+    <img src="/img/2020-09-09-bash-script-2/tao_file_UT.png">
+</div>
+{% highlight bash linenos %}
+#!/bin/bash -x
+find -maxdepth 1 -mindepth 1 -type d -name "UT_[0-9][0-9][0-9]*"  > list_folder
+
+for file in `cat list_folder`
+do
+	echo -e "\e[30;48;5;82m $file \e[0m"
+
+	7z a $file.zip $file
+
+done 
+
+rm -rf list_folder
+read -n 1 -r -s -p $'Press enter to exit...\n'
+{% endhighlight %}
+
+Tạo file auto_zip.sh với nội dung code như trên rồi chạy bash:
+<div class="post-img-post">
+    <img src="/img/2020-09-09-bash-script-2/file_7z_bash.png">
+</div>
+
+
 <svg viewBox="0 0 900 200">
 
   <!-- Symbol -->
