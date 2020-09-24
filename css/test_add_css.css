@@ -15,10 +15,10 @@
 
 .text {
   fill: none;
-  stroke-width: 6;
+  stroke-width: 3;
   stroke-linejoin: round;
   stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 50;
   -webkit-animation: stroke 6s infinite linear;
   animation: stroke 6s infinite linear;
 }
@@ -35,13 +35,13 @@
 }
 
 .text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
+  stroke: #33cc33;
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
 
 .text:nth-child(5n + 4) {
-  stroke: #56D9CD;
+  stroke: #660033;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
@@ -65,16 +65,13 @@
 }
 
 div.test_ok{
-  background: #111;
+  background-color: transparent;
   font: 150px Open Sans, Impact;
   text-transform: uppercase;
-  margin: 0;
-  height: 200px;
-  width: 200px;
 }
 
 svg {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
 }
