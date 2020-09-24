@@ -6,7 +6,7 @@ subtitle: "...Phần 2: Using Bash Shell for Windows"
 bigimg:
   - "/img/2020-09-09-bash-script/anh-bia.png"
 image: /img/2020-09-09-bash-script/anh-bia.png
-tags: [bash, script, unix]
+tags: [bash, script, unix, maxdepth, mindepth]
 # gh-repo: bangnguyendev/SmartClock
 # gh-badge: [star, watch, fork, follow]
 comments: true
@@ -58,7 +58,7 @@ Tạo file `auto_zip.sh` với nội dung code như trên rồi chạy bash:
     <img src="/img/2020-09-09-bash-script-2/file_7z_bash.png">
 </div>
 
-Kết quả sau khi chạy script chỉ nén những file cần thiết, những file khác ABC_XXX sẽ không ảnh hưởng tới. 
+Kết quả sau khi chạy script chỉ nén những file cần thiết, những file khác như *ABC_XXX* sẽ không ảnh hưởng tới. 
 <div class="post-img-post">
     <img src="/img/2020-09-09-bash-script-2/output_7z.png">
 </div>

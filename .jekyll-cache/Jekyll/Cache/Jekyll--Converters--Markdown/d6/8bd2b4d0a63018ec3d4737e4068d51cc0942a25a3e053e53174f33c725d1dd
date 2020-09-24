@@ -1,0 +1,104 @@
+I" <p>Hi Friends! Hope you are doing well. I am back to give you a daily dose of useful information. Today, I’ll discuss the details on the Introduction to ESP8266. It is a WiFi microchip module, introduced by Espressif Systems, that comes with both TCP/IP and <a href="https://en.wikipedia.org/wiki/Microcontroller">Microcontroller</a> capability.</p>
+
+<p>ESP8266 is very user-friendly, features low cast and develops a simple TCP/IP connection by connecting microcontrollers with WiFi. It has an ability to hosting or offloading all WiFi function to other processors. The first chip in this series was ESP-01 that gained a sheer attention in the market but created language barrier as it came with Chinese documentation.</p>
+
+<p>Later many features are added to this device that mainly comes with English documentation. It is easy to use and even an average person can make their feet wet with the learning of this device.</p>
+
+<p>In this tutorial, we discuss ESP8266 WiFi module, its features, specifications, applications and everything you need to know to make it run in a real-time. Let’s dive in and nail down everything related to this device.</p>
+
+<h3 id="introduction-to-esp8266">Introduction to ESP8266</h3>
+<p><img src="https://raw.githubusercontent.com/AchimPieters/ESP8266-12F---Power-Mode/master/ESP8266_01X.jpg" alt="ESP8266-12F" /></p>
+
+<ul>
+  <li>ESP8266 is a cost-effective WiFi module that supports both TCP/IP and microcontrollers. It runs at 3V with maximum voltage range around 3.6V. More often than not, it also comes under name ESP8266 Wireless Transceiver.</li>
+  <li>This module stays ahead of its predecessor in terms of processing speed and storage capability. It can be interfaced with the sensors and other devices and requires very little modification and development to make it compatible with other devices.</li>
+  <li>Components and GPIO pins interfaced on the little chip are very compact that makes it suitable for hard to reach places.</li>
+  <li>It covers little space and everything is laid out on the PCB board quite precisely that no external circuitry is required to put this device in the running condition.</li>
+  <li>No external RF circuitry is required as this module comes with self-calibrated RF capability that makes it suitable to work under all operating conditions.</li>
+  <li>It is a very useful device for wireless networking, however, there are some limitations i.e. external logic level converter is needed as it doesn’t support 5-3V logic shiting.</li>
+</ul>
+
+<p>Technical Specifications </p>
+
+<ul>
+  <li>It is also known as a system-on-chip (SoC) and comes with a 32-bit Tensilica microcontroller, antenna switches, RF balun, power amplifier, standard digital peripheral interfaces, low noise receive amplifier, power management module and filter capability.</li>
+  <li>The processor is based on Tensilica Xtensa Diamond Standard 106Micro and runs at 80 MHz.</li>
+  <li>It incorporates 64 KiB boot ROM, 80 KiB user data RAM and 32 KiB instruction RAM.</li>
+  <li>It supports Wi-Fi 802.11 b/g/n around 2.4 GHz and other features including 16 GPIO, Inter-Integrated Circuit (I²C), Serial Peripheral Interface (SPI), 10-bit ADC, and I²S interfaces with DMA.</li>
+  <li>External QSPI flash memory is accessed through SPI and supports up to 16 MiB and 512 KiB to 4 MiB is initially included in the module.</li>
+  <li>It is a major development in terms of wireless communication with little circuitry. and contains onboard regulator that helps in providing 3.3V consistent power to the board.</li>
+  <li>It supports APSD which makes it an ideal choice for VoIP applications and Bluetooth interfaces.</li>
+</ul>
+
+<p>How to Power Up the Module </p>
+
+<ul>
+  <li>You can power up the device with PC port using USB to Serial adaptor. The 2 AA  and LIPO batteries are equally handy for powering up the device.</li>
+  <li>It is advised to not power this device directly with 5V dev board. Doing so can severely affect the quality and overall performance of the device.</li>
+</ul>
+
+<h3 id="esp8266-pinout">ESP8266 Pinout</h3>
+
+<p><img src="https://vidieukhien.xyz/wp-content/uploads/2014/10/esp8266_pinout.png" alt="esp8266_pinout" /></p>
+
+<p>ESP8266 comes with eight pins named:</p>
+
+<ul>
+  <li>
+    <p>RX</p>
+  </li>
+  <li>
+    <p>VCC (+3.3 V; can handle up to 3.6 V)</p>
+  </li>
+  <li>
+    <p>GPIO 0 General-purpose I/O No. 0</p>
+  </li>
+  <li>
+    <p>RST, Reset</p>
+  </li>
+  <li>
+    <p>CH_PD (Chip power-down)</p>
+  </li>
+  <li>
+    <p>GPIO 2 General-purpose I/O No. 2</p>
+  </li>
+  <li>
+    <p>TX</p>
+  </li>
+  <li>
+    <p>GND</p>
+  </li>
+  <li>Each pin comes with a specific function associated with it where Vcc and GND are voltage source and ground respectively.</li>
+  <li>RX and TX are used for communication where TX is dedicated for data transmission and RX is used receiving data.</li>
+</ul>
+
+<h3 id="applications">Applications</h3>
+
+<p><img src="https://www.pantechsolutions.net/media/wysiwyg/IoT/IoT_connected_Health_application.png" alt="Applications" /></p>
+
+<p>This module is widely used in many projects with the intention of WiFi capability, however following are the main applications.</p>
+
+<ul>
+  <li>Wireless Web Server</li>
+  <li>Geolocation using ESP8266</li>
+  <li>Pressure Sensors on Railway Tracks</li>
+  <li>Air Pollution Meter</li>
+  <li>Temperature logging system</li>
+  <li>World’s smallest IoT project</li>
+  <li>Wi-Fi controlled robot</li>
+  <li>Humidity and temperature monitoring</li>
+  <li>M2M using ESP8266</li>
+</ul>
+
+<p>That’s all for today. I hope I have given you everything you needed to know regarding this WiFi module. If you are unsure or have any question, you can ask me in the comment section below. I’d love to help you in any way I can. You are most welcome to keep us updated with your suggestions so we keep providing quality work that resonates with your needs and demands. Thanks for reading the article.</p>
+
+<p><em>Refer to:</em></p>
+
+<p><em>https://vidieukhien.xyz</em></p>
+
+<p><em>https://raw.githubusercontent.com</em></p>
+
+<p><em>https://en.wikipedia.org/wiki/Microcontroller</em></p>
+
+<p><em>https://www.theengineeringprojects.com</em></p>
+:ET

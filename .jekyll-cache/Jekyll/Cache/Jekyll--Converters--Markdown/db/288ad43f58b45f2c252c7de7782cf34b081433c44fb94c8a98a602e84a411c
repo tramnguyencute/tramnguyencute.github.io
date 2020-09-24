@@ -1,0 +1,69 @@
+I"�<p><a href="https://www.geeksforgeeks.org/c-programming-language/">C</a> is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of C language include low-level access to memory, a simple set of keywords, and clean style, these features make C language suitable for system programmings like an operating system or compiler development.</p>
+
+<!-- Hello world! Posts -->
+<h1 class="text-center">Hello world!</h1>
+<div class="spacer"></div>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="c1">// printf() displays the string inside quotation</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript, and many other languages are mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).</p>
+
+<ul>
+  <li>Structured language
+    <ul>
+      <li>It has the ability to divide and hide all the information and instruction.</li>
+      <li>Code can be partitioned in C using functions or code block.</li>
+      <li>C is a well structured language compare to other.</li>
+    </ul>
+  </li>
+  <li>General purpose language
+    <ul>
+      <li>Make it ideal language for system programming.</li>
+      <li>It can also be used for business and scientific application.</li>
+      <li>ANSI established a standard for c in 1983.</li>
+      <li>The ability of c is to manipulate bits,byte and addresses.</li>
+      <li>It is adopted in later 1990.</li>
+    </ul>
+  </li>
+  <li>Portability
+    <ul>
+      <li>Portability is the ability to port or use the software written .</li>
+      <li>One computer C program can be reused.</li>
+      <li>By modification or no modification.</li>
+    </ul>
+  </li>
+  <li>Code Re-usability &amp; Ability to customize and extend
+    <ul>
+      <li>A programmer can easily create his own function</li>
+      <li>It can can be used repeatedly in different application</li>
+      <li>C program basically collection of function</li>
+      <li>The function are supported by ‘c’ library</li>
+      <li>Function can be added to ‘c’ library continuously</li>
+    </ul>
+  </li>
+  <li>Limited Number of Key Word
+    <ul>
+      <li>There are only 32 keywords in ‘C’</li>
+      <li>27 keywords are given by ritchie</li>
+      <li>5 is added by ANSI</li>
+      <li>The strength of ‘C’ is lies in its in-built function</li>
+      <li>Unix system provides as large number of C function</li>
+      <li>Some function are used in operation .</li>
+      <li>Other are for specialized in their application
+<img src="http://profiles.sulekhalive.com/mstore/25546077/albums/default/thumbnailfull/c.jpg" alt="C" /></li>
+    </ul>
+  </li>
+</ul>
+:ET
