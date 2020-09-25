@@ -1,0 +1,124 @@
+I"F<p><strong>Ở bài viết này</strong>, chúng ta sẽ tham khảo đoạn script ngắn giúp cho việc <strong>lọc file cần check</strong> từ cấu trúc thư mục lớn.
+Ta sẽ có hàng loạt thư mục, chúng đều chứa <strong>file excel</strong> với format name <code class="language-plaintext highlighter-rouge">TD_XXXXXX.xlsm</code> (line #26), việc <strong>nhảy ra nhảy vào</strong> để check file đó rất mất thời gian.</p>
+<div class="post-img-post">
+    <img src="/img/2020-09-25-bash-script-copy-file/hinh_dong_chay_thu_muc.gif" />
+</div>
+
+<p><strong>Cấu trúc thư mục:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td><td class="code"><pre><span class="se">\-</span><span class="nt">--MT_070_Psa_MTC_Info</span>
+    +---Delivery
+    |   +---TestEnvironment
+    |   |   <span class="se">\-</span><span class="nt">--Psa_MTC_Info</span>
+    |   |       |   Project_Psa_MTC_Info_Save.xml
+    |   |       |   PSLBuildInfo.xml
+    |   |       |
+    |   |       +---AscetPrj
+    |   |       |       Psa_MTC_Info.exp
+    |   |       |
+    |   |       +---AscetPrjAxl
+    |   |       |       AscetPrjAxl.axl
+    |   |       |
+    |   |       +---AscetPrjExp
+    |   |       |       Psa_MTC_Info.exp
+    |   |       |       TCS_CM_Sometimes.exp
+    |   |       |       TM_Psa_MTC_Info_Calc.exp
+    |   |       |       TM_Psa_MTC_Info_Init.exp
+    |   |       |       TP_Psa_MTC_Info.exp
+    |   |       |       _Environment_CycleTimes.exp
+    |   |       |
+    |   |       +---Documents
+    |   |       |       CustomerLibrary.htm
+    |   |       |       Old_Project_Psa_MTC_Info_Save.xml
+    |   |       |       Psa_MTC_Info_1.gif
+    |   |       |       <span class="s1">'TD_Psa_MTC_Info_MT_070.xlsm'</span>
+    |   |       |       TM_Psa_MTC_Info_Calc.plt
+.... 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Source code:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="c">#!/bin/bash -x</span>
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="s1">'TD_*.xlsm'</span> <span class="o">&gt;</span> list
+<span class="nb">cat </span>list
+<span class="nb">mkdir</span> <span class="nt">-p</span> OUTPUT_EXCEL
+<span class="nb">echo </span>Tao thu muc OUTPUT_EXCEL
+<span class="k">for </span>i <span class="k">in</span> <span class="sb">`</span><span class="nb">cat </span>list<span class="sb">`</span>
+<span class="k">do 
+	</span><span class="nb">cp</span> <span class="nv">$i</span> ./OUTPUT_EXCEL
+	<span class="nb">echo </span>Copy <span class="nv">$i</span>
+<span class="k">done
+</span><span class="nb">rm</span> <span class="nt">-rf</span> list
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Tạo file <code class="language-plaintext highlighter-rouge">copy_excel_TD.sh</code> với nội dung code như trên rồi chạy bash:</p>
+<div class="post-img-post">
+    <img src="/img/2020-09-25-bash-script-copy-file/ls_folder.png" />
+</div>
+
+<p>Kết quả là chúng ta sẽ có thư mục OUTPUT_EXCEL chứa hết những file excel cần check.</p>
+<div class="post-img-post">
+    <img src="/img/2020-09-25-bash-script-copy-file/output_excel.png" />
+</div>
+
+<p class="box-note">Chúng ta có thể thay đổi cú pháp tìm kiếm file <code class="language-plaintext highlighter-rouge">find . -type f -name 'TD_*.xlsm'</code> bằng một bộ lọc khác phù hợp với cái cần tìm.</p>
+
+<p>Link tải <a href="https://git-scm.com/"><strong><code class="language-plaintext highlighter-rouge">Git BASH.</code></strong></a></p>
+
+<svg viewBox="0 0 900 200">
+
+  <!-- Symbol -->
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+      Hi, I'm Bang
+    </text>
+  </symbol>  
+
+  <!-- Duplicate symbols -->
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+</svg>
+
+:ET
