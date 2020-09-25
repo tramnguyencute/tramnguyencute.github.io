@@ -125,17 +125,21 @@ img {
   {% endif %}
 }
 
-.navbar-custom .nav li a {
+.navbar-custom .navbar-brand {
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.navbar-custom .navbar-brand,
-.navbar-custom .nav li a {
+  font-size: 20px;
   font-weight: 800;
   color: #404040;
 }
+
+.navbar-custom .nav li a {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #404040;
+}
+
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
@@ -152,6 +156,7 @@ img {
 }
 .navbar-custom .navbar-brand-logo img {
   height: 50px;
+  border-radius: 50%;
   -webkit-transition: height .5s ease-in-out;
   -moz-transition: height .5s ease-in-out;
   transition: height .5s ease-in-out;
@@ -217,6 +222,7 @@ img {
   .navbar-custom .avatar-container  .avatar-img {
     width: 100%;
   }
+
 }
 
 .container-fluid  {
