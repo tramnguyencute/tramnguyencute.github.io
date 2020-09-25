@@ -1,0 +1,86 @@
+I"�<p>Câu lệnh <code class="language-plaintext highlighter-rouge">find</code> trong Linux được dùng để tìm kiếm tập tin và thư mục dựa trên các điều kiện đầu vào khác nhau. Tương tự như câu lệnh ls thì câu lệnh <code class="language-plaintext highlighter-rouge">find</code> cũng là một trong những câu lệnh được sử dụng phổ biến trên Linux.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="nv">$ </span>find <span class="o">[</span><span class="nt">-H</span><span class="o">]</span> <span class="o">[</span><span class="nt">-L</span><span class="o">]</span> <span class="o">[</span><span class="nt">-P</span><span class="o">]</span> <span class="o">[</span><span class="nt">-D</span> debugopts] <span class="o">[</span><span class="nt">-Olevel</span><span class="o">]</span> <span class="o">[</span>path...] <span class="o">[</span>expression]
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Trong đó:</p>
+
+<ul>
+  <li>Tuỳ chọn <code class="language-plaintext highlighter-rouge">-P</code> (là tuỳ chọn mặc định): không tìm kiếm các tập tin hay thư mục lối tắt liên kết tới tập tin hay thư mục khác (hay còn gọi là symbolic link).</li>
+  <li>Tuỳ chọn <code class="language-plaintext highlighter-rouge">-L</code> (là tuỳ chọn mặc định): tìm kiếm tất cả các tập tin hay thư mục bao gồm các lối tắt liên kết tới tập tin hay thư mục khác.</li>
+  <li>Tuỳ chọn <code class="language-plaintext highlighter-rouge">-H</code>: không tìm kiếm các tập tin hay thư mục lối tắt liên kết tới tập tin hay thư mục khác trừ khi xử lý đối số truyền vào câu lệnh.</li>
+  <li>Tuỳ chọn <code class="language-plaintext highlighter-rouge">-D</code> (Debug Options): quy định các tuỳ chọn giúp gỡ rối.</li>
+  <li>Tuỳ chọn <code class="language-plaintext highlighter-rouge">-O</code> (level): sử dụng khi muốn tối ưu tốc độ của câu lệnh.</li>
+</ul>
+
+<p>Ở bài viết này, lệnh <code class="language-plaintext highlighter-rouge">find</code> dùng để tìm kiếm các file có định dạng <strong>UT_001, UT_678, UT_XXX,</strong> … sau khi tìm xong thì đưa output vào file list_folder. Dùng kết hợp <code class="language-plaintext highlighter-rouge">for do done</code> &amp; <code class="language-plaintext highlighter-rouge">7z</code> để nén các thư mục đó lại.</p>
+
+<p class="box-note"><strong>Lưu ý</strong>: Hệ điều hành (mình chạy Win 10) của các bạn cần phải có 7z. <br />
+    <a href="https://www.7-zip.org/download.html">Link tải 7z, và nhớ chọn phiên bản phù hợp.</a><br />
+    <code class="language-plaintext highlighter-rouge">7z</code> và <code class="language-plaintext highlighter-rouge">zip</code> đều sử dụng được, nhưng đối với các thư mục bên trong có chứa các tệp tin <code class="language-plaintext highlighter-rouge">name file</code> thuộc dạng <code class="language-plaintext highlighter-rouge">long path</code> thì <code class="language-plaintext highlighter-rouge">zip</code> sẽ không nén được.</p>
+
+<div class="post-img-post">
+    <img src="/img/2020-09-09-bash-script-2/tao_file_UT.png" />
+</div>
+
+<p><strong>Source code:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="c">#!/bin/bash -x</span>
+find <span class="nt">-maxdepth</span> 1 <span class="nt">-mindepth</span> 1 <span class="nt">-type</span> d <span class="nt">-name</span> <span class="s2">"UT_[0-9][0-9][0-9]*"</span>  <span class="o">&gt;</span> list_folder
+
+<span class="k">for </span>file <span class="k">in</span> <span class="sb">`</span><span class="nb">cat </span>list_folder<span class="sb">`</span>
+<span class="k">do
+	</span><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[30;48;5;82m </span><span class="nv">$file</span><span class="s2"> </span><span class="se">\e</span><span class="s2">[0m"</span>
+
+	7z a <span class="nv">$file</span>.zip <span class="nv">$file</span>
+
+<span class="k">done 
+
+</span><span class="nb">rm</span> <span class="nt">-rf</span> list_folder
+<span class="nb">read</span> <span class="nt">-n</span> 1 <span class="nt">-r</span> <span class="nt">-s</span> <span class="nt">-p</span> <span class="s1">$'Press enter to exit...</span><span class="se">\n</span><span class="s1">'</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Tạo file <code class="language-plaintext highlighter-rouge">auto_zip.sh</code> với nội dung code như trên rồi chạy bash:</p>
+<div class="post-img-post">
+    <img src="/img/2020-09-09-bash-script-2/file_7z_bash.png" />
+</div>
+
+<p>Kết quả sau khi chạy script chỉ nén những file cần thiết, những file khác như <em>ABC_XXX</em> sẽ không ảnh hưởng tới.</p>
+<div class="post-img-post">
+    <img src="/img/2020-09-09-bash-script-2/output_7z.png" />
+</div>
+
+<p>Link tải <a href="https://git-scm.com/"><strong><code class="language-plaintext highlighter-rouge">Git BASH.</code></strong></a></p>
+
+<svg viewBox="0 0 900 200">
+
+  <!-- Symbol -->
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+      Hi, I'm Bang
+    </text>
+  </symbol>  
+
+  <!-- Duplicate symbols -->
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+  <use xlink:href="#s-text" class="text"></use>
+</svg>
+
+:ET

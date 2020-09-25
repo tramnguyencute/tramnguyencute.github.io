@@ -5,7 +5,7 @@ meta-title: "Test markdown"
 subtitle: Each post also has a subtitle
 bigimg:
   - "/img/My_Picture/anh_3nguoi_dalat.jpg" : "Da Lat City"
-image: img\2020-01-06-test-markdown\markdown_html.jpg
+image: /img/2020-01-06-test-markdown/markdown_html.jpg
 tags: [markdown, text, html, yaml]
 comments: true
 ---
