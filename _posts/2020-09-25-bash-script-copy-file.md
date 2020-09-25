@@ -2,7 +2,7 @@
 layout: post
 title: "Bash Script: Copy multiple files"
 meta-title: "Using Bash Shell for Windows"
-subtitle: "...Phần 2: Copy file chung teamplate"
+subtitle: "...Phần 3: Copy file chung teamplate"
 bigimg:
   - "/img/2020-09-09-bash-script/anh-bia.png"
 image: /img/2020-09-09-bash-script/anh-bia.png
@@ -37,9 +37,6 @@ Ta sẽ có hàng loạt thư mục, chúng đều chứa **file excel** với f
     |   |       |       Psa_MTC_Info.exp
     |   |       |       TCS_CM_Sometimes.exp
     |   |       |       TM_Psa_MTC_Info_Calc.exp
-    |   |       |       TM_Psa_MTC_Info_Init.exp
-    |   |       |       TP_Psa_MTC_Info.exp
-    |   |       |       _Environment_CycleTimes.exp
     |   |       |
     |   |       +---Documents
     |   |       |       CustomerLibrary.htm

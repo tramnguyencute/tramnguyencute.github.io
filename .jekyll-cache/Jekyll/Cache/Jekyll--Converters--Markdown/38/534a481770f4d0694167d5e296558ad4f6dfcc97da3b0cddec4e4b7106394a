@@ -1,4 +1,4 @@
-I"F<p><strong>Ở bài viết này</strong>, chúng ta sẽ tham khảo đoạn script ngắn giúp cho việc <strong>lọc file cần check</strong> từ cấu trúc thư mục lớn.
+I"�<p><strong>Ở bài viết này</strong>, chúng ta sẽ tham khảo đoạn script ngắn giúp cho việc <strong>lọc file cần check</strong> từ cấu trúc thư mục lớn.
 Ta sẽ có hàng loạt thư mục, chúng đều chứa <strong>file excel</strong> với format name <code class="language-plaintext highlighter-rouge">TD_XXXXXX.xlsm</code> (line #26), việc <strong>nhảy ra nhảy vào</strong> để check file đó rất mất thời gian.</p>
 <div class="post-img-post">
     <img src="/img/2020-09-25-bash-script-copy-file/hinh_dong_chay_thu_muc.gif" />
@@ -31,9 +31,6 @@ Ta sẽ có hàng loạt thư mục, chúng đều chứa <strong>file excel</st
 23
 24
 25
-26
-27
-28
 </pre></td><td class="code"><pre><span class="se">\-</span><span class="nt">--MT_070_Psa_MTC_Info</span>
     +---Delivery
     |   +---TestEnvironment
@@ -51,9 +48,6 @@ Ta sẽ có hàng loạt thư mục, chúng đều chứa <strong>file excel</st
     |   |       |       Psa_MTC_Info.exp
     |   |       |       TCS_CM_Sometimes.exp
     |   |       |       TM_Psa_MTC_Info_Calc.exp
-    |   |       |       TM_Psa_MTC_Info_Init.exp
-    |   |       |       TP_Psa_MTC_Info.exp
-    |   |       |       _Environment_CycleTimes.exp
     |   |       |
     |   |       +---Documents
     |   |       |       CustomerLibrary.htm
