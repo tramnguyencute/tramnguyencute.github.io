@@ -1,22 +1,12 @@
----
-layout: page
-title: About Bang Nguyen
-meta-title: About me
-subtitle: "For a start, my favorite quote is, <br> Do what you love, love what you do."
-bigimg:
-  - "/img/My_Picture/anh_aboutme.jpg"
----
-
-<div id="aboutme-section">
+I"Š<div id="aboutme-section">
 
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
 Hi again, my name is <strong>Nguyen Duy Bang</strong>, I am an avid open source enthusiast, contributor and developer. 
 And I'm currently a <strong>Embedded Systems Engineer</strong> at <a target="_blank" href="http://banvien.com/">Ban Vien</a> company.
-<br>&nbsp;- 7/2019 > 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd.
-<br>&nbsp;- 2/2020 > 9/2020: Onsite at Robert Bosch Engineering Viet Nam.
-<br>&nbsp;- 9/2020 > 10/2020: Training ISTQB-Overview, Unifi ed Diagnostic Services.
-<br>&nbsp;- Present : Onsite at Renesas Design Vietnam Co., Ltd. (Updated 5/11/2020)
+<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 7/2019 &gt; 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 2/2020 &gt; 9/2020: Onsite at Robert Bosch Engineering Viet Nam.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Present : Training ISTQB-Overview, Unifi ed Diagnostic Services.
 </p>
 
 <p class="about-text">
@@ -43,3 +33,5 @@ Also, I am very fond of video games, I love to create digital art and play aroun
 <span class="fa fa-envelope about-icon"></span>
 Letâ€™s connect if you want to collab something awesome in the world of open-source tech. Follow the social media links given below or drop an e-mail <a target="_blank" href="mailto:duybang140494@gmail.com">here</a>.
 </p>
+</div>
+:ET

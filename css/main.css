@@ -536,6 +536,9 @@ footer .theme-by {
 .intro-header.big-img .post-heading .post-meta {
   color: #EEE;
 }
+.img-desc {
+  border-radius: 10px;
+}
 .intro-header.big-img .img-desc {
   background: rgba(30, 30, 30, 0.6);
   position: absolute;
