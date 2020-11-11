@@ -11,7 +11,6 @@ tags: [bash, script, unix]
 # gh-badge: [star, watch, fork, follow]
 comments: true
 ---
-----------------------------------------------------------------------------
 **`Bash`** là một **Unix shell** và ngôn ngữ dòng lệnh được viết bởi Brian Fox cho Dự án GNU như là một `phần mềm` thay thế `miễn phí cho Bourne shell`. Được phát hành lần đầu tiên vào năm 1989, nó đã được phân phối rộng rãi như là login shell mặc định cho hầu hết các bản phân phối Linux và macOS. Một phiên bản cũng có sẵn cho Windows 10. Nó cũng là user shell mặc định trong Solaris 11.
 
 `Bash là một bộ xử lý dòng lệnh thường chạy trong cửa sổ văn bản nơi người dùng gõ các lệnh thực thi. Bash cũng có thể đọc và thực thi các lệnh từ một file, được gọi là shell script.` Giống như tất cả Unix shell, nó hỗ trợ tên file toàn cục (khớp ký tự đại diện), <kbd>piping</kbd>, <kbd>here documents</kbd>, <kbd>command substitution</kbd>, biến, và cấu trúc điều khiển để kiểm tra điều kiện và vòng lặp. `Các từ khóa, cú pháp và các tính năng cơ bản khác của ngôn ngữ đều được sao chép từ sh.` Các tính năng khác, ví dụ, lịch sử, được sao chép từ csh và ksh. Bash là một shell tương thích POSIX, nhưng có một số phần mở rộng.
