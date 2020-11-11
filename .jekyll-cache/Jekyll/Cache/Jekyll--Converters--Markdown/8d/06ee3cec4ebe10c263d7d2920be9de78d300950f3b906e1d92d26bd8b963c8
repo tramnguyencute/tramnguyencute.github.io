@@ -1,6 +1,0 @@
-I"K<p><strong>Ở bài viết này</strong>, chúng ta sẽ tham khảo đoạn script ngắn giúp cho việc <strong>lọc file cần check</strong> từ cấu trúc thư mục lớn.
-Ta sẽ có hàng loạt thư mục, chúng đều chứa <strong>file excel</strong> với format name <code class="language-plaintext highlighter-rouge">TD_XXXXXX.xlsm</code> (line #26), việc <strong>nhảy ra nhảy vào</strong> để check file đó rất mất thời gian.</p>
-<div class="post-img-post">
-    <img src="/img/2020-09-25-bash-script-copy-file/hinh_dong_chay_thu_muc.gif" />
-</div>
-:ET
