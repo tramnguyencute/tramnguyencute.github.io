@@ -119,8 +119,8 @@ share-links-active:
 # --- Misc --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#mail:nduybang140494@gmail.com
-disqus: "bang-nguyen-blog-1"
+# mail:nduybang140494@gmail.com
+# disqus: "bang-nguyen-blog-1"
 
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-64524695-2"

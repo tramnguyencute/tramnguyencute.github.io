@@ -757,5 +757,5 @@ void Weather_Online_sever()
 ------------------------------------------------------------
 
 {: .box-note}
-**Note:** Phần 3 chúng ta sẽ làm việc với các Mode - Sử dụng một nút nhấn cho nhiều MODE
+**Note:** [Phần 3 chúng ta sẽ làm việc với các Mode - Sử dụng một nút nhấn cho nhiều MODE](/2020-11-12-mot-nut-nhan-nhieu-tinh-nang)
 
