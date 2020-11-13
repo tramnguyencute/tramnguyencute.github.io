@@ -6,12 +6,12 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
 bigimg:
   - "/img/My_Picture/anh_aboutme.jpg"
 ---
-
+## Hi again, my name is Nguyen Duy Bang
+-------------------------
 <div id="aboutme-section">
-
 <p class="about-text">
 <span class="fa fa-briefcase about-icon"></span>
-Hi again, my name is <strong>Nguyen Duy Bang</strong>, I am an avid open source enthusiast, contributor and developer. 
+I am an avid open source enthusiast, contributor and developer. 
 And I'm currently a <strong>Embedded Systems Engineer</strong> at <a target="_blank" href="http://banvien.com/">Ban Vien</a> company.
 <br>&nbsp;- 7/2019 > 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd.
 <br>&nbsp;- 2/2020 > 9/2020: Onsite at Robert Bosch Engineering Viet Nam.

@@ -427,12 +427,18 @@ footer .theme-by {
   margin-left: auto;
   margin-right: auto;
   border: solid #ddd;
+  background-color: rgb(247, 247, 247);
   border-radius: 7px;
   padding: 5px;
   width: 80%;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform 330ms ease-out; /* Tạo hiệu ứng chuyển động zoom */
 }
 .post-img-post:hover {
   transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transition: transform 330ms ease-in; /* Tạo hiệu ứng chuyển động zoom */
 }
 /* --- Tags --- */
 

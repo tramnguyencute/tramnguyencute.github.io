@@ -18,19 +18,21 @@ comments: true
 Các loại **nút nhấn cơ học** phổ biến bao gồm:
 
 {: .box-note}
-Nút nhấn tự giữ, Nút nhấn tự nhả, Nút nhấn dù...
+Cơ chế `lò xo` bên trong `vận hành hai trạng thái` này (`nhấn` và `thả`) của một nút nhấn. Các `nút bấm` được `phân loại` chủ yếu `thành` các `nút ấn thường mở`, `thường đóng` và `nhấn kép`.
 
 <div class="post-img-post">
     <img src="/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/cacloainutnhan.png">
+	<a href="https://codienhaiau.com/category/nut-nhan/">Các loại nút nhấn.</a>
 </div>
 
 ------------------------------------------
 **`Repo có chứa Source code`** mình ví dụ trong bài viết này: [SmartClock](https://github.com/bangnguyendev/SmartClock)
 
-**Nay mình sử dụng nút nhấn tự nhả** (dùng theo kiểu trở kéo lên nhé  - `pull up resistor`) để giới thiệu về cách `sử dụng` khá hay ho `khi chúng ta bị giới hạn PIN GPIO` trên MCU.
+**Nay mình sử dụng nút nhấn tự nhả - thường mở** (dùng theo kiểu trở kéo lên nhé  - `pull up resistor`) để giới thiệu về cách `sử dụng` khá hay ho `khi chúng ta bị giới hạn PIN GPIO` trên MCU.
 
 <div class="post-img-post">
     <img src="/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/nut-nhan-pull-up.png">
+
 </div>
 
 Các bạn có thể tìm hiểu của nút nhấn sài **trở kéo lên** hoặc **trở kéo xuống** ở bài viết này:
@@ -38,10 +40,13 @@ Các bạn có thể tìm hiểu của nút nhấn sài **trở kéo lên** ho�
 {: .box-note}
 **Note:** [Xác định trạng thái của một nút nhấn](http://arduino.vn/bai-viet/161-bai-11-xac-dinh-trang-thai-cua-mot-nut-nhan-button-inputpullup)
 
+-----------------------------------
+
 ## Mục đích của bài viết này là giải quyết vấn đề bị giới hạn phần cứng và PIN GPIO ở MCU.
 
 <div class="post-img-post">
     <img src="/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/checkbutton.png">
+	Nội dung code trong bài giới thiệu.
 </div>
 
 
@@ -53,12 +58,13 @@ Vì là nút nhấn cơ học nên khi thực hiện thao tác bấm (hoặc k b
 
 <div class="post-img-post">
     <img src="/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/chong-doi-phim.jpg">
+	Debounce button.
 </div>
 
 Như trong hình thì khoảng thời gian `Fluctuations` chính là lúc xảy ra dội phím làm cho tín hiệu nhảy mức logic 1-0 loạn xạ và làm MCU xử lý sai lệch nếu đọc tín hiệu này.
 Để khắc phục tình trạng trên thì khi coding chúng ta sử dụng phương pháp chống dội bằng `delay()` (có nhiều phương pháp, mỗi phương pháp có ưu điểm, nhược điểm khác nhau. Với **#tag** mình để phía trên các bạn có thể tìm kiếm `google` để tìm hiểu thêm).
 
-**Source code:**
+**Source code mẫu:**
 {% highlight c linenos %}
 if (digitalRead(Button_Mode) == HIGH) // nếu nút bấm ở mức cao
 {
@@ -69,8 +75,15 @@ if (digitalRead(Button_Mode) == HIGH) // nếu nút bấm ở mức cao
     }
 }
 {% endhighlight %}
+*Nhìn vào Source code mẫu:*
 
-Lệnh `#line1` sẽ check xem nút nhấn có đang được nhấn hay không - **HIGH**? Nếu sau khoảng thời gian `delay(500);` mà tín hiệu vẫn đang ỏ mức **HIGH** thì chính xác là do con người cố ý tác động việc nhấn nút. Còn sau `500ms - #line3` mà việc check ở `#line4` không thỏa mãn - `LOW` thì đó chỉ là xung nhiễu hoặc nút nhấn vô tình bị cấn nhẹ gì đấy.
+Lệnh <kbd>#line1</kbd> sẽ check xem nút nhấn có đang được nhấn hay không - **`HIGH`**? 
+
+Nếu sau khoảng thời gian `delay(500);` mà tín hiệu vẫn đang ỏ mức **`HIGH`** thì chính xác là do con người cố ý tác động việc nhấn nút. 
+
+Còn sau `500ms` - <kbd>#line3</kbd> mà việc check ở <kbd>#line4</kbd> không thỏa mãn - **`LOW`** thì đó chỉ là xung nhiễu hoặc nút nhấn vô tình bị cấn nhẹ gì đấy.
+
+-------------------------
 
 ### Tìm hiểu hàm millis
 
@@ -80,31 +93,33 @@ Lệnh `#line1` sẽ check xem nút nhấn có đang được nhấn hay không 
 {: .box-note}
 **`Trả về`** một số nguyên kiểu `unsigned long` là thời gian kể từ lúc thương trình Arduino được khởi động
 
-{: .box-note}
+{: .box-warning}
 **Tham khảo thêm:** [Tìm hiểu hàm millis](http://arduino.vn/reference/micros) - diễn đàn ArduinoVN
+
+--------------------------
 
 ### Áp dụng thực tiễn
 
-`Nguyên lí làm việc` của nút nhấn là khi **chúng ta nhấn giữ nút ở khoảng bao lâu thời gian** thì **mỗi khoảng thời gian** sẽ **là một mode lựa chọn khác nhau**. Khi chúng ta **nhả nút ra thì sẽ chọn mode đó**. *(Giống mấy nút nhấn trên màn hình LCD xe máy Winner, Exceter, Raider...)*
+**`Nguyên lí làm việc`** của nút nhấn là khi **chúng ta nhấn giữ nút ở khoảng bao lâu thời gian** thì **mỗi khoảng thời gian** sẽ **là một mode lựa chọn khác nhau**. Khi chúng ta **nhả nút ra thì sẽ chọn mode đó**. *(Giống mấy nút nhấn trên màn hình LCD xe máy Winner, Exceter, Raider...)*
 
 <div class="post-img-post">
     <img src="/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/checkbutton2.png">
+	Hàm CheckButton_ndb() cho ví dụ bên dưới.
 </div>
 
-Nhìn vào `#line324`, chúng ta khởi tạo một biến `startTime` và nó được gán bằng `millis()`. Điều này có nghĩa là ngay khi chương trình chạy tới lệnh này thì giá trị truyền về của hàm `millis()` sẽ được gán cho biến `startTime`.
+Nhìn vào <kbd>#line324</kbd>, chúng ta khởi tạo một biến `startTime` và nó được gán bằng `millis()`. Điều này có nghĩa là ngay khi chương trình chạy tới lệnh này thì giá trị truyền về của hàm `millis()` sẽ được gán cho biến `startTime`.
 
-Ví dụ, ngay khi `chương trình hoạt động` thì hàm `millis() được chạy từ 0ms`, chạy tới khi nó đụng cái lệnh `#line324` thì hết `50 mili giây`. Thì ngay lúc đó biến `startTime = 50`.
+Ví dụ, ngay khi `chương trình hoạt động` thì hàm `millis() được chạy từ 0ms`, chạy tới khi nó đụng cái lệnh <kbd>#line324</kbd> thì hết `50 mili giây`. Thì ngay lúc đó biến `startTime = 50`.
 
-Sài kiểu biến phạm vi local vì mỗi lần chúng ta nhấn nút thì muốn nó lấy giá trị thời gian tại thời điểm đó.
+*Sài kiểu biến phạm vi local vì mỗi lần chúng ta nhấn nút thì muốn nó lấy giá trị thời gian tại thời điểm đó.*
 
-ở `#line327`, lệnh While sẽ check việc chúng ta giữ nút nhấn. 
-
-ở `#line330`,  `couter_Mode = (millis() - startTime) / 1000;` có nghĩa là nếu chúng ta `giữ nút nhấn trong 1000ms` (ứng với 1 giây) thì sau khoảng 1000ms thì `hàm millis() lúc này bằng 50ms trước đó cộng với 1000ms giữ phím là 1050ms`. 
-
-Nên biến `couter_Mode` sẽ luu trữ khoảng thời gian chúng ta nhấn giữ nút chính thúc bằng cách lấy giá trị hàm millis() tại thời điểm buông nút trừ đi mốc thời gian trước khi vào việc check giữ nút (`startTime`).
+Tại thời điểm <kbd>#line327</kbd>, lệnh `while (digitalRead(Button_Mode) == HIGH)` sẽ check việc chúng ta có *`ĐANG GIỮ NÚT NHẤN`* hay không? Nếu không còn giữ nút thì thoát While, ngược lại nếu đang còn giữ nút ở mức logic `HIGH` thì check lệnh bên trong.
+- Lúc này nếu còn giữ đè nút thì ở <kbd>#line330</kbd>,  `couter_Mode = (millis() - startTime) / 1000;` có nghĩa là nếu chúng ta `giữ nút nhấn trong 1000ms` (ứng với 1 giây) thì sau khoảng 1000ms thì `hàm millis() lúc này bằng 50ms trước đó cộng với 1000ms giữ phím là 1050ms`. 
+- Nên biến `couter_Mode` sẽ luu trữ khoảng thời gian chúng ta nhấn giữ nút chính thúc bằng cách `lấy giá trị trả về của hàm millis()` `tại thời điểm buông nút` `trừ đi` `mốc thời gian trước khi vào việc` check giữ nút (`startTime`).
 
 <div class="post-img-post">
     <img src="/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/cach-tinh-thoi-gian.png">
+	Mô phỏng tiến trình thời gian khi MCU hoạt động.
 </div>
 
 *Các bạn nhìn hình mô phỏng khoảng thời gian ở trên cho dễ hiểu nhé.*
@@ -183,7 +198,15 @@ Sau đó lần lượt các `Mode từ 1 đến 3 giây`, `3 đến 5 giây`, `5
 
 Tương tự như vậy các bạn có thể triển khai thêm cho từng Mode. `Khi vào mỗi mode riêng biệt` chúng ta `tạo thêm biến local để đong đếm khoảng thời gian` đè nút để vào các `mode con` của `Mode cha mẹ`.
 
+----------------------------------------
+
 ## *Chúc mọi người thành công!*
+
+*Bài viết có sử dụng một số bài link đính kèm từ diễn đàn* [*Arduino Việt Nam*](http://arduino.vn/)
+*    *http://arduino.vn/reference/micros*
+*    *http://arduino.vn/bai-viet/161-bai-11-xac-dinh-trang-thai-cua-mot-nut-nhan-button-inputpullup*
+
+--------------------------
 
 <svg viewBox="0 0 900 200">
 
@@ -209,7 +232,3 @@ Tương tự như vậy các bạn có thể triển khai thêm cho từng Mode.
 </svg>
 
 ----------------------
-*Bài viết có sử dụng một số bài link đính kèm từ diễn đàn* [*Arduino Việt Nam*](http://arduino.vn/)
-*    *http://arduino.vn/reference/micros*
-*    *http://arduino.vn/bai-viet/161-bai-11-xac-dinh-trang-thai-cua-mot-nut-nhan-button-inputpullup*
-

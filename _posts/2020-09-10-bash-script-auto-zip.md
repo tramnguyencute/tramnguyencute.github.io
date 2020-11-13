@@ -2,7 +2,7 @@
 layout: post
 title: "Bash Script: Zip multiple folders"
 meta-title: "Using Bash Shell for Windows"
-subtitle: "...Phần 2: Tạo script auto zip nhiều folder"
+subtitle: "...Phần 1: Tạo script auto zip nhiều folder"
 bigimg:
   - "/img/2020-09-09-bash-script/anh-bia.png"
 image: /img/2020-09-09-bash-script/anh-bia.png

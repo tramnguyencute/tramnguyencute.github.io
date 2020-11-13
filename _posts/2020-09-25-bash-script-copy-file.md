@@ -2,7 +2,7 @@
 layout: post
 title: "Bash Script: Copy multiple files"
 meta-title: "Using Bash Shell for Windows"
-subtitle: "...Phần 3: Copy file chung teamplate"
+subtitle: "...Phần 2: Copy file chung teamplate"
 bigimg:
   - "/img/2020-09-09-bash-script/anh-bia.png"
 image: /img/2020-09-09-bash-script/anh-bia.png
