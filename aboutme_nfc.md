@@ -24,7 +24,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
     <span class="sr-only">Phone</span> Phone Number
   </a>
 
-  <a href="zalo: zalo.me/0784140494" title="Zalo">
+  <a href="https://zalo.me/0784140494" title="Zalo">
     <span class="fa-stack fa-lg" aria-hidden="true">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
@@ -32,7 +32,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
     <span class="sr-only">Zalo</span> Zalo
   </a>
 
-  <a href="messenger: m.me/drake.bangnguyen/ " title="Messenger">
+  <a href="https://m.me/drake.bangnguyen/ " title="Messenger">
     <span class="fa-stack fa-lg" aria-hidden="true">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
