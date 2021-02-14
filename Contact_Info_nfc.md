@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About Bang Nguyen
-meta-title: About me
+title: Contact Info
+meta-title: Contact Info
 subtitle: "For a start, my favorite quote is, <br> Do what you love, love what you do."
 # bigimg:
 #   - "/img/My_Picture/anh_aboutme.jpg"

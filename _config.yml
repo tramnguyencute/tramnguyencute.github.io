@@ -29,7 +29,7 @@ navbar-links:
   Books: "books"
   About Me: 
     - About Me: aboutme
-    - Contact Info: aboutme_nfc
+    - Contact Info: Contact_Info_nfc
     - LinkedIn Profile: "https://www.linkedin.com/in/bangnguyenduy"
     - Github Profile: "https://github.com/bangnguyendev"
   Publications:
