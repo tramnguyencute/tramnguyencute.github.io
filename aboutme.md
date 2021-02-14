@@ -16,7 +16,7 @@ And I'm currently a <strong>Embedded Systems Engineer</strong> at <a target="_bl
 <br>&nbsp;- 7/2019 > 2/2020  : Onsite at Renesas Design Vietnam Co., Ltd.
 <br>&nbsp;- 2/2020 > 9/2020: Onsite at Robert Bosch Engineering Viet Nam.
 <br>&nbsp;- 9/2020 > 10/2020: Training ISTQB-Overview, Unifi ed Diagnostic Services.
-<br>&nbsp;- Present : Onsite at Renesas Design Vietnam Co., Ltd. (Updated 5/11/2020)
+<br>&nbsp;- Present : Onsite at Renesas Design Vietnam Co., Ltd. (Updated 14/02/2021)
 </p>
 
 <p class="about-text">
@@ -31,7 +31,7 @@ I am a programmer, software developer, and seasoned ethical hacker, participatin
 
 <p class="about-text">
 <span class="fa fa-book about-icon"></span>
-I enjoy reading <a target="_blank" href="https://bangnguyendev.github.io/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 51 books.
+I enjoy reading <a target="_blank" href="https://bangnguyendev.github.io/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 16 books.
 </p>
 
 <p class="about-text">

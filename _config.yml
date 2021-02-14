@@ -28,7 +28,8 @@ description: Embedded Systems Engineer
 navbar-links:
   Books: "books"
   About Me: 
-    - Github Page: aboutme
+    - About Me: aboutme
+    - Contact Info: aboutme_nfc
     - LinkedIn Profile: "https://www.linkedin.com/in/bangnguyenduy"
     - Github Profile: "https://github.com/bangnguyendev"
   Publications:
@@ -87,6 +88,7 @@ author:
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
+  telephone: 0784140494
 
 # Select which links to show in the footer
 footer-links-active:
