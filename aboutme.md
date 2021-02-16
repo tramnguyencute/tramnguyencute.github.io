@@ -31,7 +31,7 @@ I am a programmer, software developer, and seasoned ethical hacker, participatin
 
 <p class="about-text">
 <span class="fa fa-book about-icon"></span>
-I enjoy reading <a target="_blank" href="https://bangnguyendev.github.io/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 16 books.
+I enjoy reading <a target="_blank" href="https://bangnguyendev.github.io/books/">books</a>. In 2018, with an average of 1 book per week, I completed a Reading Challenge for reading 6 books.
 </p>
 
 <p class="about-text">

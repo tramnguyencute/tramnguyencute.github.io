@@ -11,157 +11,59 @@ title: Bang Nguyen - My Book Recommendations
 <div class="view">
 	<div class="my__suggestion"><center><h1><br>Books I Would Recommend</h1></center><div>
 		<section class="grid">
+		<!-- sách 1 -->
 			<div class="product">
 				<div class="product__info">
-					<img class="product__image" src="images/The_Alchemist.png" alt="The Alchemist" />
-					<h3 class="product__title">The Alchemist</h3>
-					<span class="product__author highlight">Paulo Coelho</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=The+Alchemist+by+paulo+coelho+reviews')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					<img class="product__image" src="images/Linux Shell Scripting Cookbook - Second Edition.jpg" alt="Linux Shell Scripting Cookbook - Second Edition" />
+					<h3 class="product__title">Linux Shell Scripting Cookbook</h3>
+					<span class="product__author highlight">Sarath Lakshman</span>
+					<button class="action action--button" onclick="window.open('https://www.amazon.com/Linux-Shell-Scripting-Cookbook-Second/dp/1782162747')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
-			</div>
+			</div>	
+		<!-- sách 3 -->
 			<div class="product">
 				<div class="product__info">
-					<img class="product__image" src="images/Now_That_You_are_Rich.png" alt="Now That You're Rich: Let's Fall in Love!" />
-					<h3 class="product__title">Now That You're Rich: Let's Fall in Love!</h3>
-					<span class="product__author highlight">Durjoy Datta & Maanvi Ahuja</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=now+that+you%27re+rich+reviews')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					<img class="product__image" src="images/Head First C A Brain-Friendly Guide.jpg" alt="Head First C: A Brain-Friendly Guide" />
+					<h3 class="product__title">Head First C: A Brain-Friendly Guide (1st Edition)</h3>
+					<span class="product__author highlight">Dawn Griffiths </span>
+					<button class="action action--button" onclick="window.open('https://www.amazon.com/gp/customer-reviews/R31JH7UREUWULF/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=1449399916')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
-			</div>
+			</div>	
+		<!-- sách 4 -->
 			<div class="product">
 				<div class="product__info">
-					<img class="product__image" src="images/Zero_to_One.png" alt="Zero to One: Notes on Startups, or How to Build the Future" />
-					<h3 class="product__title">Zero to One: Notes on Startups, or How to Build the Future</h3>
-					<span class="product__author highlight">Peter Thiel & Blake Masters</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=zero+to+one+by+peter+thiel+reviews')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					<img class="product__image" src="images/code-complete-2.jpg" alt="Code Complete" />
+					<h3 class="product__title">Code Complete</h3>
+					<span class="product__author highlight">Steve McConnell </span>
+					<button class="action action--button" onclick="window.open('https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/product-reviews/0735619670')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
-			</div>
+			</div>	
+		<!-- sách 2 -->
 			<div class="product">
 				<div class="product__info">
-					<img class="product__image" src="images/The_Subtle_Art_of_Not_Giving_a_Fck.png" alt="The Subtle Art of Not Giving a F*ck" />
-					<h3 class="product__title">The Subtle Art of Not Giving a F*ck</h3>
-					<span class="product__author highlight">Mark Manson</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=The+Subtle+Art+of+Not+Giving+a+F*ck+book')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					<img class="product__image" src="images/Pro WPF in CShap 2010.jpg" alt="Pro WPF in C# 2010" />
+					<h3 class="product__title">Pro WPF in C# 2010</h3>
+					<span class="product__author highlight">Matthew MacDonald</span>
+					<button class="action action--button" onclick="window.open('https://www.amazon.com/gp/customer-reviews/RRHPVL6Y2O44C/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=1430272058')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
-			</div>
+			</div>	
+		<!-- sách 5 -->
 			<div class="product">
 				<div class="product__info">
-					<img class="product__image" src="images/Harry_Potter_and_the_Cursed_Child.png" alt="Harry Potter and the Cursed Child" />
-					<h3 class="product__title">Harry Potter and the Cursed Child</h3>
-					<span class="product__author highlight">J. K. Rowling, Jack Thorne, & John Tiffany</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=Harry+Potter+and+the+Cursed+Child+book+reviews')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					<img class="product__image" src="images/Dac Nhan Tam.jpg" alt="Đắc nhân tâm" />
+					<h3 class="product__title">How to Win Friends and Influence People (Đắc nhân tâm)</h3>
+					<span class="product__author highlight">Dale Carnegie </span>
+					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=dac+nhan+tam+review&source=lmns&bih=555&biw=1280&rlz=1C1GCEU_enVN855VN855&hl=vi&sa=X&ved=2ahUKEwjgoNGUwu7uAhUMBqYKHSi_AbYQ_AUoAHoECAEQAA')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
-			</div>
+			</div>	
+		<!-- sách 6 -->
 			<div class="product">
 				<div class="product__info">
-					<img class="product__image" src="images/Astrophysics_for_People_in_a_Hurry.png" alt="Astrophysics for People in a Hurry" />
-					<h3 class="product__title">Astrophysics for People in a Hurry</h3>
-					<span class="product__author highlight">Neil deGrasse Tyson</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=astrophysics+for+people+in+a+hurry+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					<img class="product__image" src="images/The 7 Habits of Highly Effective People.jpg" alt="The 7 Habits of Highly Effective People" />
+					<h3 class="product__title">The 7 Habits of Highly Effective People</h3>
+					<span class="product__author highlight">Stephen R. Covey </span>
+					<button class="action action--button" onclick="window.open('https://www.amazon.com/gp/customer-reviews/R1NNZ9WNT4M4OW/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=0743269519')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
-			</div>		
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Who_Moved_My_Cheese.png" alt="Who Moved My Cheese?" />
-					<h3 class="product__title">Who Moved My Cheese?</h3>
-					<span class="product__author highlight">Spencer Johnson</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=Who+Moved+My+Cheese%3F+book+reviews')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Rich_Dad_Poor_Dad.png" alt="Rich Dad Poor Dad" />
-					<h3 class="product__title">Rich Dad Poor Dad</h3>
-					<span class="product__author highlight">Robert Kiyosaki & Sharon Lechter</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=rich+dad+poor+dad+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/The_Power_of_Habit.png" alt="The Power of Habit" />
-					<h3 class="product__title">The Power of Habit</h3>
-					<span class="product__author highlight">Charles Duhigg</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=the+power+of+habit+by+charles+duhigg+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Bounce.png" alt="Bounce" />
-					<h3 class="product__title">Bounce</h3>
-					<span class="product__author highlight">Matthew Syed</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=bounce+matthew+syed+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Shikhandi.png" alt="Shikhandi" />
-					<h3 class="product__title">Shikhandi and Other Stories They Don't Tell You</h3>
-					<span class="product__author highlight">Devdutt Pattanaik</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=Shikhandi+and+Other+Stories+They+Don%27t+Tell+You+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/The_White_Tiger.png" alt="The White Tiger" />
-					<h3 class="product__title">The White Tiger</h3>
-					<span class="product__author highlight">Aravind Adiga</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=the+white+tiger+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/The_Power_of_Your_Subconscious_Mind.png" alt="The Power of Your Subconscious Mind" />
-					<h3 class="product__title">The Power of Your Subconscious Mind</h3>
-					<span class="product__author highlight">Joseph Murphy</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=power+of+subconscious+mind+joseph+murphy+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Hooked.png" alt="Hooked: How to Build Habit-Forming Products" />
-					<h3 class="product__title">Hooked: How to Build Habit-Forming Products</h3>
-					<span class="product__author highlight">Nir Eyal</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=hooked+nir+eyal+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/The_One_Thing.png" alt="The One Thing: The Surprisingly Simple Truth Behind Extraordinary Results" />
-					<h3 class="product__title">The One Thing</h3>
-					<span class="product__author highlight">Gary W. Keller & Jay Papasan</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=The+One+Thing%3A+The+Surprisingly+Simple+Truth+Behind+Extraordinary+Results&oq=The+one+Thing%3A+The+Surprisingly+Simple+Truth+Behind+Extraordinary+Results')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Quirkology.png" alt="Quirkology: The Curious Science of Everyday Lives" />
-					<h3 class="product__title">Quirkology: The Curious Science of Everyday Lives</h3>
-					<span class="product__author highlight">Richard Wiseman</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=Quirkology%3A+The+Curious+Science+of+Everyday+Lives+book+reviews')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/The_Rules_of_Life.png" alt="The Rules of Life: A Personal Code for Living a Better, Happier, More Successful Life" />
-					<h3 class="product__title">The Rules of Life</h3>
-					<span class="product__author highlight">Richard Templar</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=the+rules+of+life+by+richard+templar+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/Simp.png" alt="Simplicity" />
-					<h3 class="product__title">Simplicity</h3>
-					<span class="product__author highlight">Edward de Bono</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=simplicity+edward+de+bono+book+review')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/The_Goldilocks_Enigma.png" alt="The Goldilocks Enigma: Why is the Universe Just Right for Life?" />
-					<h3 class="product__title">The Goldilocks Enigma</h3>
-					<span class="product__author highlight">Paul Davies</span>
-					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=The+Goldilocks+Enigma%3A+Why+is+the+Universe+Just+Right+for+Life%3F&oq=The+Goldilocks+Enigma%3A+Why+is+the+Universe+Just+Right+for+Life%3F')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>			
+			</div>	
 		</section>
 	</div>
