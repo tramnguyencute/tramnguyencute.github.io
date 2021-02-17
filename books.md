@@ -24,7 +24,7 @@ title: Bang Nguyen - My Book Recommendations
 			<div class="product">
 				<div class="product__info">
 					<img class="product__image" src="images/Head First C A Brain-Friendly Guide.jpg" alt="Head First C: A Brain-Friendly Guide" />
-					<h3 class="product__title">Head First C: A Brain-Friendly Guide (1st Edition)</h3>
+					<h3 class="product__title">Head First C: A Brain-Friendly Guide <br> (1st Edition)</h3>
 					<span class="product__author highlight">Dawn Griffiths </span>
 					<button class="action action--button" onclick="window.open('https://www.amazon.com/gp/customer-reviews/R31JH7UREUWULF/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=1449399916')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
@@ -51,7 +51,7 @@ title: Bang Nguyen - My Book Recommendations
 			<div class="product">
 				<div class="product__info">
 					<img class="product__image" src="images/Dac Nhan Tam.jpg" alt="Đắc nhân tâm" />
-					<h3 class="product__title">How to Win Friends and Influence People (Đắc nhân tâm)</h3>
+					<h3 class="product__title">How to Win Friends and Influence People <br> (Đắc nhân tâm)</h3>
 					<span class="product__author highlight">Dale Carnegie </span>
 					<button class="action action--button" onclick="window.open('https://www.google.com/search?q=dac+nhan+tam+review&source=lmns&bih=555&biw=1280&rlz=1C1GCEU_enVN855VN855&hl=vi&sa=X&ved=2ahUKEwjgoNGUwu7uAhUMBqYKHSi_AbYQ_AUoAHoECAEQAA')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
 				</div>
