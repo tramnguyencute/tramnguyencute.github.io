@@ -96,7 +96,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
   <span class="sr-only">MoMo</span> MoMo
   </a>
 
- <a title="TPBank">
+  <a title="TPBank">
   <span class="fa-stack fa-lg" aria-hidden="true">
     <i class="fa fa-circle fa-stack-2x"></i>
     <i class="fa fa-credit-card fa-stack-1x fa-inverse"></i>
