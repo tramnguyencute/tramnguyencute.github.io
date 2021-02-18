@@ -33,6 +33,7 @@ navbar-links:
     - LinkedIn Profile: "https://www.linkedin.com/in/bangnguyenduy"
     - Github Profile: "https://github.com/bangnguyendev"
   Publications:
+    - Auto Login account web: 2021-02-17-auto-login-web
     - A Button for Multi Mode: 2020-11-12-mot-nut-nhan-nhieu-tinh-nang
     - Smart Clock - P2: 2020-01-23-smart-clock
     - Smart Clock - P1: 2020-01-17-smart-clock
@@ -71,7 +72,7 @@ avatar: "img/My_Picture/avatar_github.jpg"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Bang Nguyen Duy
+  name: Bằng Nguyễn Duy
   rss: true
   email: "duybang140494@gmail.com"
   facebook: drake.bangnguyen
