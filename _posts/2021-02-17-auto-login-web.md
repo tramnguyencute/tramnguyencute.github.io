@@ -168,4 +168,4 @@ finally:
 ### *Link tham khảo:*
 *	*https://selenium-python.readthedocs.io/locating-elements.html*
 *	*https://phoenixnap.com/kb/how-to-install-python-3-windows*
-*	*Refer from Anh Kiệt Trần*
+*	*Refer from [Anh Kiệt Trần](https://kietanhtran.github.io/)*
