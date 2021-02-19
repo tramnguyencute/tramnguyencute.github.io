@@ -8,14 +8,6 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
 ---
 ## Hi again, my name is Nguyen Duy Bang
 
-<!-- <p align="center">
-  <a href="https://bangnguyendev.github.io/"><img src="https://img.shields.io/badge/Myblog%3A-bangnguyendev.github.io-8B008B?style=for-the-badge&logo=github"/></a><br> 
-  <a href="https://www.linkedin.com/in/bangnguyenduy/"><img src="https://img.shields.io/badge/Linkedin:-bangnguyenduy-yellowgreen?style=for-the-badge&logo=linkedin" /></a><br> 
-  <a href="https://www.facebook.com/drake.bangnguyen/"><img src="https://img.shields.io/badge/Facebook:-drake.bangnguyen-blue?style=for-the-badge&logo=facebook" /></a><br> 
-  <a href="0784140494"><img src="https://img.shields.io/badge/Phone:-0784140494-green?style=for-the-badge&logo=phone" /></a><br> 
-  <a href="https://www.instagram.com/nguyen.duy.bang/?hl=vi"><img src="https://img.shields.io/badge/Instagram:-nguyen.duy.bang-orange?style=for-the-badge&logo=instagram" /></a>
-</p> -->
-
   <a href="tel:{{ site.author.telephone }}" title="Phone">
     <span class="fa-stack fa-lg" aria-hidden="true">
       <i class="fa fa-circle fa-stack-2x"></i>
@@ -24,7 +16,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
     <span class="sr-only">Phone</span> Phone Number
   </a>
 
-  <a href="https://zalo.me/0784140494" title="Zalo">
+  <a href="https://zalo.me/{{ site.author.telephone }}" title="Zalo">
     <span class="fa-stack fa-lg" aria-hidden="true">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
@@ -32,7 +24,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
     <span class="sr-only">Zalo</span> Zalo
   </a>
 
-  <a href="https://m.me/drake.bangnguyen/ " title="Messenger">
+  <a href="https://m.me/{{ site.author.facebook }} " title="Messenger">
     <span class="fa-stack fa-lg" aria-hidden="true">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
@@ -88,7 +80,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
   <span class="sr-only">YouTube</span> YouTube
   </a>
 
-  <a href="https://nhantien.momo.vn/uMUo8rCPiDv" title="MoMo">
+  <a href="https://nhantien.momo.vn/{{ site.author.telephone }}" title="MoMo">
     <span class="fa-stack fa-lg" aria-hidden="true">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-money fa-stack-1x fa-inverse"></i>
