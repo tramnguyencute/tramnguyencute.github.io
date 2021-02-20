@@ -185,10 +185,9 @@
   </div>
 </footer>
 
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
 <!-- Simple Jekyll Search -->
 <script src="/js/jquery-3.5.1.js"></script>
-<script src="{{ "/js/simple-jekyll-search.min.js" | prepend: site.baseurl }}"></script>
+<script src="/js/simple-jekyll-search.min.js" | {{ prepend: site.baseurl }}"></script>
 <!-- Simple Jekyll Search -->
 <script>
   // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
@@ -245,11 +244,11 @@
   });
 </script>
 
-
+<!-- Trình phân tích chia sẽ bài viết trên facebook -->
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '721347795190980',
+      appId      : '{{ site.fb_app_id }}',
       cookie     : true,
       xfbml      : true,
       version    : 'v9.0'
