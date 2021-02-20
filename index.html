@@ -11,16 +11,25 @@ bigimg:
 - "/img/My_Picture/anh_3nguoi_dalat.jpg" : "Da Lat City"
 - "/img/My_Picture/anh_aboutme.jpg" : "Da Lat City"
 ---
+<!-- Data typed chạy chữ.  -->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="text-center">
+      <h2>I write about <span id="word" style="color:#890000";></span></h2>
+    </div>
+  </div>
+</div>
+<!-- JS typed chạy chữ.  -->
+<script src="/js/Typed.js"></script> 
 
-<!-- Current Projects -->
-<h1 class="text-center">Current Projects</h1>
+<!-- Projects have released -->
 <div class="spacer"></div>
 <div class="row text-center">
   <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <div class="project-card">
       {%- assign gh-user = "bangnguyendev"-%}
       {%- assign gh-project = "SmartClock" -%}
-      <span class="fa-stack fa-4x">
+      <span class="fa-stack fa-2x">
         <i class="fa fa-square fa-stack-2x stack-color"></i>
         <i class="fa fa-hourglass-half fa-stack-1x fa-inverse"></i>
       </span>
@@ -34,13 +43,13 @@ bigimg:
         <h4>{{- gh-project -}}</h4>
       </a>
       <!-- <hr class="seperator"> -->
-      <p class="text-muted">Room decoration clock.<br>Temperature, humidity.<br>Alarm, birthday.</p>
+      <p class="text-muted">Ver 1.0.2<br>Room decoration clock.<br>Temperature, humidity.<br>Alarm, birthday.</p>
     </div>
   </div>
   <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <div class="project-card">
       {%- assign gh-project = "VehicleSpeedGPS" -%}
-      <span class="fa-stack fa-4x">
+      <span class="fa-stack fa-2x">
         <i class="fa fa-square fa-stack-2x stack-color"></i>
         <i class="fa fa-map fa-stack-1x fa-inverse"></i>
       </span>
@@ -54,13 +63,13 @@ bigimg:
         <h4>{{- gh-project -}}</h4>
       </a>
       <!-- <hr class="seperator"> -->
-      <p class="text-muted">Put data to LCD.<br>Measure movement speed and altitude above sea level. </p>
+      <p class="text-muted">Ver 2.1.2<br>Put data to LCD.<br>Measure movement speed and altitude above sea level. </p>
     </div>
   </div>
   <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <div class="project-card">
       {%- assign gh-project = "SentDataThingSpeak" -%}
-      <span class="fa-stack fa-4x">
+      <span class="fa-stack fa-2x">
         <i class="fa fa-square fa-stack-2x stack-color"></i>
         <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
       </span>
@@ -74,7 +83,7 @@ bigimg:
         <h4>{{- gh-project -}}</h4>
       </a>
       <!-- <hr class="seperator"> -->
-      <p class="text-muted">Send and receive data between phone and <a
+      <p class="text-muted">Ver 1.0.2<br>Send and receive data between phone and <a
           href="https://github.com/bangnguyendev/SmartClock" target="_blank" rel="noopener"
           title="Go to Github Poject Page">SmartClock</a> project.<br>HTTP Methods GET vs POST.
       </p>
