@@ -1,5 +1,23 @@
 <!-- Search -->
+
 <div class="search-page">
+  <!-- Data header  -->
+  <!-- Đang trong quá trình setup để hiển thị song song với index.heml  -->
+  {% if 1 %}
+    <div class="text-center">
+      <h2><span style="color:#890000";><br>Search about for ...</span></h2>
+    </div>
+  {% else %}
+  <!-- Đang trong quá trình setup để hiển thị song song với index.heml  -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="text-center">
+        <h2>I write about <span id="word" style="color:#890000";></span></h2>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- Nút tìm kiếm  -->
   <div class="search-icon-close-container">
     <span class="search-icon-close">
       <i class="fa fa-chevron-down"></i>
@@ -9,7 +27,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <form></form>
-        <input type="text" id="search-input" placeholder="$ grep...">
+        <input type="text" id="search-input" placeholder="$ find ./ | grep -i '<content>'">
         </form>
         <div id="search-results" class="mini-post-list"></div>
       </div>
