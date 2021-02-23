@@ -1,7 +1,10 @@
 # bangnguyendev.github.io
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/bangnguyendev/bangnguyendev.github.io">
-<img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/bangnguyendev/bangnguyendev.github.io">
-<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/bangnguyendev/bangnguyendev.github.io">
+-----------------
+
+| Jekyll CI     | Release | Release date     |
+| :---        |    :----:   |          ---: |
+| [![Jekyll site CI](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/jekyll.yml)     | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/bangnguyendev/bangnguyendev.github.io">     | <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/bangnguyendev/bangnguyendev.github.io">   |
+
 
 <p  align="center">
   <img src="https://github.com/bangnguyendev/bangnguyendev/blob/master/profile-summary-card-output/solarized/0-profile-details.svg">
