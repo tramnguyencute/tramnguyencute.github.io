@@ -9,7 +9,7 @@ image: /img/2020-09-09-bash-script/anh-bia.png
 tags: [bash, script, unix, maxdepth, mindepth, Zip multiple folders]
 # gh-repo: bangnguyendev/SmartClock
 # gh-badge: [star, watch, fork, follow]
-comments: true
+# comments: true
 ---
 Câu lệnh `find` trong Linux được dùng để tìm kiếm tập tin và thư mục dựa trên các điều kiện đầu vào khác nhau. Tương tự như câu lệnh ls thì câu lệnh `find` cũng là một trong những câu lệnh được sử dụng phổ biến trên Linux.
 

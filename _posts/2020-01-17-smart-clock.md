@@ -7,9 +7,9 @@ bigimg:
   - "/img/2020-01-17-smart-clock/anh-bia-baiviet.jpg"
 image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
-gh-repo: bangnguyendev/SmartClock
-gh-badge: [star, watch, fork, follow]
-comments: true
+# gh-repo: bangnguyendev/SmartClock
+# gh-badge: [star, watch, fork, follow]
+# comments: true
 ---
 ----------------------------------------------------------------------------
 `Xin chào` mọi người. Đây là bài viết `đầu tiên chia sẽ` về một trong những `project` mà mình đã và đang phát triển...

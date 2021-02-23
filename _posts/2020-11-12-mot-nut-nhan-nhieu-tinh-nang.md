@@ -7,9 +7,9 @@ bigimg:
   - "/img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/anh-bia.jpg"
 image: /img/2020-11-12-mot-nut-nhan-nhieu-tinh-nang/anh-bia.jpg
 tags: [button, pullup, pull up, nút nhấn, điện trở kéo lên, chống dội nút nhấn, debounce button]
-gh-repo: bangnguyendev/SmartClock
-gh-badge: [star, watch, fork, follow]
-comments: true
+# gh-repo: bangnguyendev/SmartClock
+# gh-badge: [star, watch, fork, follow]
+# comments: true
 ---
 ## Giới thiệu về nút nhấn
 **Nút nhấn** là một phần cứng khá cơ bản và dễ dàng sử dụng. `Nút nhấn cơ học` là loại mình sẽ giới thiệu trong bài viết này. Hầu hết những bạn mới bắt đầu làm quen với điện tử thì đều quen với việc sử dụng nút nhấn. 

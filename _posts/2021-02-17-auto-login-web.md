@@ -7,9 +7,9 @@ bigimg:
   - "/img/2021-02-17-auto-login-web/AutomatableTasks.jpg"
 image: /img/2021-02-17-auto-login-web/AutomatableTasks.jpg
 tags: [python, Selenium, AutomatableTasks]
-gh-repo: bangnguyendev/Documents
-gh-badge: [star, watch, fork, follow]
-comments: true
+# gh-repo: bangnguyendev/Documents
+# gh-badge: [star, watch, fork, follow]
+# comments: true
 ---
 ## Giới thiệu về mẹo
 - Áp dụng với **máy tính cá nhân** vì `scrip có thể làm lộ thông tin cá nhân của bạn`.

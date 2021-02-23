@@ -9,7 +9,7 @@ image: /img/2020-01-17-smart-clock/anh-bia-baiviet.jpg
 tags: [đồng hồ, smart, watch, clock, alarm, thingspeak, esp8266]
 gh-repo: bangnguyendev/SmartClock
 gh-badge: [star, watch, fork, follow]
-comments: true
+# comments: true
 ---
 ----------------------------------------------------------------------------
 Ở bài viết này, chúng ta sẽ làm việc với code sau khi các bạn đã cài đặt các phần mềm và chuẩn bị những phần cứng ở [**`Phần 1.`**](https://bangnguyendev.github.io/2020-01-17-smart-clock/ "Phần 1: Giới thiệu dự án")

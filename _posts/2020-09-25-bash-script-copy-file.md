@@ -9,7 +9,7 @@ image: /img/2020-09-09-bash-script/anh-bia.png
 tags: [bash, script, unix, maxdepth, mindepth, copy multiple files]
 # gh-repo: bangnguyendev/SmartClock
 # gh-badge: [star, watch, fork, follow]
-comments: true
+# comments: true
 ---
 **Ở bài viết này**, chúng ta sẽ tham khảo đoạn script ngắn giúp cho việc **lọc file cần check** từ cấu trúc thư mục lớn.
 Ta sẽ có hàng loạt thư mục, chúng đều chứa **file excel** với format name `TD_XXXXXX.xlsm` (line #26), việc **nhảy ra nhảy vào** để check file đó rất mất thời gian.
