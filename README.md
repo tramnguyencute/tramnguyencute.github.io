@@ -3,7 +3,7 @@
 
 | Lighthouse CI | Jekyll CI | Release | Release date |
 | :----:        | :----:    | :----:  | :----:       |
-|[![Lighthouse CI](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/Lighthouse.yml/badge.svg)](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/Lighthouse.yml) | [![Jekyll site CI](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/jekyll.yml) | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/bangnguyendev/bangnguyendev.github.io"> | <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/bangnguyendev/bangnguyendev.github.io"> |
+|[![Lighthouse CI](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/Lighthouse_CI.yml/badge.svg)](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/Lighthouse_CI.yml) | [![Jekyll site CI](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/Jekyll_CI.yml/badge.svg)](https://github.com/bangnguyendev/bangnguyendev.github.io/actions/workflows/Jekyll_CI.yml) | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/bangnguyendev/bangnguyendev.github.io"> | <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/bangnguyendev/bangnguyendev.github.io"> |
 
 ----------------------
 
