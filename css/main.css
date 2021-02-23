@@ -842,42 +842,7 @@ td.gutter {
   margin-bottom: 30px;
 }
 
-/* --- Typed.js --- */
-.typed-cursor {
-  opacity: 1;
-  font-weight: 100;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  -ms-animation: blink 0.7s infinite;
-  -o-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
-  }
-  @-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-ms-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-        }
-  @-o-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
+/* Custom khi sử dụng thiết bị di dộng */
 @media screen and (max-width: 600px) {
   .mobile-js-hide {
     visibility: hidden;
@@ -985,7 +950,6 @@ td.gutter {
 }
 
 /* Add thêm .no-scroll để bổ sung vào nút search */
-
 .no-scroll {
   overflow-y: hidden;
 }
@@ -1001,4 +965,29 @@ td.gutter {
 }
 .mini-post-list .post-preview {
   position: relative;
+}
+
+
+/* Title "Search..." */
+.waviy {
+  font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
+  padding-right: 150px;
+  padding-top: 10px;
+  text-align: center;
+  -webkit-box-reflect: below  -70px linear-gradient(transparent, rgba(107, 13, 13, 0.144));
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #890000;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i))
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
 }
