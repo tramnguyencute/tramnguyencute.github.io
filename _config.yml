@@ -1,6 +1,6 @@
 # --- General options --- #
 # Name of website
-title: Nguyễn Thị Bích Trâm
+title: ✨Nguyễn Thị Bích Trâm✨
 
 #For my changes
 # use meta-title: for the center heading of the page.
@@ -13,16 +13,16 @@ description: Office
 # --- Navigation bar options --- #
 # List of links in the navigation bar
 navbar-links:
-  Books: "books"
-  About Me: aboutme
-  Social Network:
-    - NFC Connect: Contact_Info_nfc
-    - Facebook: https://www.facebook.com/pe.tram.984
-    - Instagram: https://www.instagram.com/pe.tram.984
-    - Tiktok: https://www.tiktok.com/@bichtram_4497?lang=vi-VN
-    - Messenger: https://m.me/pe.tram.984
+  # Books: "books"
+  😊About Me: aboutme
+  👥Facebook: https://www.facebook.com/pe.tram.984
+  📷Instagram: https://www.instagram.com/pe.tram.984
+  🎵Tiktok: https://www.tiktok.com/@bichtram_4497?lang=vi-VN
+  💬Messenger: https://m.me/pe.tram.984
+  📢Zalo: https://zalo.me/0374016051
 
-  Resume: "resume/NGUYENDUYBANGCV.pdf"
+
+  # Resume: "resume/NGUYENDUYBANGCV.pdf"
   # Tags: "tags" thay thế bằng nút tìm kiếm.
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -34,7 +34,7 @@ avatar: "img/My_Picture/avatar_github.jpg"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Nguyễn Thị Bích Trâm
+  name: 🔥Nguyễn Thị Bích Trâm🔥
   rss: true
   email: "nguyenthibichtram051@gmail.com"
   facebook: pe.tram.984
