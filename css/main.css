@@ -112,18 +112,18 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #831e6a;
+  color: #ff9966;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 a {
-  color: #831e6a;
+  color: #ff9966;
 }
 a:hover,
 a:focus {
-  color: #441212;
+  color: #920e6a;
 }
 blockquote {
   color: #808080;
@@ -530,7 +530,7 @@ footer .theme-by {
 .contact_NFC {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 60px;
+  padding-left: 80px;
   padding-top: 20px;
 }
 
@@ -540,7 +540,7 @@ footer .theme-by {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10px;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .row {
