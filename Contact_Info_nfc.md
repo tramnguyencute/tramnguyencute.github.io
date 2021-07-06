@@ -4,7 +4,7 @@ title: Nguyễn Thị Bích Trâm
 meta-title: About Me
 subtitle: "Một ngày nào đó trên thế giới rộng lớn này chúng ta sẽ gặp được một người thuộc về riêng mình."
 bigimg:
-  - "/img/My_Picture/anh_bia1.jpg" : "Da Lat City"
+  - "/img/My_Picture/test.jpg" : "Bích Trâm"
 ---
 ## Hi again, my name is Trâm
 

@@ -112,18 +112,18 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #008AFF;
+  color: #831e6a;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 a {
-  color: #008AFF;
+  color: #831e6a;
 }
 a:hover,
 a:focus {
-  color: #890000;
+  color: #441212;
 }
 blockquote {
   color: #808080;
@@ -525,6 +525,30 @@ footer .theme-by {
 .post-img-post:hover {
   transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   transition: transform 330ms ease-in; /* Tạo hiệu ứng chuyển động zoom */
+}
+
+.contact_NFC {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+.typed_caption {
+  width: auto;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.row {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
 /* --- Tags --- */
 

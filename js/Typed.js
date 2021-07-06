@@ -1,4 +1,4 @@
-const words = ["ăn bánh.","ăn đòn.", "ăn kem.", "mlem mlem."];
+const words = ["Bây giờ em hài lòng với việc mình độc thân."];
 let i = 0;
 let timer;
 

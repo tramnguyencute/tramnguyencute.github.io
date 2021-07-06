@@ -1,6 +1,6 @@
 ---
 layout: books
-title: Bang Nguyen - My Book Recommendations
+title: Trâm Nguyen - My Book Recommendations
 ---
 <head>
 	<link rel="stylesheet" type="text/css" href="css/book_style.css" />

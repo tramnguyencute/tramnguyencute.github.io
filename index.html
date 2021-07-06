@@ -4,69 +4,81 @@ title: Trâm Nguyễn
 subtitle: Một ngày nào đó trên thế giới rộng lớn này chúng ta sẽ gặp được một người thuộc về riêng mình.
 meta-title: "Hi, I'm Trâm"
 bigimg:
-- "/img/My_Picture/anh_bia1.jpg" : "Da Lat City"
+- "/img/My_Picture/anh_bia1.jpg" : "Bích Trâm"
 ---
 <!-- Data typed chạy chữ.  -->
-<div class="row">
+<div class="typed_caption">
   <div class="col-sm-12">
     <div class="text-center">
-      <h2>Tao thì thích <span id="word" style="color:#890000";></span></h2>
+      <h3><span id="word" style="color: #831e6a;";></span></h3>
     </div>
   </div>
 </div>
 <!-- JS typed chạy chữ.  -->
 <script src="/js/Typed.js"></script> 
 
-<!-- Projects have released -->
-<div class="spacer"></div>
-<div class="row text-center">
-  <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
-    <div class="project-card">
-      {%- assign gh-user = "bangnguyendev"-%}
-      {%- assign gh-project = "Album A" -%}
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-square fa-stack-2x stack-color"></i>
-        <i class="fa fa-hourglass-half fa-stack-1x fa-inverse"></i>
+
+<div class="contact_NFC">
+  <h3>
+    <a href="tel:{{ site.author.telephone }}" target="_blank" rel="noopener" title="Phone">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-user-plus fa-stack-1x fa-inverse"></i>
       </span>
-      <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}} " rel="noopener" class="project-link"
-        title="Go to Github Poject Page">
-        <h4>{{- gh-project -}}</h4>
-      </a>
-      <!-- <hr class="seperator"> -->
-      <p class="text-muted"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/{{- gh-user -}}/{{- gh-project -}}?color=success&logo=github"><br>Thích gì thi ghi vô.</p>
-    </div>
-  </div>
-  <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
-    <div class="project-card">
-      {%- assign gh-project = "Album B" -%}
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-square fa-stack-2x stack-color"></i>
-        <i class="fa fa-map fa-stack-1x fa-inverse"></i>
+      <span class="sr-only">Phone</span> Phone Number
+    </a>
+    <br>
+    <a href="https://zalo.me/{{ site.author.telephone }}" target="_blank" rel="noopener" title="Zalo">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
       </span>
-      <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" rel="noopener" class="project-link"
-        title="Go to Github Poject Page">
-        <h4>{{- gh-project -}}</h4>
-      </a>
-      <!-- <hr class="seperator"> -->
-      <p class="text-muted"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/{{- gh-user -}}/{{- gh-project -}}?color=success&logo=github"><br>Không thích ghi thì xóa luôn. </p>
-    </div>
-  </div>
-  <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
-    <div class="project-card">
-      {%- assign gh-project = "Album C" -%}
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-square fa-stack-2x stack-color"></i>
+      <span class="sr-only">Zalo</span> Zalo
+    </a>
+    <br>
+    <a href="https://m.me/{{ site.author.facebook }} " target="_blank" rel="noopener" title="Messenger">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
       </span>
-      <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" rel="noopener" class="project-link"
-        title="Go to Github Poject Page">
-        <h4>{{- gh-project -}}</h4>
-      </a>
-      <!-- <hr class="seperator"> -->
-      <p class="text-muted"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/{{- gh-user -}}/{{- gh-project -}}?color=success&logo=github"><br>Cho hình vô cũng được.</p>
-    </div>
-  </div>
+      <span class="sr-only">Messenger</span> Messenger
+    </a>
+    <br>
+    <a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank" rel="noopener" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span> Facebook
+    </a>
+    <br>
+    <a href="mailto:{{ site.author.email }}" target="_blank" rel="noopener" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span> Gmail
+    </a>
+    <br>
+    <a href="https://www.instagram.com/{{ site.author.instagram }}" target="_blank" rel="noopener" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span> Instagram
+    </a>
+    <br>
+    <a href="https://nhantien.momo.vn/{{ site.author.telephone }}" target="_blank" rel="noopener" title="MoMo">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+      </span>
+    <span class="sr-only">MoMo</span> MoMo
+    </a>
+    <br>
+  </h3>
 </div>
+
 
 <!-- Recent Posts -->
 <h1 class="text-center">Recent Posts</h1>
