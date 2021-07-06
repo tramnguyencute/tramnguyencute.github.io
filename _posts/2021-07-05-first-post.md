@@ -10,7 +10,11 @@ bigimg:
   - "/img/My_Picture/avatar_github.jpg"
 ---
 
-Có một số người mà bạn từng yêu, đích xác chỉ là một quá trình, anh ta xuất hiện trong cuộc đời bạn để khiến bạn trở nên mạnh mẽ hơn, khiến bạn học được giá trị của sự trân trọng và cho đi, khiến bạn cuối cùng sẽ hiểu được mình muốn gì, và thứ gì bạn cần tìm kiếm trong cuộc đời này. Sự đổ vỡ của ngày hôm qua, để đổi lấy sự trưởng thành cho ngày mai. Vậy thì, nỗi đau khi đó cũng coi như xứng đáng.
+Có một số người mà bạn từng yêu, đích xác chỉ là một quá trình, anh ta xuất hiện trong cuộc đời bạn để khiến bạn trở nên mạnh mẽ hơn, khiến bạn học được giá trị của sự trân trọng và cho đi, khiến bạn cuối cùng sẽ hiểu được mình muốn gì, và thứ gì bạn cần tìm kiếm trong cuộc đời này. 
+
+Sự đổ vỡ của ngày hôm qua, để đổi lấy sự trưởng thành cho ngày mai. 
+
+Vậy thì, nỗi đau khi đó cũng coi như xứng đáng.
 
 `Là con gái , đừng như hoa dâm bụt có đỏ mà không có hương. `
 
