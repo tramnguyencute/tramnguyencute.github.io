@@ -1,6 +1,6 @@
 # --- General options --- #
 # Name of website
-title: Bang Nguyen Duy
+title: Nguyễn Thị Bích Trâm
 
 #For my changes
 # use meta-title: for the center heading of the page.
@@ -8,29 +8,20 @@ title: Bang Nguyen Duy
 # use subtitle: to set the sub heading for that title(meta-title). NOTE: if(meta-title exists){subtilel visiblity = true}
 
 # Short description of your site
-description: Embedded Systems Engineer
+description: Office
 
 # --- Navigation bar options --- #
 # List of links in the navigation bar
 navbar-links:
   Books: "books"
-  About Me: 
-    - About Me: aboutme
-    - Contact Info: Contact_Info_nfc
-    - LinkedIn Profile: "https://www.linkedin.com/in/bangnguyenduy"
-    - Github Profile: "https://github.com/bangnguyendev"
-  Publications:
-    - Auto Login account web: 2021-02-17-auto-login-web
-    - A Button for Multi Mode: 2020-11-12-mot-nut-nhan-nhieu-tinh-nang
-    - Smart Clock - P2: 2020-01-23-smart-clock
-    - Smart Clock - P1: 2020-01-17-smart-clock
-    - Zip multiple folders: 2020-09-10-bash-script-auto-zip
-  Projects:
-    - Smart Clock: "https://github.com/bangnguyendev/SmartClock"
-    - Sent Data ThingSpeak: "https://github.com/bangnguyendev/SentDataThingSpeak"  
-    - Vehicle Speed GPS: "https://github.com/bangnguyendev/VehicleSpeedGPS"    
-    - STM32 RTC RFID: "https://github.com/bangnguyendev/STMF1_RTCBackup_RFID"
-    - PWM Sine Wave Generator: "https://github.com/bangnguyendev/PWMSineWaveGenerator"
+  About Me: aboutme
+  Social Network:
+    - NFC Connect: Contact_Info_nfc
+    - Facebook: https://www.facebook.com/pe.tram.984
+    - Instagram: https://www.instagram.com/pe.tram.984
+    - Tiktok: https://www.tiktok.com/@bichtram_4497?lang=vi-VN
+    - Messenger: https://m.me/pe.tram.984
+
   Resume: "resume/NGUYENDUYBANGCV.pdf"
   # Tags: "tags" thay thế bằng nút tìm kiếm.
 
@@ -43,16 +34,16 @@ avatar: "img/My_Picture/avatar_github.jpg"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Bằng Nguyễn Duy
+  name: Nguyễn Thị Bích Trâm
   rss: true
-  email: "duybang140494@gmail.com"
-  facebook: drake.bangnguyen
-  github: bangnguyendev
-  linkedin: bangnguyenduy
-  stackoverflow: "12104912"
-  instagram: nguyen.duy.bang
-  youtube: user/chip140494
-  telephone: 0784140494
+  email: "nguyenthibichtram051@gmail.com"
+  facebook: pe.tram.984
+  github: tramnguyencute
+  # linkedin: bangnguyenduy
+  # stackoverflow: "12104912"
+  instagram: pe.tram.984
+  # youtube: user/chip140494
+  telephone: "0374016051"
 
 # Select which links to show in the footer
 footer-links-active:

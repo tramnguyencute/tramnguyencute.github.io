@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Contact Info
-meta-title: Contact Info
-subtitle: "For a start, my favorite quote is, <br> Do what you love, love what you do."
-# bigimg:
-#   - "/img/My_Picture/anh_aboutme.jpg"
+title: Nguyễn Thị Bích Trâm
+meta-title: About Me
+subtitle: "Một ngày nào đó trên thế giới rộng lớn này chúng ta sẽ gặp được một người thuộc về riêng mình."
+bigimg:
+  - "/img/My_Picture/anh_bia1.jpg" : "Da Lat City"
 ---
-## Hi again, my name is Nguyen Duy Bang
+## Hi again, my name is Trâm
 
   <a href="tel:{{ site.author.telephone }}" target="_blank" rel="noopener" title="Phone">
     <span class="fa-stack fa-lg" aria-hidden="true">
@@ -29,23 +29,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
     </span>
-    <span class="sr-only">Zalo</span> Messenger
-  </a>
-
-  <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" title="GitHub">
-    <span class="fa-stack fa-lg" aria-hidden="true">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-    </span>
-    <span class="sr-only">GitHub</span> Github
-  </a>
-
-  <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">
-  <span class="fa-stack fa-lg" aria-hidden="true">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-  </span>
-  <span class="sr-only">LinkedIn</span> LinkedIn
+    <span class="sr-only">Messenger</span> Messenger
   </a>
 
   <a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank" rel="noopener" title="Facebook">
@@ -72,13 +56,6 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
     <span class="sr-only">Instagram</span> Instagram
   </a>
 
-  <a href="https://www.youtube.com/{{ site.author.youtube }}" target="_blank" rel="noopener" title="YouTube">
-    <span class="fa-stack fa-lg" aria-hidden="true">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-    </span>
-  <span class="sr-only">YouTube</span> YouTube
-  </a>
 
   <a href="https://nhantien.momo.vn/{{ site.author.telephone }}" target="_blank" rel="noopener" title="MoMo">
     <span class="fa-stack fa-lg" aria-hidden="true">
@@ -88,13 +65,7 @@ subtitle: "For a start, my favorite quote is, <br> Do what you love, love what y
   <span class="sr-only">MoMo</span> MoMo
   </a>
 
-  <a title="TPBank">
-  <span class="fa-stack fa-lg" aria-hidden="true">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-credit-card fa-stack-1x fa-inverse"></i>
-  </span>
-  <span class="sr-only">TPBank</span> TPBank: 03922248901
-  </a>
+
 
 
  

@@ -1,4 +1,4 @@
-const words = ["Technology.","Python.", "Photography.", "Open Source.", "Linux."];
+const words = ["ăn bánh.","ăn đòn.", "ăn kem.", "mlem mlem."];
 let i = 0;
 let timer;
 

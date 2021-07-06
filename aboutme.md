@@ -2,11 +2,11 @@
 layout: page
 title: About me
 meta-title: About me
-subtitle: "For a start, my favorite quote is, <br> Do what you love, love what you do."
+subtitle: "Một ngày nào đó trên thế giới rộng lớn này chúng ta sẽ gặp được một người thuộc về riêng mình."
 bigimg:
   - "/img/My_Picture/anh_aboutme.jpg"
 ---
-## Hi again, my name is Nguyen Duy Bang
+## Hi again, my name is Trâm
 -------------------------
 <div id="aboutme-section">
 <p class="about-text">
