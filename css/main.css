@@ -531,8 +531,8 @@ footer .theme-by {
 .contact_NFC {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 65px;
-  padding-right: 65px;
+  padding-left: 60px;
+  /* padding-right: 65px; */
   padding-top: 10px;
   padding-bottom: 20px;
   background-color: #f087d01f;
